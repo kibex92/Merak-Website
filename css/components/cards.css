@@ -1,0 +1,83 @@
+/* Your card CSS file */
+.cards {
+	display: flex;
+	justify-content: space-evenly;
+}
+.card-category {
+	background-size: cover;
+	background-position: center;
+	margin-top: 12px;
+	margin: 50px 0;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card-category-large {
+	background-size: cover;
+	background-position: center;
+	margin-top: 12px;
+	margin-bottom: 50px;
+	justify-content: center;
+	align-items: center;
+	padding: 75px;
+	border-radius: 5px;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+	border: 1px solid black;
+}
+.card-product {
+	display: flex;
+	align-items: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+	height: 120px;
+}
+
+.card-product img {
+	margin-top: 12px;
+	width: 140px;
+}
+
+.card-product-desc {
+	padding: 10px;
+}
+
+.card-trip {
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.card-trip > img {
+	width: 700px;
+	height: 100%;
+}
+
+.card-trip-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 12px;
+	position: relative;
+}
+
+.card-trip-user {
+	position: absolute;
+	right: 50px;
+	top: -30px;
+}
+
+.avatar {
+	width: 40px;
+	border-radius: 50%;
+	border: 1px solid white;
+}
+.card-trip-footer h2,
+p {
+	margin: 0;
+}
+
+.video-card {
+	margin: 0 12px;
+}

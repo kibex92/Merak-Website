@@ -1,0 +1,17 @@
+.footer {
+	background-color: #1a1718;
+	text-align: center;
+	padding: 16px;
+	color: white;
+	margin-top: 25px;
+}
+
+.links a {
+	margin: 12px;
+	color: white;
+}
+
+.fab:hover {
+	opacity: 1;
+	color: #ada168;
+}
