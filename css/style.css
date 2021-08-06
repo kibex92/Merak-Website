@@ -29,7 +29,6 @@
 	}
 }
 
-/* Utilities */
 body {
 	margin: 0;
 	font-family: 'Nunito', sans-serif;
@@ -39,16 +38,18 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: 'Nunito', sans-serif;
 	font-weight: 500;
-	font-size: 32px;
 }
-
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 2em;
+}
 a {
 	text-decoration: none;
 }
 
-/* Custom design below! */
 .text-center {
 	text-align: center;
 }
@@ -65,4 +66,7 @@ a {
 img {
 	height: 60vh;
 	width: auto;
+}
+p {
+	font-size: 1.5em;
 }
