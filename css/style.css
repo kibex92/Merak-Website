@@ -37,8 +37,9 @@
 		font-size: 0.8em;
 	}
 	.banner {
-		height: 2vh;
-		
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/FB-cover\ mobile.png');
+		padding: 180px;
 	}
 }
 
