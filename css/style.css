@@ -15,6 +15,9 @@
 	.container {
 		width: 700px;
 	}
+	img {
+	width: 100%;
+	}
 }
 @media (max-width: 720px) {
 	/* For a screen < 720px, this CSS will be read */
@@ -26,6 +29,16 @@
 	/* For a screen < 540px, this CSS will be read */
 	.container {
 		width: 300px;
+	}
+	#trio-pic {
+		width: 100vw;
+	}
+	body {
+		font-size: 0.8em;
+	}
+	.banner {
+		height: 2vh;
+		
 	}
 }
 
@@ -46,6 +59,9 @@ h1 {
 h2 {
 	font-size: 2em;
 }
+p {
+	font-size: 1.5em;
+}
 a {
 	text-decoration: none;
 }
@@ -61,12 +77,10 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 2em;
+	width: 100%;
+	margin-top: 1em;
 }
 img {
-	height: 60vh;
-	width: auto;
-}
-p {
-	font-size: 1.5em;
+	height: auto;
+	width: 100%;
 }
