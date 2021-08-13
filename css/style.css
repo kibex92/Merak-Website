@@ -38,8 +38,8 @@
 	}
 	.banner {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url('../images/FB-cover\ mobile.png');
-		padding: 180px;
+		url('../images/FB-cover-mobile.png');
+		padding: 200px 175px;
 	}
 }
 
