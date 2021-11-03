@@ -1,14 +1,13 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 /* Fontawesome */
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
-@import url('components/container.css');
-@import url('components/banner.css');
-@import url('components/cards.css');
-@import url('components/button.css');
-@import url('components/footer.css');
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+@import url("components/container.css");
+@import url("components/banner.css");
+@import url("components/cards.css");
+@import url("components/button.css");
+@import url("components/footer.css");
 
 @media (max-width: 960px) {
 	/* For a screen < 960px, this CSS will be read */
@@ -16,7 +15,7 @@
 		width: 700px;
 	}
 	img {
-	width: 100%;
+		width: 100%;
 	}
 }
 @media (max-width: 720px) {
@@ -37,33 +36,18 @@
 		font-size: 0.8em;
 	}
 	.banner {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url('../images/FB-cover-mobile.png');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+			url("../images/FB-cover-mobile.png");
 		padding: 200px 175px;
 	}
 }
 
 body {
 	margin: 0;
-	font-family: 'Nunito', sans-serif;
+	font-family: "Roboto", sans-serif;
+	background-color: #2b2b2b;
 }
 
-h1,
-h2,
-h3,
-h4 {
-	font-weight: 500;
-}
-h1 {
-	font-size: 2em;
-}
-h2 {
-	font-size: 2em;
-	margin-bottom: 0;
-}
-p {
-	font-size: 1.5em;
-}
 a {
 	text-decoration: none;
 }
@@ -72,17 +56,23 @@ a {
 	text-align: center;
 }
 
-.fab {
-	font-size: 50px;
+.line-gold {
+	color: #a78049;
+	width: 135px;
 }
-.img-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	margin-top: 1em;
+.info {
+	margin-top: 30px;
+	color: #ffffff;
+	padding: 0.5rem;
 }
-img {
-	height: auto;
-	width: 100%;
+
+.info h1 {
+	margin-top: 30px;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.info p {
+	font-size: 1rem;
+	margin-bottom: 50px;
 }
