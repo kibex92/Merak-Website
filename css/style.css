@@ -83,9 +83,9 @@ a {
 	justify-content: space-between;
 }
 
-.justify-space-between {
+/* .justify-space-between {
 	justify-content: space-between;
-}
+} */
 
 .event-info {
 	display: flex;
@@ -101,7 +101,7 @@ a {
 
 iframe {
 	border-style:none;
-	width: 387px;
+	width: 320px;
 	height: 215px;
 	display: block;
 	margin: 20px auto;
