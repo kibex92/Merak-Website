@@ -3,62 +3,27 @@
 
 /* Fontawesome */
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
-@import url("components/container.css");
+
+/* Components */
 @import url("components/banner.css");
-@import url("components/cards.css");
 @import url("components/button.css");
 @import url("components/footer.css");
 
-@media (max-width: 960px) {
-	/* For a screen < 960px, this CSS will be read */
-	.container {
-		width: 700px;
-		margin: 0 auto;
-	}
-	img {
-		width: 100%;
-	}
-}
-@media (max-width: 720px) {
-	/* For a screen < 720px, this CSS will be read */
-	.container {
-		width: 500px;
-		margin: 0 auto;
-	}
-}
-@media (max-width: 540px) {
-	/* For a screen < 540px, this CSS will be read */
-	.container {
-		width: 100vw;
-		margin: 0 auto;
-	}
-	#trio-pic {
-		width: 100vw;
-	}
-	body {
-		font-size: 0.8em;
-	}
-}
-
 body {
-	margin: 0;
-	color: #ffffffde;
-	font-family: "Roboto", sans-serif;
-	background-color: #2b2b2b;
+	background-color: #2b2b2b !important;
+	font-family: "Roboto", sans-serif !important;
 }
 
-a {
-	text-decoration: none;
-}
-
-.text-center {
-	text-align: center;
+.container {
+	color: #ffffffde !important;
 }
 
 .line-gold {
 	color: #a78049;
 	width: 135px;
+	margin: auto;
 }
+
 .info {
 	margin-top: 30px;
 	padding: 0.5rem;
@@ -77,16 +42,6 @@ a {
 	opacity: 1;
 }
 
-.flex-container {
-	display: flex;
-	margin: 0 30px;
-	justify-content: space-between;
-}
-
-/* .justify-space-between {
-	justify-content: space-between;
-} */
-
 .event-info {
 	display: flex;
 	justify-content: space-between;
@@ -101,8 +56,8 @@ a {
 
 iframe {
 	border-style:none;
-	width: 320px;
-	height: 215px;
+	width: 370px;
+	height: 195px;
 	display: block;
 	margin: 20px auto;
 }
