@@ -8,6 +8,7 @@
 @import url("components/banner.css");
 @import url("components/button.css");
 @import url("components/footer.css");
+@import url("components/card.css");
 
 body {
 	background-color: #2b2b2b !important;
@@ -71,3 +72,4 @@ iframe {
 	display: block;
 	margin: 20px auto;
 }
+
