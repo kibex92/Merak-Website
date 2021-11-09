@@ -24,7 +24,7 @@
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,9 +129,9 @@
 
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
-  color: #fff;
+  color: #ffffffde;
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .menu-wrap .menu > div > div > ul > li > a {
