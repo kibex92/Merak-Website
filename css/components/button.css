@@ -1,6 +1,6 @@
 
 .btn-gold {
-	background-color: #a78049;
+	background-color: var(--merak-gold);
 	padding: 10px 20px; 
 	color: #ffffff;
 	border-radius: 4px;
@@ -18,9 +18,7 @@
 	height: 10px;
 	vertical-align: middle;
 }
-.btn-gold:focus {
-	outline: none !important;
-}
+
 .videos a {
 	width: 100px;
 	height: 25px;

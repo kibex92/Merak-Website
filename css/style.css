@@ -9,28 +9,43 @@
 @import url("components/button.css");
 @import url("components/footer.css");
 @import url("components/card.css");
+@import url("components/menu.css");
 
+/* Variables */
+:root {
+	--background-color: #2b2b2b;
+	--font-color: #ffffffde;
+	--form-color: #FFFFFF99;
+	--merak-gold: #a78049;
+	--menu-speed: 0.75s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
 	background-color: #2b2b2b !important;
 	font-family: "Roboto", sans-serif !important;
 }
 
 .container {
-	color: #ffffffde !important;
+	color: var(--font-color) !important;
 }
 
 .form-control {
-	border: 1px solid #FFFFFF99 !important;
-	color: #FFFFFF99 !important;
-	background-color: #2b2b2b !important;
+	border: 1px solid var(--form-color) !important;
+	color: var(--form-color) !important;
+	background-color: var(--background-color) !important;
 }
 
 .form-control > label > p {
-	color: #FFFFFF99 !important;
+	color: var(--form-color) !important;
 }
 
 .line-gold {
-	color: #a78049;
+	color: var(--merak-gold);
 	width: 135px;
 	margin: auto;
 }
@@ -67,9 +82,12 @@ body {
 
 iframe {
 	border-style:none;
-	width: 370px;
-	height: 195px;
+	width: 320px;
+	height: 180px;
 	display: block;
 	margin: 20px auto;
 }
 
+.invalid-feedback {
+	content: "ASdasd";
+}
