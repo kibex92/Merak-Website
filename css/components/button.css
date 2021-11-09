@@ -18,6 +18,9 @@
 	height: 10px;
 	vertical-align: middle;
 }
+.btn-gold:focus {
+	outline: none !important;
+}
 .videos a {
 	width: 100px;
 	height: 25px;
@@ -25,4 +28,8 @@
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 50px;
+}
+
+.button-holder {
+	text-align: center;
 }
