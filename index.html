@@ -103,23 +103,28 @@
 			<div class="contact">
 				<h1 class="text-center section-header">Kontakt</h1>
 				<p class="text-center long-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, voluptate, nihil porro blanditiis nam quidem tempora officiis facilis aperiam iste unde.</p>
-				<form>
+				<form action="https://formspree.io/info@triomerak.de" method="POST">
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" autofocus id="name" placeholder="">
+						<input type="text" class="form-control" autofocus id="name" name="name" placeholder="">
 						<label for="name">Vorname</label>
           </div>
 					<div class="form-floating mb-3">
-						<input type="text" class="form-control" autofocus id="lastname" placeholder="">
+						<input type="text" class="form-control" autofocus id="lastname" name="lastname" placeholder="">
 						<label for="lastname">Nachname</label>
           </div>
 					<div class="form-floating mb-3">
-							<input type="email" class="form-control" autofocus id="email" placeholder="">
+							<input type="email" class="form-control" autofocus id="email" name="email" placeholder="">
 							<label for="email">E-mail</label>
 					</div>
 					<div class="form-floating mb-3">
-							<textarea class="form-control" id="message" placeholder=" " style="height: 200px;" ></textarea>
+							<textarea class="form-control" id="message" placeholder=" " name="message" style="height: 200px;" ></textarea>
 							<label for="message">Ihre Nachricht</label>
 					</div>
+					<input
+						type="hidden"
+						name="_subject"
+						value="New submission from contact form"
+					/>
 					<div class="button-holder">
 						<button type="submit" class="btn-gold ">Abschicken</button>
 					</div>
