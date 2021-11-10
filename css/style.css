@@ -10,13 +10,14 @@
 @import url("components/footer.css");
 @import url("components/card.css");
 @import url("components/menu.css");
+@import url("components/form.css");
 
 /* Variables */
 :root {
 	--background-color: #2b2b2b;
 	--font-color: #ffffffde;
-	--form-color: #FFFFFF99;
 	--merak-gold: #a78049;
+	--form-color: #FFFFFF99;
 	--menu-speed: 0.75s;
 }
 
@@ -34,15 +35,6 @@ body {
 	color: var(--font-color) !important;
 }
 
-.form-control {
-	border: 1px solid var(--form-color) !important;
-	color: var(--form-color) !important;
-	background-color: var(--background-color) !important;
-}
-
-.form-control > label > p {
-	color: var(--form-color) !important;
-}
 
 .line-gold {
 	color: var(--merak-gold);
@@ -86,8 +78,4 @@ iframe {
 	height: 180px;
 	display: block;
 	margin: 20px auto;
-}
-
-.invalid-feedback {
-	content: "ASdasd";
 }

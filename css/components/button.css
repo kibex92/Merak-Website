@@ -25,7 +25,20 @@
 	margin: 0 auto;
 	margin-bottom: 50px;
 }
+/* Overwrite bootstrap form button */
 
+.btn.btn-gold {
+	background-color: var(--merak-gold);
+	padding: 10px 20px; 
+	color: #ffffff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 1.25px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 13px;
+}
 .button-holder {
 	text-align: center;
 }
