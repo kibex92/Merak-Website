@@ -15,10 +15,11 @@
 /* Variables */
 :root {
 	--background-color: #2b2b2b;
-	--font-color: #ffffffde;
+	--font-color: rgba(255, 255, 255, 0.87);
 	--merak-gold: #a78049;
-	--form-color: #FFFFFF99;
+	--form-color: rgba(255, 255, 255, 0.6);
 	--menu-speed: 0.75s;
+	--body-font-size: 0.8rem;
 }
 
 * {
@@ -38,12 +39,13 @@ body {
 
 .line-gold {
 	color: var(--merak-gold);
-	width: 135px;
+	width: 120px;
 	margin: auto;
+	opacity: 1;
 }
 
 .info {
-	margin-top: 30px;
+	margin-top: 5px;
 	padding: 0.5rem;
 }
 
@@ -54,13 +56,14 @@ body {
 }
 
 .long-text {
-	font-size: 1rem;
+	font-size: var(--body-font-size);
 	margin-bottom: 50px;
 	line-height: 30px;
 	opacity: 1;
 }
 
 .event-info {
+	font-size: var(--body-font-size);
 	display: flex;
 	justify-content: space-between;
 	margin: 0 30px 15px 30px;
