@@ -19,10 +19,8 @@
 	vertical-align: middle;
 }
 
-.videos a {
-	width: 100px;
-	height: 25px;
-	padding: 5px 5px !important;
+.btn-gold.long{
+	width: 140px;
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 50px;
