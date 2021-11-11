@@ -1,9 +1,6 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
-/* Fontawesome */
-@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
-
 /* Components */
 @import url("components/banner.css");
 @import url("components/button.css");
@@ -27,12 +24,14 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+h1 {
+	font-weight: 400 !important;
+}
+
 body {
 	background-color: #2b2b2b !important;
 	font-family: "Roboto", sans-serif !important;
-}
-
-.container {
 	color: var(--font-color) !important;
 }
 
@@ -81,4 +80,31 @@ iframe {
 	height: 180px;
 	display: block;
 	margin: 20px auto;
+}
+
+#logo {
+	width: 3.5rem;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+.title {
+	margin-top: 3.5rem;
+}
+
+.img-artist {
+	width: 100%;
+}
+
+#instrument {
+	color: var(--merak-gold);
+}
+
+.arist-content {
+	font-size: var(--body-font-size);
+}
+h5 {
+	font-size: 1rem !important;
+	margin-bottom: 0 !important;
 }
