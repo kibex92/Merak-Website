@@ -37,3 +37,7 @@
 .button-holder {
 	text-align: center;
 }
+
+#form-send {
+	line-height: 2px;
+}
