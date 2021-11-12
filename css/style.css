@@ -35,6 +35,9 @@ body {
 	color: var(--font-color) !important;
 }
 
+.container {
+	width: 90% !important;
+}
 
 .line-gold {
 	color: var(--merak-gold);
@@ -104,6 +107,7 @@ iframe {
 .artist-content {
 	font-size: var(--body-font-size);
 }
+
 h5 {
 	font-size: 1rem !important;
 	margin-bottom: 0 !important;
@@ -118,3 +122,9 @@ h5 {
 	transition: top 0.4s;
 }
 
+#home-logo {
+	height: 24px;
+	position: relative;
+	top: 16px;
+	left: 324px;
+}

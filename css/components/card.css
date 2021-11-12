@@ -38,6 +38,21 @@
   grid-row: 3;
   border-radius: 18px;
 }
+.F {
+  grid-column: 1 / span 1;
+  grid-row: 4;
+  border-radius: 18px;
+}
+.G {
+  grid-column: 2 / span 1;
+  grid-row: 4;
+  border-radius: 18px;
+}
+.H {
+  grid-column: 3 / span 1;
+  grid-row: 4;
+  border-radius: 18px;
+}
 
 /* Events */
 .date {
