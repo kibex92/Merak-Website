@@ -101,7 +101,7 @@ iframe {
 	color: var(--merak-gold);
 }
 
-.arist-content {
+.artist-content {
 	font-size: var(--body-font-size);
 }
 h5 {
@@ -115,4 +115,6 @@ h5 {
 	top: 20px;
 	font-size: 1.4rem;
 	color: var(--merak-gold);
+	transition: top 0.4s;
 }
+
