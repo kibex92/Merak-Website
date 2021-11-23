@@ -1,5 +1,6 @@
 let prevScrollpos = window.pageYOffset;
 
+// Hide Menu on Scroll
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {

@@ -3,7 +3,8 @@
 <head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <title>Über uns</title>
   <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon" />
@@ -57,19 +58,21 @@
   <div class="title">
     <img id="logo" src="images/symbol.png" alt="Symbol von Merak">
     <h1 class="text-center">Gallerie</h1>
-    <div class="container-fluid">
-      <div class="row">
-        <h5 class="text-left mb-3">Sesions</h5>
-        <div class="cards">
-					<div class="img-grid A" style="background-image: url(images/img-merak.jpg);"></div>
-					<div class="img-grid B" style="background-image: url(images/img-moritz.jpg);"></div>
-					<div class="img-grid C" style="background-image: url(images/img-boris.jpg);"></div>
-					<div class="img-grid D" style="background-image: url(images/img-cris.jpg);"></div>
-					<div class="img-grid E" style="background-image: url(images/img-merak2.jpg);"></div>
-					<div class="img-grid F" style="background-image: url(images/boris2.jpg);"></div>
-					<div class="img-grid G" style="background-image: url(images/cris2.jpg);"></div>
-					<div class="img-grid H" style="background-image: url(images/moritz2.jpg);"></div>
-        </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row" id="gallery">
+      <h5 class="text-left mb-3">Sesions</h5>
+      <div class="cards" >
+        <img src="images/img-merak.jpg" class="img-grid A">
+        <img src="images/img-moritz.jpg" class="img-grid B">
+        <img src="images/img-boris.jpg" class="img-grid C">
+        <img src="images/img-cris.jpg" class="img-grid D">
+        <img src="images/img-merak2.jpg" class="img-grid E">
+        <img src="images/boris2.jpg" class="img-grid F">
+        <img src="images/cris2.jpg" class="img-grid G">
+        <img src="images/moritz2.jpg" class="img-grid H">
       </div>
     </div>
+  </div>
+  <script src="main.js"></script>
 </body>

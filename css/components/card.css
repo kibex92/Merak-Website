@@ -8,9 +8,10 @@
 }
 
 .img-grid {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  height: 188px;
+  width: 100%;
 }
 
 .A {
