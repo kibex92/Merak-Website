@@ -8,6 +8,8 @@
 }
 
 .img-grid {
+  background-size: cover;
+  background-position: center;
   object-fit: cover;
   object-position: center;
   height: 188px;
