@@ -21,6 +21,7 @@ let windowWith = window.innerWidth;
 
 galleryImages.forEach((img, index) => {
   img.onclick = () => {
+    toggleBlur();
     getLatestOpenedImg = index + 1;
 
     let container = document.body;
@@ -55,6 +56,7 @@ closeImg = () => {
   document.querySelector(".img-window").remove();
   document.querySelector(".img-btn-next").remove();
   document.querySelector(".img-btn-prev").remove();
+  toggleBlur();
 };
 
 nextImg = (next) => {
@@ -81,4 +83,10 @@ nextImg = (next) => {
   newImg.setAttribute("id", "current-img");
 
   getLatestOpenedImg = calcNewImg;
+};
+
+// Blur
+toggleBlur = () => {
+  const blur = document.getElementById("blur");
+  blur.classList.toggle("active");
 };
