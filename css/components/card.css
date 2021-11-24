@@ -14,6 +14,7 @@
   object-position: center;
   height: 188px;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .A {
