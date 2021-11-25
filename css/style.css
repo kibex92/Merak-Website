@@ -42,7 +42,7 @@ body {
 
 .line-gold {
 	color: var(--merak-gold);
-	width: 120px;
+	width: 30%;
 	margin: auto;
 	opacity: 1;
 }
@@ -70,6 +70,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 30px 15px 30px;
+	width: 90%;
 }
 
 .section-header {

@@ -32,7 +32,7 @@
 	<body>
 		<div class="banner"></div>
 		<div class="container">
-			<nav>
+			<nav id="navbar">
 				<div class="menu-wrap">
 					<input type="checkbox" class="toggler">
 					<div class="hamburger"><div></div></div>
@@ -53,6 +53,7 @@
 					</div>
 				</div>
 			</nav>
+
 			<div class="info">
 				<hr class="line-gold" />
 				<h1 class="text-center">Grooves ohne Grenzen</h1>
@@ -64,46 +65,49 @@
 				</p>
 				<hr class="line-gold" />
 			</div>
+			<h2 class="text-center section-header">Events</h1>
 			<div class="events">
-				<h1 class="text-center section-header">Events</h1>
-				<div class="event-info">
-					<div class="date">
-						<p id="day">15.</p>
-						<p id="month">11.</p>
-					</div>
-					<div class="venue-container">
-						<div class="venues">
-							<p id="city">München</p>
-							<p id="hall">Kulturhaus</p>
+				<div class="event-container">
+					<div class="event-info">
+						<div class="date">
+							<p id="day">15.</p>
+							<p id="month">11.</p>
+						</div>
+						<div class="venue-container">
+							<div class="venues">
+								<p id="city">München</p>
+								<p id="hall">Kulturhaus</p>
+							</div>
 						</div>
 						<a href="#" style="display: inline" class="btn-gold">Tickets</a>
 					</div>
-				</div>
-				<div class="event-info">
-					<div class="date">
-						<p id="day">26.</p>
-						<p id="month">11.</p>
-					</div>
-					<div class="venue-container">
-						<div class="venues">
-							<p id="city">Vaterstetten</p>
-							<p id="hall">Kulturhaus</p>
+					<div class="event-info">
+						<div class="date">
+							<p id="day">26.</p>
+							<p id="month">11.</p>
+						</div>
+						<div class="venue-container">
+							<div class="venues">
+								<p id="city">Vaterstetten</p>
+								<p id="hall">Kulturhaus</p>
+							</div>
 						</div>
 						<a href="#" style="display: inline" class="btn-gold">Tickets</a>
 					</div>
-				</div>
-				<div class="event-info">
-					<div class="date">
-						<p id="day">28.</p>
-						<p id="month">11.</p>
-					</div>
-					<div class="venue-container">
-						<div class="venues">
-							<p id="city">Neubiberg</p>
-							<p id="hall">Grundschule</p>
+					<div class="event-info">
+						<div class="date">
+							<p id="day">28.</p>
+							<p id="month">11.</p>
+						</div>
+						<div class="venue-container">
+							<div class="venues">
+								<p id="city">Neubiberg</p>
+								<p id="hall">Grundschule</p>
+							</div>
 						</div>
 						<a href="#" style="display: inline" class="btn-gold">Tickets</a>
 					</div>
+
 				</div>
 				<hr class="line-gold">
 			</div>
@@ -117,11 +121,11 @@
 			<div class="gallery">
 				<h1 class="text-center section-header">Gallerie</h1>
 				<div class="cards">
-					<div class="img-grid A" style="background-image: url(images/gallery/img-3.jpg);"></div>
-					<div class="img-grid B" style="background-image: url(images/gallery/img-5.jpg);"></div>
-					<div class="img-grid C" style="background-image: url(images/gallery/img-1.jpg);"></div>
-					<div class="img-grid D" style="background-image: url(images/gallery/img-8.jpg);"></div>
-					<div class="img-grid E" style="background-image: url(images/gallery/img-4.jpg);"></div>
+					<img src="images/gallery/img-3.jpg" class="img-grid A img-fluid">
+					<img src="images/gallery/img-5.jpg" class="img-grid B img-fluid">
+					<img src="images/gallery/img-1.jpg" class="img-grid C img-fluid">
+					<img src="images/gallery/img-2.jpg" class="img-grid D img-fluid">
+					<img src="images/gallery/img-4.jpg" class="img-grid E img-fluid">
 				</div>
 				<a href="" class="btn-gold long">Alle Bilder</a>
 			</div>
@@ -156,5 +160,6 @@
 				</form>
 			</div>
 		</div>
+		<script src="main.js"></script>
 	</body>
 </html>
