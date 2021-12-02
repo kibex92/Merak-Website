@@ -1,13 +1,8 @@
 .banner {
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
   background-position: center;
 	width: 100vw;
 	height: 40vh;
-	background-image: url(../../images/merak-website-header.png)
-}
-
-@media screen and (min-width: 900px) {
-	.banner {
-		background-image: url(../../images/merak-website-header-desktop.png)
-	}
+	background-image: url(../../images/banner.jpg)
 }
