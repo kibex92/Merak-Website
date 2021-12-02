@@ -48,6 +48,10 @@
 		font-size: 1em;
 	}
 
+	.btn-gold.long {
+		width: 185px;
+	}
+
 	.event-info {
 		font-size: 1.5rem;
 	}
