@@ -80,7 +80,7 @@ body {
 }
 
 iframe {
-	border-style:none;
+	border-style: none;
 	width: 320px;
 	height: 180px;
 	display: block;
@@ -129,4 +129,11 @@ h5 {
 	position: relative;
 	top: 16px;
 	left: 324px;
+}
+
+@media screen and (min-width: 650px) {
+	.info {
+		max-width: 650px;
+		margin: 0 auto;
+	}
 }
