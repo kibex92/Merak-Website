@@ -70,13 +70,13 @@
 @media screen and (min-width: 2400px) {
 	.banner {
 		background-position: top 5px center;
-		padding: 23em;
+		padding: 25em;
 		margin-bottom: 1em;
 		background-image: url(../../images/header-FINAL.png);
 	}
 
 	.banner-container {
-		width: 75%;
+		width: 65%;
 		margin: 0 auto;
 	}
 }

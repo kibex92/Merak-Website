@@ -17,7 +17,7 @@
 	--merak-gold: #a78049;
 	--form-color: rgba(255, 255, 255, 0.6);
 	--menu-speed: 0.75s;
-	--body-font-size: 0.8rem;
+	--body-font-size: 1rem;
 }
 
 * {
@@ -30,15 +30,16 @@ h1 {
 	font-weight: 400 !important;
 }
 
+h5 {
+	font-size: 1rem !important;
+	margin-bottom: 0 !important;
+}
+
 body {
 	background-color: #2b2b2b !important;
 	font-family: "Roboto", sans-serif !important;
 	color: var(--font-color) !important;
 }
-
-/* .container {
-	width: 90% !important;
-} */
 
 .line-gold {
 	color: var(--merak-gold);
@@ -110,10 +111,6 @@ iframe {
 	font-size: var(--body-font-size);
 }
 
-h5 {
-	font-size: 1rem !important;
-	margin-bottom: 0 !important;
-}
 
 #back-arrow {
 	position: relative;
@@ -183,6 +180,16 @@ h5 {
 	iframe {
 		height: 275px;
 		margin: 0 3em;
+	}
+
+	.gallery {
+		max-width: 1070px;
+		margin: 0 auto;
+	}
+
+	.contact {
+		max-width: 1070px;
+		margin: 0 auto;
 	}
 }
 
