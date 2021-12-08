@@ -186,3 +186,7 @@ h5 {
 	}
 }
 
+/* Hide events section until there is more concerts */
+.events {
+	display: none;
+}
