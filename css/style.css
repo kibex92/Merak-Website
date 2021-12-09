@@ -90,7 +90,7 @@ iframe {
 #logo {
 	width: 3.5rem;
 	height: auto;
-	margin: 0 auto;
+	margin: 1em auto;
 	display: block;
 }
 
@@ -141,6 +141,13 @@ iframe {
 		max-width: 500px;
 		margin: 0 auto;
 	}
+	#back-arrow {
+		display: none;
+	}
+
+	#logo {
+		width: 6.5em
+	}
 }
 
 @media screen and (min-width: 992px) {
@@ -155,6 +162,11 @@ iframe {
 		width: 486px;
 		height: 245px;
 	}
+
+	#logo {
+		width: 8.5em
+	}
+	
 }
 
 @media screen and (min-width: 1200px) {
