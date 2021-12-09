@@ -120,13 +120,6 @@ iframe {
 	transition: top 0.4s;
 }
 
-#home-logo {
-	height: 24px;
-	position: relative;
-	top: 16px;
-	left: 324px;
-}
-
 #banner-logo {
 	width: 56%;
 	position: absolute;
