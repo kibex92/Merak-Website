@@ -8,9 +8,16 @@
 	background-image: url(../../images/merak-website-header.png)
 }
 
+.about {
+	background-image: url(../../images/gallery/img-4.jpg);
+}
+
 @media screen and (max-width: 360px) {
 	.banner {
 		padding: 9em;
+	}
+	.about {
+		background-image: url(../../images/gallery/img-4.jpg);
 	}
 }
 
@@ -20,6 +27,9 @@
 		padding: 18em;
 		margin-bottom: .5em;
 	}
+	.about {
+		background-image: url(../../images/gallery/img-4.jpg);
+	}
 }
 
 @media screen and (min-width: 700px) and (min-height: 1024px) {
@@ -27,6 +37,9 @@
 		background-position: top -64px center;
 		padding: 19em;
 		background-image: url(../../images/merak-website-header.png);
+	}
+	.about {
+		background-image: url(../../images/gallery/img-4.jpg);
 	}
 
 }
@@ -36,6 +49,9 @@
 		background-position: top -93px center;
 		padding: 24em;
 		margin-bottom: .5em;
+	}
+	.about {
+		background-image: url(../../images/gallery/img-4.jpg);
 	}
 }
 
@@ -51,6 +67,10 @@
 		width: 90%;
 		margin: 0 auto;
 	}
+
+	.about {
+		background-image: url(../../images/gallery/img-4.jpg);
+	}
 }
 
 @media screen and (min-width: 1800px) {
@@ -58,7 +78,11 @@
 		background-position: top 5px center;
 		padding: 21em;
 		margin-bottom: -2.5em;
-		background-image: url(../../images/header-FINAL.png);
+		/* background-image: url(../../images/header-FINAL.png); */
+	}
+
+	.about {
+		background-image: url(../../images/gallery/img-4.jpg);
 	}
 
 	.banner-container {
@@ -72,7 +96,7 @@
 		background-position: top 5px center;
 		padding: 25em;
 		margin-bottom: 1em;
-		background-image: url(../../images/header-FINAL.png);
+		/* background-image: url(../../images/header-FINAL.png); */
 	}
 
 	.banner-container {

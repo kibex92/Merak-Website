@@ -17,7 +17,6 @@
 	--merak-gold: #a78049;
 	--form-color: rgba(255, 255, 255, 0.6);
 	--menu-speed: 0.75s;
-	--body-font-size: 1rem;
 }
 
 * {
@@ -60,7 +59,7 @@ body {
 }
 
 .long-text {
-	font-size: var(--body-font-size);
+	font-size: 1rem;
 	margin-bottom: 50px;
 	line-height: 30px;
 	opacity: 1;
@@ -108,7 +107,7 @@ iframe {
 }
 
 .artist-content {
-	font-size: var(--body-font-size);
+	font-size: 1.1rem;
 }
 
 
