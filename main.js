@@ -1,16 +1,16 @@
-let prevScrollpos = window.pageYOffset;
+// let prevScrollpos = window.pageYOffset;
 
-// Hide Menu on Scroll
-window.onscroll = () => {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector(".hamburger").style.top = "0";
-  } else {
-    document.querySelector(".hamburger").style.top = "-100px";
-    // document.querySelector("#back-arrow").style.top = "-100px";
-  }
-  prevScrollpos = currentScrollPos;
-};
+// // Hide Menu on Scroll
+// window.onscroll = () => {
+//   let currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.querySelector(".hamburger").style.top = "0";
+//   } else {
+//     document.querySelector(".hamburger").style.top = "-100px";
+//     // document.querySelector("#back-arrow").style.top = "-100px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
 
 // Gallery Slider
 
@@ -87,5 +87,6 @@ nextImg = (next) => {
 // Blur
 toggleBlur = () => {
   const blur = document.getElementById("blur");
+  console.log(blur);
   blur.classList.toggle("active");
 };

@@ -49,11 +49,11 @@
   color: #fff;
 }
 
-.container-fluid#blur {
+.container#blur {
   transition: filter 0.4s ease-in-out;
 }
 
-.container-fluid#blur.active {
+.container#blur.active {
   filter: blur(5px);
   pointer-events: none;
   user-select: none;
