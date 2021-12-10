@@ -203,3 +203,7 @@ iframe {
 .events {
 	display: none;
 }
+
+#contact-container {
+	height: 80vh;
+}
