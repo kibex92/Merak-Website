@@ -1,51 +1,66 @@
-/* Your button CSS file */
-.btn-medium {
-	color: #999999;
-	padding: 15px 25px;
-	border: 1px solid #999999;
-	border-radius: 50px;
-	font-weight: lighter;
-	opacity: 0.6;
-}
-
-.btn-medium:hover {
-	opacity: 1;
-	color: #999999;
-	text-decoration: none;
-}
-
-.btn-treehouse {
-	color: white;
-	font-weight: bold;
-	background-color: black;
-	padding: 25px 60px;
+.btn-gold {
+	background-color: var(--merak-gold);
+	padding: 18px 12px;
+	color: #ffffff;
 	border-radius: 4px;
-	transition: 0.3s ease;
-	transition-property: background;
-	transition-duration: 0.3s;
-	transition-timing-function: ease;
-	transition-delay: 0s;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	letter-spacing: 1.25px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 1px;
+	height: 22px;
+}
+
+.btn-gold.long {
+	width: 120px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+/* Overwrite bootstrap form button */
+.btn.btn-gold {
+	background-color: var(--merak-gold);
+	padding: 18px;
+	color: #ffffff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 1.25px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 13px;
+}
+.button-holder {
 	text-align: center;
 }
 
-.btn-treehouse:hover {
-	opacity: 1;
-	background-color: #ada168;
+#form-send {
+	line-height: 2px;
 }
 
-.btn-yours {
-	background-color: red;
-	opacity: 0.4;
-	padding: 15px 20px;
-	color: white;
-	border-radius: 10px;
-	transition: 0.3s ease;
-	transition-property: background;
-	transition-duration: 0.3s;
-	transition-timing-function: ease;
-	transition-delay: 0s;
-}
+@media screen and (min-width: 900px) {
+	.btn-gold {
+		padding: 18px;
+		line-height: 1px;
+		height: 0;
+		font-size: 1em;
+	}
 
-.btn-yours:hover {
-	opacity: 1;
+	.btn-gold.long {
+		width: 185px;
+	}
+
+	.event-info {
+		font-size: 1.5rem;
+	}
+
+	.events {
+		max-width: 580px;
+		margin: 0 auto;
+	}
+}
+.event-info {
+	align-items: center;
 }

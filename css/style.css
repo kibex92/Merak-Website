@@ -1,88 +1,213 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
-/* Fontawesome */
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
-@import url('components/container.css');
-@import url('components/banner.css');
-@import url('components/cards.css');
-@import url('components/button.css');
-@import url('components/footer.css');
+/* Components */
+@import url("components/banner.css");
+@import url("components/button.css");
+@import url("components/footer.css");
+@import url("components/card.css");
+@import url("components/menu.css");
+@import url("components/form.css");
+@import url("gallery.css");
 
-@media (max-width: 960px) {
-	/* For a screen < 960px, this CSS will be read */
-	.container {
-		width: 700px;
-	}
-	img {
-	width: 100%;
-	}
+/* Variables */
+:root {
+	--background-color: #2b2b2b;
+	--font-color: rgba(255, 255, 255, 0.87);
+	--merak-gold: #a78049;
+	--form-color: rgba(255, 255, 255, 0.6);
+	--menu-speed: 0.75s;
 }
-@media (max-width: 720px) {
-	/* For a screen < 720px, this CSS will be read */
-	.container {
-		width: 500px;
-	}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-@media (max-width: 540px) {
-	/* For a screen < 540px, this CSS will be read */
-	.container {
-		width: 300px;
-	}
-	#trio-pic {
-		width: 100vw;
-	}
-	body {
-		font-size: 0.8em;
-	}
-	.banner {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-		url('../images/FB-cover-mobile.png');
-		padding: 200px 175px;
-	}
+
+h1 {
+	font-weight: 400 !important;
+}
+
+h5 {
+	font-size: 1rem !important;
+	margin-bottom: 0 !important;
 }
 
 body {
-	margin: 0;
-	font-family: 'Nunito', sans-serif;
+	background-color: #2b2b2b !important;
+	font-family: "Roboto", sans-serif !important;
+	color: var(--font-color) !important;
 }
 
-h1,
-h2,
-h3,
-h4 {
-	font-weight: 500;
+.line-gold {
+	color: var(--merak-gold);
+	width: 30%;
+	margin: 4em auto;
+	opacity: 1;
 }
-h1 {
-	font-size: 2em;
+
+.info {
+	margin-top: 5px;
+	padding: 0.5rem;
 }
-h2 {
-	font-size: 2em;
-	margin-bottom: 0;
+
+.info h1 {
+	margin-top: 30px;
+	font-size: 1.8rem;
+	font-weight: 400;
 }
-p {
-	font-size: 1.5em;
+
+.long-text {
+	font-size: 1.1rem;
+	margin: 0;
+	line-height: 30px;
+	opacity: 1;
 }
-a {
-	text-decoration: none;
+
+.event-info {
+	font-size: var(--body-font-size);
+	display: flex;
+	justify-content: space-between;
+	margin: 0 30px 15px 30px;
+	width: 90%;
+}
+
+.section-header {
+	font-size: 1.8rem;
+	font-weight: 400;
+	margin: 1em 0;
+}
+
+iframe {
+	border-style: none;
+	width: 320px;
+	height: 180px;
+	display: block;
+	margin: 20px auto;
+}
+
+#logo {
+	width: 3.5rem;
+	height: auto;
+	margin: 1em auto;
+	display: block;
+}
+
+.title {
+	margin-top: 3.5rem;
+}
+
+.img-artist {
+	width: 100%;
+}
+
+#instrument {
+	color: var(--merak-gold);
+}
+
+.artist-content {
+	font-size: 1.1rem;
+}
+
+
+#back-arrow {
+	position: relative;
+	left: 63px;
+	top: 20px;
+	font-size: 1.4rem;
+	color: var(--merak-gold);
+	transition: top 0.4s;
+}
+
+#banner-logo {
+	width: 56%;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 22%
+}
+
+
+@media screen and (min-width: 650px) {
+	.info {
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	.event-container {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	#back-arrow {
+		display: none;
+	}
+
+	#logo {
+		width: 6.5em
+	}
+}
+
+
+
+@media screen and (min-width: 992px) {
+	.video-container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1em;
+	}
+
+	iframe {
+		margin: 0 1em;
+		width: 486px;
+		height: 245px;
+	}
+
+	#logo {
+		width: 8.5em
+	}
+	
+}
+
+@media screen and (min-width: 1200px) {
+	iframe {
+		height: 262px;
+		margin: 0 3em;
+	}
+
+	.event-info {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	iframe {
+		height: 275px;
+		margin: 0 3em;
+	}
+
+	.gallery {
+		max-width: 1070px;
+		margin: 0 auto;
+	}
+
+	.contact {
+		max-width: 1070px;
+		margin: 0 auto;
+	}
+}
+
+/* Hide events section until there is more concerts */
+.events {
+	display: none;
+}
+
+#contact-container {
+	height: 80vh;
 }
 
 .text-center {
-	text-align: center;
-}
-
-.fab {
-	font-size: 50px;
-}
-.img-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	margin-top: 1em;
-}
-img {
-	height: auto;
-	width: 100%;
+	margin-bottom: 1em;
 }
