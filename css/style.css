@@ -207,3 +207,7 @@ iframe {
 #contact-container {
 	height: 80vh;
 }
+
+.text-center {
+	margin-bottom: 1em;
+}

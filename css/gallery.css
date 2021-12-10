@@ -43,6 +43,36 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 700px) {
+  .img-btn-prev {
+    left: 15% ;
+  }
+
+  .img-btn-next {
+    right: 15%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .img-btn-prev {
+    left: 24% ;
+  }
+
+  .img-btn-next {
+    right: 24%;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .img-btn-prev {
+    left: 31% ;
+  }
+
+  .img-btn-next {
+    right: 31%;
+  }
+}
+
 .img-btn-next:hover, .img-btn-prev:hover {
   background-color: #282828;
   transition: 0.2s ease-out;

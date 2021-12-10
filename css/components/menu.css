@@ -36,16 +36,26 @@
   .menu-wrap .hamburger {
     left: 125px;
   }
+
+  .menu-wrap .toggler {
+    left: 125px;
+  }
 }
 
 @media screen and (min-width: 1900px) {
   .menu-wrap .hamburger {
     left: 170px;
   }
+  .menu-wrap .toggler {
+    left: 170px;
+  }
 }
 
 @media screen and (min-width: 2500px) {
   .menu-wrap .hamburger {
+    left: 555px;
+  }
+  .menu-wrap .toggler {
     left: 555px;
   }
 }
