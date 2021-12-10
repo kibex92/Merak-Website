@@ -30,8 +30,26 @@
   justify-content: center;
   transition: top 0.4s;
   /* opacity: 0.75; */
-  
 }
+
+@media screen and (min-width: 1400px) {
+  .menu-wrap .hamburger {
+    left: 125px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .menu-wrap .hamburger {
+    left: 170px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .menu-wrap .hamburger {
+    left: 555px;
+  }
+}
+
 
 /* Hamburger line */
 .menu-wrap .hamburger > div {

@@ -43,7 +43,7 @@ body {
 .line-gold {
 	color: var(--merak-gold);
 	width: 30%;
-	margin: auto;
+	margin: 4em auto;
 	opacity: 1;
 }
 
@@ -60,7 +60,7 @@ body {
 
 .long-text {
 	font-size: 1rem;
-	margin-bottom: 4em;
+	margin: 0;
 	line-height: 30px;
 	opacity: 1;
 }
