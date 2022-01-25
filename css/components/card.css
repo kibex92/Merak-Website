@@ -2,181 +2,178 @@
 .cards {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+	grid-template-rows: auto;
 	grid-gap: 1rem;
-  margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .img-grid {
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  object-position: center;
-  height: 11em;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
+	background-size: cover;
+	background-position: center;
+	object-fit: cover;
+	object-position: center;
+	height: 11em;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
 }
 
 .A {
-  grid-column: 1 / span 3;
-  grid-row: 1 ;
-  border-radius: 18px;
-
+	grid-column: 1 / span 3;
+	grid-row: 1;
+	border-radius: 18px;
 }
 .B {
-  grid-column: 1 / span 1;
-  grid-row: 2;
-  border-radius: 9px;
-
+	grid-column: 1 / span 1;
+	grid-row: 2;
+	border-radius: 9px;
 }
 .C {
-  grid-column: 2 / span 1;
-  grid-row: 2;
-  border-radius: 9px;
-
+	grid-column: 2 / span 1;
+	grid-row: 2;
+	border-radius: 9px;
 }
 .D {
-  grid-column: 3 / span 1;
-  grid-row: 2;
-  border-radius: 9px;
-
+	grid-column: 3 / span 1;
+	grid-row: 2;
+	border-radius: 9px;
 }
 .E {
-  grid-column: 1 / span 3;
-  grid-row: 3;
-  border-radius: 18px;
-
+	grid-column: 1 / span 3;
+	grid-row: 3;
+	border-radius: 18px;
 }
 .F {
-  grid-column: 1 / span 1;
-  grid-row: 4;
-  border-radius: 18px;
+	grid-column: 1 / span 1;
+	grid-row: 4;
+	border-radius: 18px;
 }
 .G {
-  grid-column: 2 / span 1;
-  grid-row: 4;
-  border-radius: 18px;
+	grid-column: 2 / span 1;
+	grid-row: 4;
+	border-radius: 18px;
 }
 .H {
-  grid-column: 3 / span 1;
-  grid-row: 4;
-  border-radius: 18px;
+	grid-column: 3 / span 1;
+	grid-row: 4;
+	border-radius: 18px;
 }
 
 @media screen and (min-width: 675px) {
-  .img-grid {
-    height: 10em;
-  }
+	.img-grid {
+		height: 10em;
+	}
 
-  .A {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-    height: 21em;
-  }
+	.A {
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 2;
+		height: 21em;
+	}
 
-  .B {
-    grid-column: 3 / span 1;
-    grid-row: 1;
-    object-position: 100% 10%;
-  }
+	.B {
+		grid-column: 3 / span 1;
+		grid-row: 1;
+		object-position: 100% 10%;
+	}
 
-  .C {
-    grid-column: 3 / span 1;
-    grid-row: 2;
-  }
-  .D {
-    grid-column: 3 / span 1;
-    grid-row: 3;
-  }
-  .E {
-    grid-column: 1 / span 2;
-    grid-row: 3;
-  }
+	.C {
+		grid-column: 3 / span 1;
+		grid-row: 2;
+	}
+	.D {
+		grid-column: 3 / span 1;
+		grid-row: 3;
+	}
+	.E {
+		grid-column: 1 / span 2;
+		grid-row: 3;
+	}
 }
 
-
 @media screen and (min-width: 1000px) {
-  .img-grid {
-    height: 15em;
-  }
+	.img-grid {
+		height: 15em;
+	}
 
-  .A {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-    height: 31em;
-  }
+	.A {
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 2;
+		height: 31em;
+	}
 
-  .B {
-    grid-column: 3 / span 1;
-    grid-row: 1;
-    object-position: 100% 10%;
-  }
+	.B {
+		grid-column: 3 / span 1;
+		grid-row: 1;
+		object-position: 100% 10%;
+	}
 
-  .C {
-    grid-column: 3 / span 1;
-    grid-row: 2;
-  }
-  .D {
-    grid-column: 3 / span 1;
-    grid-row: 3;
-  }
-  .E {
-    grid-column: 1 / span 2;
-    grid-row: 3;
-  }
+	.C {
+		grid-column: 3 / span 1;
+		grid-row: 2;
+		object-position: 100% 20%;
+	}
+	.D {
+		grid-column: 3 / span 1;
+		grid-row: 3;
+		object-position: 100% 20%;
+	}
+	.E {
+		grid-column: 1 / span 2;
+		grid-row: 3;
+	}
 }
 
 /* Events */
 .date {
-  border: 1px solid var(--merak-gold);
-  height: 4rem;
-  width: 4rem;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin-right: 1rem;
+	border: 1px solid var(--merak-gold);
+	height: 4rem;
+	width: 4rem;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	margin-right: 1rem;
 }
 
-#day, #month {
-  margin: 0;
-  position: relative;
+#day,
+#month {
+	margin: 0;
+	position: relative;
 }
 
 #month {
-  top: -8px;
+	top: -8px;
 }
 
 #day {
-  top: 8px
+	top: 8px;
 }
 
-#city,#hall {
-  position: relative;
-  right: 30px;
+#city,
+#hall {
+	position: relative;
+	right: 30px;
 }
 #city {
-  color: var(--merak-gold);
-  margin: 0;
-  font-size: bold;
+	color: var(--merak-gold);
+	margin: 0;
+	font-size: bold;
 }
 
 #hall {
-  font-weight: thin;
-  margin: 0;
-  font-style: italic;
+	font-weight: thin;
+	margin: 0;
+	font-style: italic;
 }
 
 .venue-container {
-  display: flex;
-  align-items: center;
-
+	display: flex;
+	align-items: center;
 }
 
 /* About us */
 .artist-card {
-  max-width: 900px;
-  margin: 0 auto;
+	max-width: 900px;
+	margin: 0 auto;
 }
