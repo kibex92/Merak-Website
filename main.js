@@ -89,3 +89,12 @@ toggleBlur = () => {
 	const blur = document.getElementById("blur");
 	blur.classList.toggle("active");
 };
+
+// Menu Toggle on Reload or going back
+let liItem = document.querySelector("a");
+const toggleMenu = () => {
+	let toggler = document.querySelector(".toggler");
+	toggler.checked = false;
+};
+
+liItem.addEventListener("click", toggleMenu());
