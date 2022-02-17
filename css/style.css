@@ -40,6 +40,12 @@ body {
 	color: var(--font-color) !important;
 }
 
+#quote {
+	font-style: italic;
+	font-size: 0.9rem;
+	margin-top: 0;
+}
+
 .line-gold {
 	color: var(--merak-gold);
 	width: 30%;
@@ -104,10 +110,7 @@ iframe {
 
 #instrument {
 	color: var(--merak-gold);
-}
-
-.artist-content {
-	font-size: 1.1rem;
+	margin-bottom: 0;
 }
 
 #back-arrow {
