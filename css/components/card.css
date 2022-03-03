@@ -171,9 +171,3 @@
 	display: flex;
 	align-items: center;
 }
-
-/* About us */
-.artist-card {
-	max-width: 900px;
-	margin: 0 auto;
-}
