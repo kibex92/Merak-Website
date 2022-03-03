@@ -1,0 +1,28 @@
+.img-artist {
+	width: 100%;
+}
+
+.artist-card {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.artist-content {
+  margin-top: 3em;
+}
+
+@media screen and (min-width: 992px) {
+  .artist-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .img-artist {
+    width: 40%;
+  }
+  .artist-content {
+    max-width: 450px;
+    margin-top: 0;
+  }
+}
+  
