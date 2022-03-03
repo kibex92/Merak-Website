@@ -20,6 +20,6 @@ form {
 
 /* Pageclip */
 .pageclip-form__success {
-
+	font-weight: bold;
 	background: hsla(0,0%,0%, 0.50);
 }
