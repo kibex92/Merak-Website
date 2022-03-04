@@ -1,6 +1,6 @@
 .btn-gold {
 	background-color: var(--merak-gold);
-	padding: 18px 12px;
+	padding: 1.25em .75em;
 	color: #ffffff;
 	border-radius: 4px;
 	text-transform: uppercase;
@@ -37,12 +37,12 @@
 }
 
 #form-send {
-	line-height: 2px;
+	line-height: .125em;
 }
 
 @media screen and (min-width: 900px) {
 	.btn-gold {
-		padding: 18px;
+		padding: 1.125em;
 		line-height: 1px;
 		height: 0;
 		font-size: 1em;
