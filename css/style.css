@@ -68,18 +68,22 @@ h5 {
 	opacity: 1;
 }
 
-
-
 .section-header {
 	font-size: 1.8rem;
 	font-weight: 400;
 	margin: 1em 0;
 }
+.video-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 iframe {
 	border-style: none;
-	width: 320px;
-	height: 180px;
+	height: 169px;
+	width: 100%;
 	display: block;
 	margin: 1.25em auto;
 }
@@ -95,7 +99,6 @@ iframe {
 	margin-top: 3.5rem;
 }
 
-
 #banner-logo {
 	width: 56%;
 	position: absolute;
@@ -105,6 +108,7 @@ iframe {
 	right: 0;
 	top: 22%;
 }
+
 
 @media screen and (min-width: 650px) {
 	.info {
@@ -116,9 +120,6 @@ iframe {
 		max-width: 500px;
 		margin: 0 auto;
 	}
-	#back-arrow {
-		display: none;
-	}
 
 	#logo {
 		width: 6.5em;
@@ -127,8 +128,9 @@ iframe {
 
 @media screen and (min-width: 992px) {
 	.video-container {
-		display: flex;
-		justify-content: center;
+		/* display: flex;
+		justify-content: center; */
+		flex-direction: row;
 		margin-bottom: 1em;
 	}
 
