@@ -8,27 +8,33 @@
 	background-image: url(../../images/merak-website-header.png)
 }
 
-.about {
-	background-image: url(../../images/gallery/img-4.jpg);
+
+@media screen and (max-width: 576px) {
+	.banner {
+		padding: 15em;
+	}
 }
 
 @media screen and (max-width: 360px) {
 	.banner {
 		padding: 9em;
 	}
-	.about {
-		background-image: url(../../images/gallery/img-4.jpg);
+}
+
+
+@media screen and (min-width: 650px) {
+	.banner {
+		background-position: top -65px center;
+		padding: 17em;
+		margin-bottom: -3.5em;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	.banner {
-		background-position: top -65px center;
+		background-position: top -52px center;
 		padding: 18em;
-		margin-bottom: .5em;
-	}
-	.about {
-		background-image: url(../../images/gallery/img-4.jpg);
+		margin-bottom: -3.5em;
 	}
 }
 
@@ -37,21 +43,52 @@
 		background-position: top -64px center;
 		padding: 19em;
 		background-image: url(../../images/merak-website-header.png);
+		margin-bottom: -2.5em;
 	}
-	.about {
-		background-image: url(../../images/gallery/img-4.jpg);
-	}
-
 }
 
 @media screen and (min-width: 900px) {
 	.banner {
-		background-position: top -93px center;
-		padding: 24em;
-		margin-bottom: .5em;
+		background-position: top 6px center;
+		padding: 13em;
+		margin-bottom: -2.5em;
+		background-image: url(../../images/header-FINAL.png);
 	}
-	.about {
-		background-image: url(../../images/gallery/img-4.jpg);
+}
+
+@media screen and (min-width: 990px) {
+	.banner {
+		background-position: top 6px center;
+		padding: 13em;
+		margin-bottom: -2.5em;
+		background-image: url(../../images/header-FINAL.png);
+	}
+}
+
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+	.banner {
+		background-position: top 6px center;
+		padding: 15em;
+		margin-bottom: -2.5em;
+		background-image: url(../../images/header-FINAL.png);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.banner {
+		background-position: top 5px center;
+		padding: 16em;
+		margin-bottom: -2.5em;
+		background-image: url(../../images/header-FINAL.png);
+	}
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1399px) {
+	.banner {
+		background-position: top 6px center;
+		padding: 17em;
+		margin-bottom: -.5em;
+		background-image: url(../../images/header-FINAL.png);
 	}
 }
 
@@ -67,10 +104,6 @@
 		width: 90%;
 		margin: 0 auto;
 	}
-
-	.about {
-		background-image: url(../../images/gallery/img-4.jpg);
-	}
 }
 
 @media screen and (min-width: 1800px) {
@@ -78,11 +111,6 @@
 		background-position: top 5px center;
 		padding: 21em;
 		margin-bottom: -2.5em;
-		/* background-image: url(../../images/header-FINAL.png); */
-	}
-
-	.about {
-		background-image: url(../../images/gallery/img-4.jpg);
 	}
 
 	.banner-container {
@@ -94,9 +122,8 @@
 @media screen and (min-width: 2400px) {
 	.banner {
 		background-position: top 5px center;
-		padding: 25em;
+		padding: 20em;
 		margin-bottom: 1em;
-		/* background-image: url(../../images/header-FINAL.png); */
 	}
 
 	.banner-container {

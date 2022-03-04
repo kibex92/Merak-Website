@@ -186,19 +186,19 @@ iframe {
 
 /* Currently not in use */
 
-/* #back-arrow {
+#back-arrow {
 	position: relative;
 	left: 63px;
 	top: 20px;
 	font-size: 1.4rem;
 	color: var(--merak-gold);
 	transition: top 0.4s;
-} */
+}
 
-/* .event-info {
+.event-info {
 	font-size: var(--body-font-size);
 	display: flex;
 	justify-content: space-between;
 	margin: 0 30px 15px 30px;
 	width: 90%;
-} */
+}
