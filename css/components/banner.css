@@ -42,7 +42,7 @@
 @media screen and (min-width: 700px) and (min-height: 1024px) {
 	.banner {
 		background-position: top -64px center;
-		padding: 19em;
+		padding: 20em;
 		background-image: url(../../images/merak-website-header.png);
 		margin-bottom: -2.5em;
 	}
