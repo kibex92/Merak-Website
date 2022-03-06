@@ -159,15 +159,27 @@
 	border-radius: 18px;
 }
 
-@media screen and (min-width: 675px) {
+@media screen and (min-width: 576px) {
 	.img-grid {
-		height: 10em;
+		height: 15em;
+	}
+
+	.A {
+		object-position: 100% 36%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.img-grid {
+		height: 12em;
 	}
 
 	.A {
 		grid-column: 1 / span 2;
 		grid-row: 1 / span 2;
-		height: 21em;
+		height: 25em;
+		object-position: 30%;
+
 	}
 
 	.B {
@@ -179,10 +191,12 @@
 	.C {
 		grid-column: 3 / span 1;
 		grid-row: 2;
+		object-position: 100% 20%;
 	}
 	.D {
 		grid-column: 3 / span 1;
 		grid-row: 3;
+		object-position: 100% 20%;
 	}
 	.E {
 		grid-column: 1 / span 2;
@@ -190,15 +204,15 @@
 	}
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 992px) {
 	.img-grid {
-		height: 15em;
+		height: 16em;
 	}
 
 	.A {
 		grid-column: 1 / span 2;
 		grid-row: 1 / span 2;
-		height: 31em;
+		height: 33em;
 	}
 
 	.B {
@@ -220,5 +234,6 @@
 	.E {
 		grid-column: 1 / span 2;
 		grid-row: 3;
+		object-position: 100% 10%;
 	}
 }
