@@ -42,7 +42,6 @@ h5 {
 	margin-bottom: 0 !important;
 }
 
-
 .line-gold {
 	color: var(--merak-gold);
 	width: 30%;
@@ -147,7 +146,6 @@ iframe {
 	}
 }
 
-
 @media screen and (min-width: 992px) {
 	.video-container {
 		/* display: flex;
@@ -158,7 +156,6 @@ iframe {
 
 	iframe {
 		margin: 0 1em;
-		width: 486px;
 		height: 245px;
 	}
 
@@ -169,7 +166,7 @@ iframe {
 
 @media screen and (min-width: 1200px) {
 	iframe {
-		height: 262px;
+		height: 260px;
 		margin: 0 3em;
 	}
 
@@ -180,7 +177,7 @@ iframe {
 
 @media screen and (min-width: 1400px) {
 	iframe {
-		height: 275px;
+		height: 309px;
 		margin: 0 3em;
 	}
 
