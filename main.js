@@ -64,7 +64,6 @@ nextImg = (next) => {
 	let getImgWindow = document.querySelector(".img-window");
 	let newImg = document.createElement("img");
 	getImgWindow.appendChild(newImg);
-
 	let calcNewImg;
 	if (next === 1) {
 		calcNewImg = getLatestOpenedImg + 1;
@@ -98,3 +97,15 @@ const toggleMenu = () => {
 };
 
 liItem.addEventListener("click", toggleMenu());
+
+document.addEventListener("keydown", (e) => {
+	if (e.key == "ArrowLeft") {
+		nextImg(0);
+	}
+	if (e.key == "ArrowRight") {
+		nextImg(1);
+	}
+	if (e.key == "Escape") {
+		closeImg();
+	}
+});
