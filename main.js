@@ -47,6 +47,16 @@ galleryImages.forEach((img, index) => {
 			container.appendChild(newPrevBtn);
 			newPrevBtn.classList.add("img-btn-prev");
 			newPrevBtn.setAttribute("onclick", "nextImg(0)");
+
+			const imgWindow = document.querySelector(".img-window");
+			imgWindow.addEventListener("keydown", (e) => {
+				if (e.key == "37") {
+					nextImg(0);
+				}
+				if (e.key == "39") {
+					nextImg(1);
+				}
+			});
 		};
 	};
 });
@@ -98,3 +108,16 @@ const toggleMenu = () => {
 };
 
 liItem.addEventListener("click", toggleMenu());
+
+document.addEventListener("keydown", (e) => {
+	console.log(e);
+	if (e.key == "ArrowLeft") {
+		nextImg(0);
+	}
+	if (e.key == "ArrowRight") {
+		nextImg(1);
+	}
+	if (e.key == "Escape") {
+		closeImg();
+	}
+});
