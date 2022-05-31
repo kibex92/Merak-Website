@@ -30,6 +30,7 @@ body {
 	background-color: #2b2b2b !important;
 	font-family: "Roboto", sans-serif !important;
 	color: var(--font-color) !important;
+	overscroll-behavior: none;
 }
 
 /* Typography */
