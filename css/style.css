@@ -8,8 +8,10 @@
 @import url("components/card.css");
 @import url("components/menu.css");
 @import url("components/form.css");
+@import url("components/new_menu.css");
 @import url("gallery.css");
 @import url("about.css");
+@import url("animations.css");
 
 /* Variables */
 :root {

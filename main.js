@@ -1,16 +1,16 @@
 let prevScrollpos = window.pageYOffset;
 
 // Hide Menu on Scroll
-window.onscroll = () => {
-	let currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		document.querySelector(".hamburger").style.top = "0";
-	} else {
-		document.querySelector(".hamburger").style.top = "-100px";
-		// document.querySelector("#back-arrow").style.top = "-100px";
-	}
-	prevScrollpos = currentScrollPos;
-};
+// window.onscroll = () => {
+// 	let currentScrollPos = window.pageYOffset;
+// 	if (prevScrollpos > currentScrollPos) {
+// 		document.querySelector(".hamburger").style.top = "0";
+// 	} else {
+// 		document.querySelector(".hamburger").style.top = "-100px";
+// 		// document.querySelector("#back-arrow").style.top = "-100px";
+// 	}
+// 	prevScrollpos = currentScrollPos;
+// };
 
 // Gallery Slider
 
@@ -90,13 +90,13 @@ toggleBlur = () => {
 };
 
 // Menu Toggle on Reload or going back
-let liItem = document.querySelector("a");
-const toggleMenu = () => {
-	let toggler = document.querySelector(".toggler");
-	toggler.checked = false;
-};
+// let liItem = document.querySelector("a");
+// const toggleMenu = () => {
+// 	let toggler = document.querySelector(".toggler");
+// 	toggler.checked = false;
+// };
 
-liItem.addEventListener("click", toggleMenu());
+// liItem.addEventListener("click", toggleMenu());
 
 document.addEventListener("keydown", (e) => {
 	if (e.key == "ArrowLeft") {
@@ -107,5 +107,16 @@ document.addEventListener("keydown", (e) => {
 	}
 	if (e.key == "Escape") {
 		closeImg();
+	}
+});
+
+// New menu
+const header = document.querySelector(".main-header");
+window.addEventListener("scroll", () => {
+	const scrollPosition = window.scrollY;
+	if (scrollPosition > 10) {
+		header.classList.add("scrolled");
+	} else {
+		header.classList.remove("scrolled");
 	}
 });

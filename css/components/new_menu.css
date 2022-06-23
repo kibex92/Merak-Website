@@ -1,0 +1,195 @@
+.main-header {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 65px;
+	width: 100vw;
+	padding: 0 10vw;
+	color: #000;
+	z-index: 1;
+	transition: 0.4s ease-out;
+}
+
+.main-header .nav-links .nav-link > a {
+	text-decoration: none;
+	color: var(--font-color);
+	text-transform: uppercase;
+	margin: 0.2rem;
+	padding: 1rem 0.5rem;
+}
+
+.main-header > .nav-links {
+	display: flex;
+	list-style: none;
+	margin: 0;
+}
+
+.main-header .nav-links .nav-link {
+	transition: opacity 0.4s ease-in-out,
+		transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.main-header .nav-links .nav-link:nth-of-type(2) {
+	transition-delay: 0.1s;
+}
+.main-header .nav-links .nav-link:nth-of-type(3) {
+	transition-delay: 0.2s;
+}
+.main-header .nav-links .nav-link:nth-of-type(4) {
+	transition-delay: 0.3s;
+}
+.main-header .nav-links .nav-link > a:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon {
+	position: relative;
+	padding: 26px 10px;
+	cursor: pointer;
+	z-index: 1;
+	display: none;
+}
+
+.menu-icon__line {
+	display: block;
+	position: relative;
+	background: var(--merak-gold);
+	height: 2px;
+	width: 20px;
+	border-radius: 4px;
+}
+
+.menu-icon__line::before,
+.menu-icon__line::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 4px;
+	background: var(--merak-gold);
+	transition: background 0.8s ease;
+}
+
+.menu-icon__line::before {
+	transform: translateY(-5px);
+}
+.menu-icon__line::after {
+	transform: translateY(5px);
+}
+
+.menu-btn {
+	position: absolute;
+	top: -100px;
+}
+
+.menu-btn:focus ~ .menu-icon .menu-icon__line::before {
+	transform: translateY(-7px);
+}
+
+.menu-btn:focus ~ .menu-icon .menu-icon__line::after {
+	transform: translateY(7px);
+}
+
+.main-header.scrolled {
+	height: 50px;
+	background: rgba(0, 0, 0, 0.9);
+	color: #fff;
+}
+
+.menu-header.scrolled .menu-icon .menu-icon__line,
+.menu-header.scrolled .menu-icon .menu-icon__line::before,
+.menu-header.scrolled .menu-icon .menu-icon__line::after {
+	background: #fff;
+}
+
+/* Media queries */
+@media screen and (max-width: 767px) {
+	.main-header .menu-icon {
+		display: block;
+		position: absolute;
+		margin-right: 1rem;
+		right: 0;
+	}
+
+	.main-header .menu-icon .menu-icon__line {
+		animation: closedMid 0.8s backwards;
+		animation-direction: reverse;
+	}
+
+	.main-header .menu-icon .menu-icon__line::before {
+		animation: closedTop 0.8s backwards;
+		animation-direction: reverse;
+	}
+	.main-header .menu-icon .menu-icon__line::after {
+		animation: closedBtm 0.8s backwards;
+		animation-direction: reverse;
+	}
+	.main-header .nav-links {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 10rem;
+		width: 100vw;
+		height: 100vh;
+		font-size: 2rem;
+		color: white;
+		background: #272727;
+		transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+		clip-path: circle(200px at top right);
+	}
+
+	.main-header .nav-links .nav-link {
+		opacity: 0;
+		transform: translateX(100%);
+		width: 100%;
+		text-align: center;
+	}
+	.main-header .nav-links .nav-link a {
+		display: block;
+		/* padding: 2rem 0; */
+	}
+	.main-header .menu-btn:checked ~ .nav-links {
+		opacity: 1;
+		clip-path: circle(100% at center);
+	}
+
+	.main-header .menu-btn:checked ~ .nav-links .nav-link {
+		opacity: 1;
+		transform: translateX(0);
+		transition: opacity 0.4s ease-in-out 1s,
+			transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+	}
+
+	.main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(1) {
+		transition-delay: 0.7s;
+	}
+	.main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(2) {
+		transition-delay: 0.8s;
+	}
+	.main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3) {
+		transition-delay: 0.9s;
+	}
+	.main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(4) {
+		transition-delay: 1s;
+	}
+
+	.main-header .menu-btn:checked ~ .menu-icon {
+		border-radius: 50%;
+		animation: pulse 1s;
+	}
+
+	.main-header .menu-btn:checked ~ .menu-icon .menu-icon__line {
+		animation: openMid 0.8s forwards;
+	}
+	.main-header .menu-btn:checked ~ .menu-icon .menu-icon__line::before {
+		animation: openTop 0.8s forwards;
+	}
+	.main-header .menu-btn:checked ~ .menu-icon .menu-icon__line::after {
+		animation: openBtm 0.8s forwards;
+	}
+}
