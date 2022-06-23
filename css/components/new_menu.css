@@ -1,7 +1,7 @@
 .main-header {
 	position: fixed;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	height: 65px;
 	width: 100vw;
@@ -93,8 +93,9 @@
 
 .main-header.scrolled {
 	height: 50px;
-	background: rgba(0, 0, 0, 0.9);
+	background: var(--background-color);
 	color: #fff;
+	z-index: 1;
 }
 
 .menu-header.scrolled .menu-icon .menu-icon__line,
