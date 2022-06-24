@@ -10,6 +10,7 @@
 @import url("components/form.css");
 @import url("gallery.css");
 @import url("about.css");
+@import url("animations.css");
 
 /* Variables */
 :root {
@@ -162,6 +163,7 @@ iframe {
 
 	#logo {
 		width: 8.5em;
+		margin-top: 5em;
 	}
 }
 
