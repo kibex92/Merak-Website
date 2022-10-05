@@ -196,9 +196,9 @@ iframe {
 }
 
 /* Hide events section until there is more concerts */
-.events {
+/* .events {
 	display: none;
-}
+} */
 
 #contact-container {
 	min-height: 100%;
@@ -221,8 +221,8 @@ iframe {
 
 .event-info {
 	font-size: var(--body-font-size);
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	margin: 0 30px 15px 30px;
 	width: 90%;
 }
