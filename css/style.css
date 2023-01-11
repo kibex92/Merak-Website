@@ -74,6 +74,7 @@ h5 {
 	font-weight: 400;
 	margin: 1em 0;
 }
+
 .video-container {
 	display: flex;
 	flex-direction: column;
@@ -195,10 +196,24 @@ iframe {
 	}
 }
 
-/* Hide events section until there is more concerts */
-/* .events {
-	display: none;
-} */
+/* Events */
+.year {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.current-year {
+	cursor: default;
+}
+
+.fa-caret-right {
+	transition: all 250ms;
+}
+
+.cw-90 {
+	transform: rotate(90deg);
+}
+
 
 #contact-container {
 	min-height: 100%;
