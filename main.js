@@ -120,3 +120,13 @@ window.addEventListener("scroll", () => {
 		header.classList.remove("scrolled");
 	}
 });
+
+// Show events per year
+const year = document.querySelector(".year")
+const events = document.querySelector(".event-container")
+const caret = document.querySelector(".fa-caret-right")
+
+year.addEventListener("click", () => {
+	events.classList.toggle("d-none")
+	caret.classList.toggle("cw-90")
+})
