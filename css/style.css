@@ -202,16 +202,17 @@ iframe {
 	cursor: pointer;
 }
 
-.current-year {
-	cursor: default;
-}
-
-.fa-caret-right {
+.fa-caret-right,
+.fa-caret-down {
 	transition: all 250ms;
 }
 
 .cw-90 {
 	transform: rotate(90deg);
+}
+
+.cw-90-reverse {
+	transform: rotate(-90deg);
 }
 
 

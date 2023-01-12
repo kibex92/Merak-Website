@@ -122,11 +122,25 @@ window.addEventListener("scroll", () => {
 });
 
 // Show events per year
-const year = document.querySelector(".year")
+// const year = document.querySelector(".year")
 const events = document.querySelector(".event-container")
 const caret = document.querySelector(".fa-caret-right")
 
-year.addEventListener("click", () => {
-	events.classList.toggle("d-none")
-	caret.classList.toggle("cw-90")
+// year.addEventListener("click", () => {
+// 	events.classList.toggle("d-none")
+// 	caret.classList.toggle("cw-90")
+// })
+
+const years = document.querySelectorAll(".year")
+let currentYear = "2023"
+years.forEach(year => {
+	year.addEventListener("click", () => {
+		let event = document.getElementById(`${year.innerText.trim()}`)
+		event.classList.toggle("d-none")
+		if (year.innerText.trim() === currentYear) {
+			year.childNodes[1].classList.toggle("cw-90-reverse")
+		} else {
+			year.childNodes[1].classList.toggle("cw-90")
+		}
+	})
 })
