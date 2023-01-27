@@ -215,7 +215,6 @@ iframe {
 	transform: rotate(-90deg);
 }
 
-
 #contact-container {
 	min-height: 100%;
 }
@@ -241,4 +240,8 @@ iframe {
 	grid-template-columns: repeat(3, 1fr);
 	margin: 0 30px 15px 30px;
 	width: 90%;
+}
+
+.line-through {
+	text-decoration: line-through;
 }
