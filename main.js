@@ -1,19 +1,6 @@
 let prevScrollpos = window.pageYOffset;
 
-// Hide Menu on Scroll
-// window.onscroll = () => {
-// 	let currentScrollPos = window.pageYOffset;
-// 	if (prevScrollpos > currentScrollPos) {
-// 		document.querySelector(".hamburger").style.top = "0";
-// 	} else {
-// 		document.querySelector(".hamburger").style.top = "-100px";
-// 		// document.querySelector("#back-arrow").style.top = "-100px";
-// 	}
-// 	prevScrollpos = currentScrollPos;
-// };
-
 // Gallery Slider
-
 let galleryImages = document.querySelectorAll(".img-grid");
 let getLatestOpenedImg;
 let windowWith = window.innerWidth;
@@ -89,15 +76,6 @@ toggleBlur = () => {
 	blur.classList.toggle("active");
 };
 
-// Menu Toggle on Reload or going back
-// let liItem = document.querySelector("a");
-// const toggleMenu = () => {
-// 	let toggler = document.querySelector(".toggler");
-// 	toggler.checked = false;
-// };
-
-// liItem.addEventListener("click", toggleMenu());
-
 document.addEventListener("keydown", (e) => {
 	if (e.key == "ArrowLeft") {
 		nextImg(0);
@@ -122,25 +100,16 @@ window.addEventListener("scroll", () => {
 });
 
 // Show events per year
-// const year = document.querySelector(".year")
-const events = document.querySelector(".event-container")
-const caret = document.querySelector(".fa-caret-right")
-
-// year.addEventListener("click", () => {
-// 	events.classList.toggle("d-none")
-// 	caret.classList.toggle("cw-90")
-// })
-
-const years = document.querySelectorAll(".year")
-let currentYear = "2023"
-years.forEach(year => {
+const years = document.querySelectorAll(".year");
+let currentYear = "2023";
+years.forEach((year) => {
 	year.addEventListener("click", () => {
-		let event = document.getElementById(`${year.innerText.trim()}`)
-		event.classList.toggle("d-none")
+		let event = document.getElementById(`${year.innerText.trim()}`);
+		event.classList.toggle("d-none");
 		if (year.innerText.trim() === currentYear) {
-			year.childNodes[1].classList.toggle("cw-90-reverse")
+			year.childNodes[1].classList.toggle("cw-90-reverse");
 		} else {
-			year.childNodes[1].classList.toggle("cw-90")
+			year.childNodes[1].classList.toggle("cw-90");
 		}
-	})
-})
+	});
+});
