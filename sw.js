@@ -23,6 +23,17 @@ const assets = [
     "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
 ]
 
+// cache size limit function
+const limitCacheSize = (name, size) => {
+    caches.open(name).then(cache => {
+        cache.keys().then(keys => {
+            if (keys.length > size) {
+                cache.delete(keys[0]).then(limitCacheSize(name, size));
+            }
+        })
+    })
+}
+
 self.addEventListener("install", event => {
     // console.log("service worker has been installed");
     event.waitUntil(
@@ -55,9 +66,12 @@ self.addEventListener("fetch", event => {
             return cacheResponse || fetch(event.request).then(fetchResponse => {
                 return caches.open(dynamicCache).then(cache => {
                     cache.put(event.request.url, fetchResponse.clone());
+                    limitCacheSize(dynamicCache, 15)
                     return fetchResponse;
                 })
             })
         })
     )
 })
+
+// TODO: Add offline fallback(#19,#20)
