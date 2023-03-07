@@ -167,5 +167,17 @@
             "type": "image/png",
             "sizes": "1024x1024"
         }
+    ],
+    "shortcuts": [
+        {
+            "name": "Kontakt",
+            "url": "/contact.html",
+            "icons": [
+                {
+                    "src": "/images/icons/icons8-mail-100.png",
+                    "sizes": "100x100"
+                }
+            ]
+        }
     ]
 }
