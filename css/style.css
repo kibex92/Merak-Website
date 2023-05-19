@@ -233,13 +233,6 @@ iframe {
 	margin-left: 0;
 }
 
-@media screen and (max-width: 480px) {
-	/* bootstrap img-fluid for pdf responsiveness */
-	.pdf-page-canvas {
-		height: auto;
-		max-width: 100%;
-	}
-}
 /* Currently not in use */
 
 #back-arrow {
