@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href=" https://cdn.jsdelivr.net/npm/pdfjs-dist@3.6.172/web/pdf_viewer.min.css " rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.6.172/build/pdf.min.js"></script>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -19,6 +21,46 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KDQHKZH');</script>
   <!-- End Google Tag Manager -->
+  <script>
+    // If absolute URL from the remote server is provided, configure the CORS
+    // header on that server.
+    var url =
+      "/data/programmheft-haar.pdf"
+    // Loaded via <script> tag, create shortcut to access PDF.js exports.
+    var pdfjsLib = window["pdfjs-dist/build/pdf"];
+
+    // The workerSrc property shall be specified.
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.6.172/build/pdf.worker.js";
+
+    // Asynchronous download of PDF
+    var loadingTask = pdfjsLib.getDocument(url)
+    var thePdf = null;
+    var scale = 1.5;
+
+    loadingTask.promise.then(
+      function (pdf) {
+        thePdf = pdf;
+        viewer = document.querySelector('.container');
+
+        for (page = 1; page <= pdf.numPages; page++) {
+          canvas = document.createElement("canvas");
+          canvas.className = 'pdf-page-canvas';
+          // canvas.className = 'img-fluid';
+          viewer.appendChild(canvas);
+          renderPage(page, canvas);
+        }
+      });
+
+    function renderPage(pageNumber, canvas) {
+      thePdf.getPage(pageNumber).then(function (page) {
+        viewport = page.getViewport({ scale: scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+        page.render({ canvasContext: canvas.getContext('2d'), viewport: viewport });
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -26,8 +68,9 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDQHKZH" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <iframe src="data/programmheft-haar.pdf" id="pdfViewer"></iframe>
-  <script src="main.js"></script>
+
+  <div class="container">
+  </div>
 </body>
 
 </html>
