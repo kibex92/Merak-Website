@@ -121,3 +121,26 @@ years.forEach((year) => {
 		}
 	});
 });
+// PDF Iframe resize
+
+window.addEventListener("DOMContentLoaded", function () {
+	var iframe = document.getElementById("pdfViewer");
+
+	function resizeIframe() {
+		var viewportWidth =
+			window.innerWidth ||
+			document.documentElement.clientWidth ||
+			document.body.clientWidth;
+		var viewportHeight =
+			window.innerHeight ||
+			document.documentElement.clientHeight ||
+			document.body.clientHeight;
+
+		iframe.style.width = viewportWidth + "px";
+		iframe.style.height = viewportHeight + "px";
+	}
+
+	// Resize the iframe initially and whenever the window is resized
+	resizeIframe();
+	window.addEventListener("resize", resizeIframe);
+});
