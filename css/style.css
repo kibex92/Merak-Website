@@ -240,7 +240,7 @@ iframe {
 	overflow: auto;
 }
 
-.pdf-page-canvas:first-child {
+.pdf-page-canvas {
 	display: block;
 	margin: 5px auto;
 	border: 1px solid rgba(0, 0, 0, 0.2);
