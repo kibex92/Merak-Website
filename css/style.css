@@ -51,6 +51,7 @@ h5 {
 	opacity: 1;
 }
 
+
 .info {
 	margin-top: 5px;
 	padding: 0.5em;
@@ -251,6 +252,7 @@ iframe {
 }
 
 @media screen and (max-width: 480px) {
+
 	/* bootstrap img-fluid for pdf responsiveness */
 	.pdf-page-canvas {
 		height: auto;
@@ -275,6 +277,14 @@ iframe {
 	grid-template-columns: repeat(3, 1fr);
 	margin: 0 30px 15px 30px;
 	width: 90%;
+}
+
+.event-info.past {
+	color: gray;
+}
+
+.city.past {
+	color: gray;
 }
 
 .line-through {

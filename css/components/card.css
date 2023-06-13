@@ -26,18 +26,19 @@
 	top: 8px;
 }
 
-#city,
-#hall {
+.city,
+.hall {
 	position: relative;
 	right: 30px;
 }
-#city {
+
+.city {
 	color: var(--merak-gold);
 	margin: 0;
 	font-size: bold;
 }
 
-#hall {
+.hall {
 	font-weight: thin;
 	margin: 0;
 	font-style: italic;
