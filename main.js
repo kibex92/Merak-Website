@@ -123,24 +123,38 @@ years.forEach((year) => {
 });
 // PDF Iframe resize
 
-window.addEventListener("DOMContentLoaded", function () {
-	var iframe = document.getElementById("pdfViewer");
+// NOT USED
+// if (document.getElementById("pdfViewer")) {
+// 	var iframe = document.getElementById("pdfViewer");
 
-	function resizeIframe() {
-		var viewportWidth =
-			window.innerWidth ||
-			document.documentElement.clientWidth ||
-			document.body.clientWidth;
-		var viewportHeight =
-			window.innerHeight ||
-			document.documentElement.clientHeight ||
-			document.body.clientHeight;
+// 	function resizeIframe() {
+// 		console.log("resizing");
 
-		iframe.style.width = viewportWidth + "px";
-		iframe.style.height = viewportHeight + "px";
-	}
+// 		var viewportWidth =
+// 			window.innerWidth ||
+// 			document.documentElement.clientWidth ||
+// 			document.body.clientWidth;
+// 		var viewportHeight =
+// 			window.innerHeight ||
+// 			document.documentElement.clientHeight ||
+// 			document.body.clientHeight;
 
-	// Resize the iframe initially and whenever the window is resized
-	resizeIframe();
-	window.addEventListener("resize", resizeIframe);
-});
+// 		iframe.style.width = viewportWidth + "px";
+// 		iframe.style.height = viewportHeight + "px";
+// 	}
+// 	resizeIframe();
+// 	window.addEventListener("resize", resizeIframe);
+// }
+
+let videos = document.querySelectorAll(".video-center");
+const resizeVideos = () => {
+	videos.forEach((video) => {
+		let width = video.clientWidth;
+		console.log(width);
+		video.style.height = width / (16 / 9) + "px";
+	});
+};
+
+resizeVideos();
+// Resize the iframe initially and whenever the window is resized
+window.addEventListener("resize", resizeVideos);

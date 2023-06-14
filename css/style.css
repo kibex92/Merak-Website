@@ -51,7 +51,6 @@ h5 {
 	opacity: 1;
 }
 
-
 .info {
 	margin-top: 5px;
 	padding: 0.5em;
@@ -113,21 +112,21 @@ iframe {
 }
 
 @media screen and (min-width: 390px) {
-	iframe {
+	/* iframe {
 		height: 208px;
-	}
+	} */
 }
 
 @media screen and (min-width: 410px) {
-	iframe {
+	/* iframe {
 		height: 221px;
-	}
+	} */
 }
 
 @media screen and (min-width: 576px) {
-	iframe {
+	/* iframe {
 		height: 291px;
-	}
+	} */
 
 	.info {
 		max-width: 650px;
@@ -145,23 +144,23 @@ iframe {
 }
 
 @media screen and (min-width: 768px) {
-	iframe {
+	/* iframe {
 		height: 390px;
-	}
+	} */
 }
 
 @media screen and (min-width: 992px) {
 	.video-container {
-		/* display: flex;
-		justify-content: center; */
-		flex-direction: row;
-		margin-bottom: 1em;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1em;
 	}
 
-	iframe {
+	/* iframe {
 		margin: 0 1em;
 		height: 245px;
-	}
+	} */
 
 	#logo {
 		width: 8.5em;
@@ -170,10 +169,10 @@ iframe {
 }
 
 @media screen and (min-width: 1200px) {
-	iframe {
+	/* iframe {
 		height: 260px;
 		margin: 0 3em;
-	}
+	} */
 
 	.event-info {
 		font-size: 1em;
@@ -181,10 +180,10 @@ iframe {
 }
 
 @media screen and (min-width: 1400px) {
-	iframe {
+	/* iframe {
 		height: 309px;
 		margin: 0 3em;
-	}
+	} */
 
 	.gallery {
 		max-width: 1070px;
@@ -252,7 +251,6 @@ iframe {
 }
 
 @media screen and (max-width: 480px) {
-
 	/* bootstrap img-fluid for pdf responsiveness */
 	.pdf-page-canvas {
 		height: auto;
