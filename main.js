@@ -158,3 +158,127 @@ const resizeVideos = () => {
 resizeVideos();
 // Resize the iframe initially and whenever the window is resized
 window.addEventListener("resize", resizeVideos);
+
+// Dynamic Calendar
+
+concerts = [
+	{
+		day: "05",
+		month: "07",
+		city: "Tertianum Residenz München",
+		hall: "Privatkonzert",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "01",
+		month: "07",
+		city: "Abschlusskonzert",
+		hall: "Reaktorhalle - 18 Uhr | Luisenstr. 37a | Eintritt frei!",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "18",
+		month: "06",
+		city: "Musik im Olympischen Dorf",
+		hall: "Kath. Kirchenzentrum Frieden Christi - 19 Uhr | Eintritt frei!",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "16",
+		month: "06",
+		city: "Balkantage",
+		hall: "Gasteig Saal X - 20 Uhr",
+		link: "https://www.muenchenticket.de/tickets/performances/ep1dyct6pstg/Trio-MERAK",
+		visibility: "",
+		linkText: "Tickets",
+	},
+	{
+		day: "15",
+		month: "06",
+		city: "Lesung der Autorin Ursula Kirchenmayer",
+		hall: "Fraunhofer Theater - 20 Uhr",
+		link: "https://www.fraunhofertheater.de/",
+		visibility: "",
+		linkText: "Infos",
+	},
+	{
+		day: "07",
+		month: "06",
+		city: "Flower Power Festival",
+		hall: "Reaktorhalle - 18 Uhr | Luisenstr. 37a | Eintritt frei!",
+		link: "https://hmtm.de/veranstaltungen/flower-power-festival-sommerkonzert-der-schlagzeugklasse-muenchen/",
+		visibility: "",
+		linkText: "Infos",
+	},
+	{
+		day: "20",
+		month: "05",
+		city: "Haar",
+		hall: "Kleines Theater - 19 Uhr",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "06",
+		month: "05",
+		city: "Lange Nacht der Musik München",
+		hall: "Großer Konzertsaal - 20 Uhr | Arcisstr. 12",
+		link: "https://hmtm.de/veranstaltungen/lange-nacht-der-musik-eine-lange-kammermusik-nacht-2/",
+		visibility: "",
+		linkText: "Infos",
+	},
+	{
+		day: "05",
+		month: "05",
+		city: "Chamberfest HMT Münchenr",
+		hall: "Großer Konzertsaal - 19 Uhr | Arcisstr. 12",
+		link: "https://hmtm.de/veranstaltungen/chamberfest-abschlusskonzert-alles-moeglich/",
+		visibility: "",
+		linkText: "Infos",
+	},
+	{
+		day: "18",
+		month: "04",
+		city: "Gasteig HP8",
+		hall: "Saal X - 18 Uhr Eintritt frei!",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+];
+
+let today = new Date();
+
+let eventContainer = document.getElementById("2023");
+concerts.forEach((concert) => {
+	let eventDate = new Date(2023, concert.month - 1, concert.day);
+	let position =
+		today < eventDate || today.getDate() === eventDate.getDate()
+			? "afterbegin"
+			: "beforeend";
+	let pastClass =
+		today < eventDate || today.getDate() === eventDate.getDate() ? "" : "past";
+	let eventDiv = `<div class="event-info ${pastClass}">
+								<div class="date">
+									<p id="day">${concert.day}.</p>
+									<p id="month">${concert.month}.</p>
+								</div>
+								<div class="venue-container">
+									<div class="venues">
+										<p class="city ${pastClass}">${concert.city}</p>
+										<p class="hall">${concert.hall}</p>
+									</div>
+								</div>
+								<a href="${concert.link}" style="display: inline" target="_blank"
+									class="btn-gold ${concert.visibility}">${concert.linkText}</a>
+							</div>`;
+
+	eventContainer.insertAdjacentHTML(position, eventDiv);
+});
