@@ -121,30 +121,8 @@ years.forEach((year) => {
 		}
 	});
 });
-// PDF Iframe resize
 
-// NOT USED
-// if (document.getElementById("pdfViewer")) {
-// 	var iframe = document.getElementById("pdfViewer");
-
-// 	function resizeIframe() {
-// 		console.log("resizing");
-
-// 		var viewportWidth =
-// 			window.innerWidth ||
-// 			document.documentElement.clientWidth ||
-// 			document.body.clientWidth;
-// 		var viewportHeight =
-// 			window.innerHeight ||
-// 			document.documentElement.clientHeight ||
-// 			document.body.clientHeight;
-
-// 		iframe.style.width = viewportWidth + "px";
-// 		iframe.style.height = viewportHeight + "px";
-// 	}
-// 	resizeIframe();
-// 	window.addEventListener("resize", resizeIframe);
-// }
+// Resize Youtube Iframes
 
 let videos = document.querySelectorAll(".video-center");
 const resizeVideos = () => {
@@ -156,7 +134,6 @@ const resizeVideos = () => {
 };
 
 resizeVideos();
-// Resize the iframe initially and whenever the window is resized
 window.addEventListener("resize", resizeVideos);
 
 // Dynamic Calendar
