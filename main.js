@@ -236,12 +236,14 @@ let today = new Date();
 let eventContainer = document.getElementById("2023");
 concerts.forEach((concert) => {
 	let eventDate = new Date(2023, concert.month - 1, concert.day);
+	let todayStr = `${today.getDate()}.${today.getMonth() + 1}`
+	let eventStr = `${eventDate.getDate()}.${eventDate.getMonth() + 1}`
 	let position =
-		today < eventDate || today.getDate() === eventDate.getDate()
+		today < eventDate || todayStr === eventStr
 			? "afterbegin"
 			: "beforeend";
 	let pastClass =
-		today < eventDate || today.getDate() === eventDate.getDate() ? "" : "past";
+		today < eventDate || todayStr === eventStr ? "" : "past";
 	let eventDiv = `<div class="event-info ${pastClass}">
 								<div class="date">
 									<p id="day">${concert.day}.</p>
