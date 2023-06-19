@@ -149,6 +149,15 @@ concerts = [
 		linkText: "",
 	},
 	{
+		day: "02",
+		month: "07",
+		city: "Gemeinschaftliches Benefizkonzert für Musiker aus Kharkiv",
+		hall: "Kirche St. Barbara - 18 Uhr | Infanteriestr. 15 | Spenden erwünscht",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
 		day: "01",
 		month: "07",
 		city: "Abschlusskonzert",
