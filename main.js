@@ -140,6 +140,15 @@ window.addEventListener("resize", resizeVideos);
 
 concerts = [
 	{
+		day: "17",
+		month: "11",
+		city: "Seeshaupt",
+		hall: "Seeresidenz Alte Post",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
 		day: "05",
 		month: "07",
 		city: "Tertianum Residenz München",
@@ -245,14 +254,11 @@ let today = new Date();
 let eventContainer = document.getElementById("2023");
 concerts.forEach((concert) => {
 	let eventDate = new Date(2023, concert.month - 1, concert.day);
-	let todayStr = `${today.getDate()}.${today.getMonth() + 1}`
-	let eventStr = `${eventDate.getDate()}.${eventDate.getMonth() + 1}`
+	let todayStr = `${today.getDate()}.${today.getMonth() + 1}`;
+	let eventStr = `${eventDate.getDate()}.${eventDate.getMonth() + 1}`;
 	let position =
-		today < eventDate || todayStr === eventStr
-			? "afterbegin"
-			: "beforeend";
-	let pastClass =
-		today < eventDate || todayStr === eventStr ? "" : "past";
+		today < eventDate || todayStr === eventStr ? "afterbegin" : "beforeend";
+	let pastClass = today < eventDate || todayStr === eventStr ? "" : "past";
 	let eventDiv = `<div class="event-info ${pastClass}">
 								<div class="date">
 									<p id="day">${concert.day}.</p>
