@@ -109,7 +109,7 @@ window.addEventListener("scroll", () => {
 
 // Show events per year
 const years = document.querySelectorAll(".year");
-let currentYear = "2023";
+let currentYear = new Date().getFullYear().toString;
 years.forEach((year) => {
 	year.addEventListener("click", () => {
 		let event = document.getElementById(`${year.innerText.trim()}`);
@@ -138,10 +138,23 @@ window.addEventListener("resize", resizeVideos);
 
 // Dynamic Calendar
 
+// Utility function to create dates without time
+
 concerts = [
+	{
+		day: "16",
+		month: "02",
+		city: "Gräfelfing",
+		year: 2024,
+		hall: "Bürgerhaus",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
 	{
 		day: "17",
 		month: "11",
+		year: 2023,
 		city: "Seeshaupt",
 		hall: "Seeresidenz Alte Post",
 		link: "",
@@ -151,6 +164,7 @@ concerts = [
 	{
 		day: "05",
 		month: "07",
+		year: 2023,
 		city: "Tertianum Residenz München",
 		hall: "Privatkonzert",
 		link: "",
@@ -160,6 +174,7 @@ concerts = [
 	{
 		day: "02",
 		month: "07",
+		year: 2023,
 		city: "Gemeinschaftliches Benefizkonzert für Musiker aus Kharkiv",
 		hall: "Kirche St. Barbara - 18 Uhr | Infanteriestr. 15 | Spenden erwünscht",
 		link: "",
@@ -169,6 +184,7 @@ concerts = [
 	{
 		day: "01",
 		month: "07",
+		year: 2023,
 		city: "Abschlusskonzert",
 		hall: "Reaktorhalle - 18 Uhr | Luisenstr. 37a | Eintritt frei!",
 		link: "",
@@ -178,6 +194,7 @@ concerts = [
 	{
 		day: "18",
 		month: "06",
+		year: 2023,
 		city: "Musik im Olympischen Dorf",
 		hall: "Kath. Kirchenzentrum Frieden Christi - 19 Uhr | Eintritt frei!",
 		link: "",
@@ -187,6 +204,7 @@ concerts = [
 	{
 		day: "16",
 		month: "06",
+		year: 2023,
 		city: "Balkantage",
 		hall: "Gasteig Saal X - 20 Uhr",
 		link: "https://www.muenchenticket.de/tickets/performances/ep1dyct6pstg/Trio-MERAK",
@@ -196,6 +214,7 @@ concerts = [
 	{
 		day: "15",
 		month: "06",
+		year: 2023,
 		city: "Lesung der Autorin Ursula Kirchenmayer",
 		hall: "Fraunhofer Theater - 20 Uhr",
 		link: "https://www.fraunhofertheater.de/",
@@ -205,6 +224,7 @@ concerts = [
 	{
 		day: "07",
 		month: "06",
+		year: 2023,
 		city: "Flower Power Festival",
 		hall: "Reaktorhalle - 18 Uhr | Luisenstr. 37a | Eintritt frei!",
 		link: "https://hmtm.de/veranstaltungen/flower-power-festival-sommerkonzert-der-schlagzeugklasse-muenchen/",
@@ -214,6 +234,7 @@ concerts = [
 	{
 		day: "20",
 		month: "05",
+		year: 2023,
 		city: "Haar",
 		hall: "Kleines Theater - 19 Uhr",
 		link: "",
@@ -223,6 +244,7 @@ concerts = [
 	{
 		day: "06",
 		month: "05",
+		year: 2023,
 		city: "Lange Nacht der Musik München",
 		hall: "Großer Konzertsaal - 20 Uhr | Arcisstr. 12",
 		link: "https://hmtm.de/veranstaltungen/lange-nacht-der-musik-eine-lange-kammermusik-nacht-2/",
@@ -232,6 +254,7 @@ concerts = [
 	{
 		day: "05",
 		month: "05",
+		year: 2023,
 		city: "Chamberfest HMT Münchenr",
 		hall: "Großer Konzertsaal - 19 Uhr | Arcisstr. 12",
 		link: "https://hmtm.de/veranstaltungen/chamberfest-abschlusskonzert-alles-moeglich/",
@@ -241,8 +264,89 @@ concerts = [
 	{
 		day: "18",
 		month: "04",
+		year: 2023,
 		city: "Gasteig HP8",
 		hall: "Saal X - 18 Uhr Eintritt frei!",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "06",
+		month: "12",
+		year: 2022,
+		city: "München",
+		hall: "Reaktorhalle",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "17",
+		month: "11",
+		year: 2022,
+		city: "München",
+		hall: "Erlöserkirche Schwabing",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "13",
+		month: "11",
+		year: 2022,
+		city: "München",
+		hall: "Hochschule für Musik und Theater München",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "22",
+		month: "10",
+		year: 2022,
+		city: "München",
+		hall: "Kulturetage",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "28",
+		month: "09",
+		year: 2022,
+		city: "München",
+		hall: "Residenz",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "26",
+		month: "06",
+		year: 2022,
+		city: "Balkantage München",
+		hall: "",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "25",
+		month: "06",
+		year: 2022,
+		city: "Augsburg",
+		hall: "Schaetzlerpalais",
+		link: "",
+		visibility: "d-none",
+		linkText: "",
+	},
+	{
+		day: "02",
+		month: "06",
+		year: 2022,
+		city: "Balkantage München",
+		hall: "",
 		link: "",
 		visibility: "d-none",
 		linkText: "",
@@ -251,28 +355,44 @@ concerts = [
 
 let today = new Date();
 
-let eventContainer = document.getElementById("2023");
-concerts.forEach((concert) => {
-	let eventDate = new Date(2023, concert.month - 1, concert.day);
-	let todayStr = `${today.getDate()}.${today.getMonth() + 1}`;
-	let eventStr = `${eventDate.getDate()}.${eventDate.getMonth() + 1}`;
-	let position =
-		today < eventDate || todayStr === eventStr ? "afterbegin" : "beforeend";
-	let pastClass = today < eventDate || todayStr === eventStr ? "" : "past";
-	let eventDiv = `<div class="event-info ${pastClass}">
-								<div class="date">
-									<p id="day">${concert.day}.</p>
-									<p id="month">${concert.month}.</p>
-								</div>
-								<div class="venue-container">
-									<div class="venues">
-										<p class="city ${pastClass}">${concert.city}</p>
-										<p class="hall">${concert.hall}</p>
-									</div>
-								</div>
-								<a href="${concert.link}" style="display: inline" target="_blank"
-									class="btn-gold ${concert.visibility}">${concert.linkText}</a>
-							</div>`;
+let eventContainers = document
+	.querySelector(".events")
+	.getElementsByClassName("event-container");
 
-	eventContainer.insertAdjacentHTML(position, eventDiv);
-});
+for (let event of eventContainers) {
+	concerts.forEach((concert) => {
+		let eventDate = new Date(concert.year, concert.month - 1, concert.day);
+
+		if (event.id !== concert.year.toString()) {
+			return;
+		}
+
+		let position =
+			today < eventDate ||
+			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+				? "afterbegin"
+				: "beforeend";
+		let pastClass =
+			today < eventDate ||
+			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+				? ""
+				: "past";
+
+		let eventDiv = `<div class="event-info ${pastClass}">
+									<div class="date">
+										<p id="day">${concert.day}.</p>
+										<p id="month">${concert.month}.</p>
+									</div>
+									<div class="venue-container">
+										<div class="venues">
+											<p class="city ${pastClass}">${concert.city}</p>
+											<p class="hall">${concert.hall}</p>
+										</div>
+									</div>
+									<a href="${concert.link}" style="display: inline" target="_blank"
+										class="btn-gold ${concert.visibility}">${concert.linkText}</a>
+								</div>`;
+
+		event.insertAdjacentHTML(position, eventDiv);
+	});
+}
