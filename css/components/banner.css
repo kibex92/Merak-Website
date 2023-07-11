@@ -1,6 +1,6 @@
 .banner {
 	background-size: cover;
-  background-position: center;
+	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
 	padding: 11em;
@@ -132,4 +132,3 @@
 		margin: 0 auto;
 	}
 }
-

@@ -111,23 +111,7 @@ iframe {
 	top: 22%;
 }
 
-@media screen and (min-width: 390px) {
-	/* iframe {
-		height: 208px;
-	} */
-}
-
-@media screen and (min-width: 410px) {
-	/* iframe {
-		height: 221px;
-	} */
-}
-
 @media screen and (min-width: 576px) {
-	/* iframe {
-		height: 291px;
-	} */
-
 	.info {
 		max-width: 650px;
 		margin: 0 auto;
@@ -143,12 +127,6 @@ iframe {
 	}
 }
 
-@media screen and (min-width: 768px) {
-	/* iframe {
-		height: 390px;
-	} */
-}
-
 @media screen and (min-width: 992px) {
 	.video-container {
 		display: grid;
@@ -157,11 +135,6 @@ iframe {
 		grid-gap: 1em;
 	}
 
-	/* iframe {
-		margin: 0 1em;
-		height: 245px;
-	} */
-
 	#logo {
 		width: 8.5em;
 		margin-top: 5em;
@@ -169,22 +142,12 @@ iframe {
 }
 
 @media screen and (min-width: 1200px) {
-	/* iframe {
-		height: 260px;
-		margin: 0 3em;
-	} */
-
 	.event-info {
 		font-size: 1em;
 	}
 }
 
 @media screen and (min-width: 1400px) {
-	/* iframe {
-		height: 309px;
-		margin: 0 3em;
-	} */
-
 	.gallery {
 		max-width: 1070px;
 		margin: 0 auto;
@@ -251,22 +214,12 @@ iframe {
 }
 
 @media screen and (max-width: 480px) {
+
 	/* bootstrap img-fluid for pdf responsiveness */
 	.pdf-page-canvas {
 		height: auto;
 		max-width: 100%;
 	}
-}
-
-/* Currently not in use */
-
-#back-arrow {
-	position: relative;
-	left: 63px;
-	top: 20px;
-	font-size: 1.4rem;
-	color: var(--merak-gold);
-	transition: top 0.4s;
 }
 
 .event-info {

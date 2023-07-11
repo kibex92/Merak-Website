@@ -6,8 +6,6 @@ if ("serviceWorker" in navigator) {
 		.catch((err) => console.log("service worker not registered", err));
 }
 
-let prevScrollpos = window.pageYOffset;
-
 // Gallery Slider
 let galleryImages = document.querySelectorAll(".img-grid");
 let getLatestOpenedImg;
@@ -123,12 +121,10 @@ years.forEach((year) => {
 });
 
 // Resize Youtube Iframes
-
 let videos = document.querySelectorAll(".video-center");
 const resizeVideos = () => {
 	videos.forEach((video) => {
 		let width = video.clientWidth;
-		console.log(width);
 		video.style.height = width / (16 / 9) + "px";
 	});
 };
@@ -137,9 +133,6 @@ resizeVideos();
 window.addEventListener("resize", resizeVideos);
 
 // Dynamic Calendar
-
-// Utility function to create dates without time
-
 concerts = [
 	{
 		day: "16",
@@ -354,7 +347,6 @@ concerts = [
 ];
 
 let today = new Date();
-
 let eventContainers = document
 	.querySelector(".events")
 	.getElementsByClassName("event-container");
@@ -369,12 +361,12 @@ for (let event of eventContainers) {
 
 		let position =
 			today < eventDate ||
-			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+				today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
 				? "afterbegin"
 				: "beforeend";
 		let pastClass =
 			today < eventDate ||
-			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+				today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
 				? ""
 				: "past";
 
