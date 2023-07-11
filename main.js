@@ -109,7 +109,7 @@ window.addEventListener("scroll", () => {
 
 // Show events per year
 const years = document.querySelectorAll(".year");
-let currentYear = "2023";
+let currentYear = new Date().getFullYear().toString;
 years.forEach((year) => {
 	year.addEventListener("click", () => {
 		let event = document.getElementById(`${year.innerText.trim()}`);
