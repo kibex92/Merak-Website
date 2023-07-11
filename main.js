@@ -138,6 +138,8 @@ window.addEventListener("resize", resizeVideos);
 
 // Dynamic Calendar
 
+// Utility function to create dates without time
+
 concerts = [
 	{
 		day: "16",
@@ -284,9 +286,17 @@ for (let event of eventContainers) {
 		if (event.id !== concert.year.toString()) {
 			return;
 		}
+
 		let position =
-			today < eventDate || today === eventDate ? "afterbegin" : "beforeend";
-		let pastClass = today < eventDate || today === eventDate ? "" : "past";
+			today < eventDate ||
+			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+				? "afterbegin"
+				: "beforeend";
+		let pastClass =
+			today < eventDate ||
+			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+				? ""
+				: "past";
 
 		let eventDiv = `<div class="event-info ${pastClass}">
 									<div class="date">
