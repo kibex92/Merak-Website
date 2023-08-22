@@ -15,7 +15,6 @@ galleryImages.forEach((img, index) => {
 	img.onclick = () => {
 		toggleBlur();
 		getLatestOpenedImg = index + 1;
-
 		let container = document.body;
 		let newImgWindow = document.createElement("div");
 		container.appendChild(newImgWindow);
@@ -59,12 +58,17 @@ nextImg = (next) => {
 	getImgWindow.appendChild(newImg);
 	let calcNewImg;
 	if (next === 1) {
+		console.log("next is", next);
+		console.log("latest opened img is", getLatestOpenedImg);
+
 		calcNewImg = getLatestOpenedImg + 1;
+		console.log("calc new img is ", calcNewImg);
 		if (calcNewImg > galleryImages.length) {
 			calcNewImg = 1;
 		}
 	} else if (next === 0) {
 		calcNewImg = getLatestOpenedImg - 1;
+
 		if (calcNewImg < 1) {
 			calcNewImg = galleryImages.length;
 		}
@@ -361,12 +365,12 @@ for (let event of eventContainers) {
 
 		let position =
 			today < eventDate ||
-				today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
 				? "afterbegin"
 				: "beforeend";
 		let pastClass =
 			today < eventDate ||
-				today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
+			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
 				? ""
 				: "past";
 
