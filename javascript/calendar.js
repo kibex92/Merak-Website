@@ -12,17 +12,12 @@ for (let event of eventContainers) {
 		if (event.id !== concert.year.toString()) {
 			return;
 		}
+		const compareDates =
+			today < eventDate ||
+			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0);
 
-		let position =
-			today < eventDate ||
-			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
-				? "afterbegin"
-				: "beforeend";
-		let pastClass =
-			today < eventDate ||
-			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0)
-				? ""
-				: "past";
+		let position = compareDates ? "afterbegin" : "beforeend";
+		let pastClass = compareDates ? "" : "past";
 
 		let eventDiv = `<div class="event-info ${pastClass}">
 									<div class="date">
