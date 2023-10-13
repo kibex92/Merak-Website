@@ -10,10 +10,10 @@ concerts = [
 		linkText: "",
 	},
 	{
-		day: "16",
-		month: "02",
+		day: "18",
+		month: "12",
 		city: "Rotary München",
-		year: 2024,
+		year: 2023,
 		hall: "Privatkonzert",
 		link: "",
 		visibility: "d-none",
