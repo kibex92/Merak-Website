@@ -24,3 +24,16 @@ years.forEach((year) => {
 		}
 	});
 });
+
+// Get month from date in German
+const getMonth = function(index) {
+
+  const objDate = new Date();
+  objDate.setDate(1);
+  objDate.setMonth(index - 1);
+
+  const locale = "de"
+  const month = objDate.toLocaleString(locale, { month: "long" });
+
+  return month;
+}
