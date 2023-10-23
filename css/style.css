@@ -238,6 +238,9 @@ iframe {
 }
 
 .venue {
+	word-wrap: break-word;
+	word-break: break-all;
+	width: 300px;
 	grid-column: 2 /4;
 	grid-row: 2 / 4
 }
