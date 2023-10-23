@@ -179,19 +179,6 @@ iframe {
 	text-decoration: underline;
 }
 
-.fa-caret-right,
-.fa-caret-down {
-	transition: all 250ms;
-}
-
-.cw-90 {
-	transform: rotate(90deg);
-}
-
-.cw-90-reverse {
-	transform: rotate(-90deg);
-}
-
 #contact-container {
 	min-height: 100%;
 }
