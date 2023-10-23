@@ -1,5 +1,5 @@
 /* Events */
-.date {
+/* .date {
 	border: 1px solid var(--merak-gold);
 	height: 4rem;
 	width: 4rem;
@@ -10,9 +10,9 @@
 	justify-content: center;
 	font-size: 1.5rem;
 	margin-right: 1rem;
-}
+} */
 
-#day,
+/* #day,
 #month {
 	margin: 0;
 	position: relative;
@@ -24,27 +24,27 @@
 
 #day {
 	top: 8px;
-}
+} */
 
-.city,
+/* .city,
 .hall {
 	position: relative;
 	right: 30px;
-}
+} */
 
-.city {
+/* .city {
 	color: var(--merak-gold);
 	margin: 0;
 	font-size: bold;
-}
+} */
 
-.hall {
+/* .hall {
 	font-weight: thin;
 	margin: 0;
 	font-style: italic;
-}
+} */
 
-.venue-container {
+/* .venue-container {
 	display: flex;
 	align-items: center;
-}
+} */

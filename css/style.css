@@ -226,9 +226,25 @@ iframe {
 .event-info {
 	font-size: var(--body-font-size);
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin: 0 30px 15px 30px;
-	width: 90%;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.date {
+	grid-column: 1 / 2;
+	grid-row: 1 / 1;
+}
+
+.city {
+	grid-column: 2 / 4;
+}
+
+.venue {
+	grid-column: 2 /4;
+	grid-row: 2 / 4
+}
+
+.tickets {
+	grid-column: 2 / 3;
 }
 
 .event-info.past {

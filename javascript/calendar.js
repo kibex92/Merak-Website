@@ -19,20 +19,20 @@ for (let event of eventContainers) {
 		let position = compareDates ? "afterbegin" : "beforeend";
 		let pastClass = compareDates ? "" : "past";
 
-		let eventDiv = `<div class="event-info ${pastClass}">
-									<div class="date">
-										<p id="day">${concert.day}.</p>
-										<p id="month">${concert.month}.</p>
-									</div>
-									<div class="venue-container">
-										<div class="venues">
-											<p class="city ${pastClass}">${concert.city}</p>
-											<p class="hall">${concert.hall}</p>
-										</div>
-									</div>
-									<a href="${concert.link}" style="display: inline" target="_blank"
-										class="btn-gold ${concert.visibility}">${concert.linkText}</a>
-								</div>`;
+		// let eventDiv = `<div class="event-info ${pastClass}">
+		// 							<div class="date">
+		// 								<p id="day">${concert.day}.</p>
+		// 								<p id="month">${concert.month}.</p>
+		// 							</div>
+		// 							<div class="venue-container">
+		// 								<div class="venues">
+		// 									<p class="city ${pastClass}">${concert.city}</p>
+		// 									<p class="hall">${concert.hall}</p>
+		// 								</div>
+		// 							</div>
+		// 							<a href="${concert.link}" style="display: inline" target="_blank"
+		// 								class="btn-gold ${concert.visibility}">${concert.linkText}</a>
+		// 						</div>`;
 
 		event.insertAdjacentHTML(position, eventDiv);
 	});
