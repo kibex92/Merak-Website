@@ -160,9 +160,23 @@ iframe {
 }
 
 /* Events */
+.years-container {
+	display: flex;
+	justify-content: center;
+}
+
+.years-container h2 {
+	padding: 1em;
+	color: #a78049;
+}
+
 .year {
-	text-decoration: underline;
 	cursor: pointer;
+	font-size: 1.3rem;
+}
+
+.year-active {
+	text-decoration: underline;
 }
 
 .fa-caret-right,
