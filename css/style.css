@@ -226,6 +226,7 @@ iframe {
 	font-size: var(--body-font-size);
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	margin-top: 2em;
 }
 
 .date {
@@ -257,7 +258,9 @@ iframe {
 .tickets {
 	grid-column: 2 / 3;
 	font-size: 1.4rem;
-	padding: 0.5em;
+	padding: 0.3em 0.6em;
+	width: 75%;
+	letter-spacing: 1.8px;
 }
 
 .event-info.past {
