@@ -16,6 +16,14 @@
 	color: #212529 !important;
 }
 
+button {
+  all: unset;
+}
+
+button:focus {
+  outline: revert;
+}
+
 .btn-gold.long {
 	width: 120px;
 	display: block;

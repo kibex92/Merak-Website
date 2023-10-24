@@ -241,6 +241,8 @@ iframe {
 .city {
 	grid-column: 2 / 4;
 	font-size: 1rem;
+	font-weight: bold;
+	color: var(--merak-gold);
 }
 
 .venue {
@@ -254,6 +256,8 @@ iframe {
 
 .tickets {
 	grid-column: 2 / 3;
+	font-size: 1.4rem;
+	padding: 0.5em;
 }
 
 .event-info.past {
