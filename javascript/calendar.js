@@ -25,7 +25,7 @@ concerts.forEach((concert) => {
     <h3 class="date">${concert.day}.${concert.month}</h3>
     <h3 class="city">${concert.city}</h3>
     <p class="venue">${concert.hall}</p>
-    <a href="${concert.link}" class="tickets btn-gold">Tickets</a>
+    <a href="${concert.link}" class="tickets btn-gold ${concert.visibility} ">${concert.linkText}</a>
   `;
 
   // Append the concert info to the corresponding month-section
