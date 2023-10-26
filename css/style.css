@@ -266,6 +266,10 @@ iframe {
 	color: gray;
 }
 
+.current-year {
+	text-decoration: underline;
+}
+
 .city.past {
 	color: gray;
 }
