@@ -257,9 +257,8 @@ iframe {
 
 .tickets {
 	grid-column: 2 / 3;
-	font-size: 1.4rem;
-	padding: 0.3em 0.6em;
-	width: 75%;
+	font-size: 1.2rem;
+	padding: 0.9em;
 	letter-spacing: 1.8px;
 }
 
