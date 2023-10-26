@@ -35,9 +35,9 @@ concerts = [
 		year: 2023,
 		city: "Seeshaupt",
 		hall: "Seeresidenz Alte Post",
-		link: "",
-		visibility: "d-none",
-		linkText: "",
+		link: "https://www.seeresidenz-alte-post.de/kultur/programm/november-2023/",
+		visibility: "",
+		linkText: "Infos",
 	},
 	{
 		day: "05",
