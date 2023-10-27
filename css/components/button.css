@@ -34,7 +34,6 @@ button:focus {
 /* Overwrite bootstrap form button */
 .btn.btn-gold {
 	background-color: var(--merak-gold);
-	padding: 18px;
 	color: #ffffff;
 	border-radius: 4px;
 	text-transform: uppercase;

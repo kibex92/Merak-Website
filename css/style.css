@@ -260,6 +260,7 @@ iframe {
 	font-size: 1.2rem;
 	padding: 0.9em;
 	letter-spacing: 1.8px;
+	width: 125px;
 }
 
 .event-info.past {
