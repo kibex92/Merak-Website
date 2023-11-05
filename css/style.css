@@ -117,7 +117,7 @@ iframe {
 	}
 
 	.event-container {
-		max-width: 500px;
+		max-width: 800px;
 		margin: 0 auto;
 	}
 
@@ -233,6 +233,7 @@ iframe {
 	grid-column: 1 / 2;
 	grid-row: 1 / 1;
 	font-size: 1.1rem;
+	/* height: 30px; */
 }
 
 .month {
@@ -244,11 +245,12 @@ iframe {
 	font-size: 1rem;
 	font-weight: bold;
 	color: var(--merak-gold);
+	/* height: 30px; */
 }
 
 .venue {
 	word-wrap: break-word;
-	word-break: break-all;
+	/* word-break: break-all; */
 	width: 300px;
 	grid-column: 2 /4;
 	grid-row: 2 / 4;
@@ -262,7 +264,11 @@ iframe {
 	letter-spacing: 1.8px;
 	width: 125px;
 }
-
+@media screen and (min-width: 900px ) {
+	.tickets {
+		grid-column: 6 / 4;
+	}
+}
 .event-info.past {
 	color: gray;
 }

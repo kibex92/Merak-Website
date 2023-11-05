@@ -51,7 +51,7 @@ button:focus {
 	line-height: 0.125em;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
 	.btn-gold {
 		padding: 1.125em;
 		line-height: 1px;
@@ -67,10 +67,10 @@ button:focus {
 		font-size: 1.5rem;
 	}
 
-	.events {
+	/* .events {
 		max-width: 580px;
 		margin: 0 auto;
-	}
+	} */
 }
 .event-info {
 	align-items: center;
