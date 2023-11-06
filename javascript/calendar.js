@@ -1,39 +1,45 @@
-// Dynamic Calendar
-
 let today = new Date();
 let eventContainers = document
-	.querySelector(".events")
-	.getElementsByClassName("event-container");
+  .querySelector(".events")
+  .getElementsByClassName("event-container");
 
-for (let event of eventContainers) {
-	concerts.forEach((concert) => {
-		let eventDate = new Date(concert.year, concert.month - 1, concert.day);
+const monthTemplate = document.getElementById("month-template");
+const monthsMap = new Map();
 
-		if (event.id !== concert.year.toString()) {
-			return;
-		}
-		const compareDates =
-			today < eventDate ||
-			today.setHours(0, 0, 0, 0) == eventDate.setHours(0, 0, 0, 0);
+concerts.forEach((concert) => {
+	// Create unique month key to be used with the monthsMap
+  const monthKey = `${concert.month}-${concert.year}`;
 
-		let position = compareDates ? "afterbegin" : "beforeend";
-		let pastClass = compareDates ? "" : "past";
+  // Check if the month-section already exists
+  if (!monthsMap.has(monthKey)) {
+    // If not, create a new month-section
+    let newMonthSection = monthTemplate.content.cloneNode(true);
+    newMonthSection.querySelector('h3').textContent = `${getMonth(concert.month)}`;
+    monthsMap.set(monthKey, newMonthSection);
+  }
 
-		let eventDiv = `<div class="event-info ${pastClass}">
-									<div class="date">
-										<p id="day">${concert.day}.</p>
-										<p id="month">${concert.month}.</p>
-									</div>
-									<div class="venue-container">
-										<div class="venues">
-											<p class="city ${pastClass}">${concert.city}</p>
-											<p class="hall">${concert.hall}</p>
-										</div>
-									</div>
-									<a href="${concert.link}" style="display: inline" target="_blank"
-										class="btn-gold ${concert.visibility}">${concert.linkText}</a>
-								</div>`;
+	// Create a div with concert details to append to the month section
+  const concertInfo = document.createElement('div');
+  concertInfo.classList.add('event-info');
+  concertInfo.innerHTML = `
+    
+    <h3 class="date">${concert.day}.${concert.month}</h3>
+    <h3 class="city">${concert.city}</h3>
+    <p class="venue">${concert.hall}</p>
+    <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
+  `;
 
-		event.insertAdjacentHTML(position, eventDiv);
-	});
+  // Append the concert info to the corresponding month-section
+  monthsMap.get(monthKey).appendChild(concertInfo);
+});
+
+// Append the month-sections to the respective event containers
+for (let i = 0; i < eventContainers.length; i++) {
+  const event = eventContainers[i];
+  const year = event.id;
+  const yearMonths = [...monthsMap.keys()].filter(key => key.endsWith(`-${year}`));
+
+  yearMonths.forEach((monthKey) => {
+    event.appendChild(monthsMap.get(monthKey).cloneNode(true));
+  });
 }

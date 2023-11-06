@@ -116,20 +116,29 @@
 			<!-- Events -->
 			<div class="events">
 				<h2 class="text-center section-header">Events</h1>
-					<h2 class="text-center year">2022 <i class="fas fa-caret-right"></i>
-					</h2>
-					<div class="event-container d-none" id="2022">
-					</div>
-					<h2 class="text-center year current-year">2023
-						<i class="fas fa-caret-down"></i>
-					</h2>
-					<div class="event-container" id="2023">
+					<div class="years-container">
+						<h2 class="text-center year">
+							2022
+						</h2>
+						<h2 class="text-center year current-year">
+							2023
+						</h2>
+						<h2 class="text-center year">
+							2024
+						</h2>
 
 					</div>
-					<h2 class="text-center year">2024 <i class="fas fa-caret-right"></i>
-					</h2>
-					<div class="event-container" id="2024">
+
+					<div class="event-container d-none" id="2022"></div>
+					<div class="event-container" id="2023">
+						<template id="month-template">
+							<section class="month-section mt-4">
+								<h3 class="month">Dezember</h3>
+								<hr>
+							</section>
+						</template>
 					</div>
+					<div class="event-container d-none" id="2024"></div>
 			</div>
 			<hr class="line-gold d-none">
 

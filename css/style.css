@@ -5,7 +5,6 @@
 @import url("components/banner.css");
 @import url("components/button.css");
 @import url("components/footer.css");
-@import url("components/card.css");
 @import url("components/menu.css");
 @import url("components/form.css");
 @import url("gallery.css");
@@ -118,7 +117,7 @@ iframe {
 	}
 
 	.event-container {
-		max-width: 500px;
+		max-width: 800px;
 		margin: 0 auto;
 	}
 
@@ -160,22 +159,23 @@ iframe {
 }
 
 /* Events */
+.years-container {
+	display: flex;
+	justify-content: center;
+}
+
+.years-container h2 {
+	padding: 1em;
+	color: #a78049;
+}
+
 .year {
-	text-decoration: underline;
 	cursor: pointer;
+	font-size: 1.3rem;
 }
 
-.fa-caret-right,
-.fa-caret-down {
-	transition: all 250ms;
-}
-
-.cw-90 {
-	transform: rotate(90deg);
-}
-
-.cw-90-reverse {
-	transform: rotate(-90deg);
+.year-active {
+	text-decoration: underline;
 }
 
 #contact-container {
@@ -223,15 +223,65 @@ iframe {
 }
 
 .event-info {
-	font-size: var(--body-font-size);
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin: 0 30px 15px 30px;
-	width: 90%;
+    font-size: var(--body-font-size);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 2em;
 }
 
+.date {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    font-size: 1.1rem;
+}
+
+.month {
+    font-size: 1rem;
+}
+
+.city,
+.venue {
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.city {
+    grid-column: 2 / 4;
+    font-weight: bold;
+    color: var(--merak-gold);
+}
+
+.venue {
+    word-wrap: break-word;
+    width: 300px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+.tickets {
+    grid-column: 2 / 3;
+    font-size: 1.2rem;
+    padding: 0.9em;
+    letter-spacing: 1.8px;
+    width: 125px;
+}
+
+
+@media screen and (min-width: 900px ) {
+	.tickets {
+		grid-column: 6 / 4;
+		font-size: 1rem;
+	}
+}
 .event-info.past {
 	color: gray;
+}
+
+.current-year {
+	text-decoration: underline;
 }
 
 .city.past {
