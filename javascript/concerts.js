@@ -133,7 +133,7 @@ concerts = [
 		day: "05",
 		month: "05",
 		year: 2023,
-		city: "Chamberfest HMT Münchenr",
+		city: "Chamberfest HMT München",
 		hall: "Großer Konzertsaal - 19 Uhr | Arcisstr. 12",
 		link: "https://hmtm.de/veranstaltungen/chamberfest-abschlusskonzert-alles-moeglich/",
 		visibility: "",

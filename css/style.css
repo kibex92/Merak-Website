@@ -223,50 +223,57 @@ iframe {
 }
 
 .event-info {
-	font-size: var(--body-font-size);
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	margin-top: 2em;
+    font-size: var(--body-font-size);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 2em;
 }
 
 .date {
-	grid-column: 1 / 2;
-	grid-row: 1 / 1;
-	font-size: 1.1rem;
-	/* height: 30px; */
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+    font-size: 1.1rem;
 }
 
 .month {
-	font-size: 1rem;
+    font-size: 1rem;
+}
+
+.city,
+.venue {
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
 }
 
 .city {
-	grid-column: 2 / 4;
-	font-size: 1rem;
-	font-weight: bold;
-	color: var(--merak-gold);
-	/* height: 30px; */
+    grid-column: 2 / 4;
+    font-weight: bold;
+    color: var(--merak-gold);
 }
 
 .venue {
-	word-wrap: break-word;
-	/* word-break: break-all; */
-	width: 300px;
-	grid-column: 2 /4;
-	grid-row: 2 / 4;
-	font-size: 1rem;
+    word-wrap: break-word;
+    width: 300px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
 }
 
 .tickets {
-	grid-column: 2 / 3;
-	font-size: 1.2rem;
-	padding: 0.9em;
-	letter-spacing: 1.8px;
-	width: 125px;
+    grid-column: 2 / 3;
+    font-size: 1.2rem;
+    padding: 0.9em;
+    letter-spacing: 1.8px;
+    width: 125px;
 }
+
+
 @media screen and (min-width: 900px ) {
 	.tickets {
 		grid-column: 6 / 4;
+		font-size: 1rem;
 	}
 }
 .event-info.past {
