@@ -1,5 +1,16 @@
 concerts = [
 	{
+		day: "11",
+		month: "07",
+		year: 2024,
+		city: "Seeshaupt",
+		hall: "Seeresidenz Alte Post",
+		link: "https://www.seeresidenz-alte-post.de/kultur/programm/november-2023/",
+		visibility: "d-none",
+		linkText: "Infos",
+		cancelled: false
+	},
+	{
 		day: "16",
 		month: "02",
 		city: "Gräfelfing",
