@@ -292,3 +292,9 @@ iframe {
 .line-through {
 	text-decoration: line-through;
 }
+
+.city.line-through::after {
+	content: '  VERSCHOBEN';
+	display: inline-block;
+	color: red;
+}
