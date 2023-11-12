@@ -8,6 +8,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "18",
@@ -18,6 +19,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "28",
@@ -28,6 +30,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "17",
@@ -38,6 +41,7 @@ concerts = [
 		link: "https://www.seeresidenz-alte-post.de/kultur/programm/november-2023/",
 		visibility: "",
 		linkText: "Infos",
+		cancelled: true
 	},
 	{
 		day: "05",
@@ -48,6 +52,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "02",
@@ -58,6 +63,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "01",
@@ -68,6 +74,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "18",
@@ -78,6 +85,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "16",
@@ -88,6 +96,7 @@ concerts = [
 		link: "https://www.muenchenticket.de/tickets/performances/ep1dyct6pstg/Trio-MERAK",
 		visibility: "",
 		linkText: "Tickets",
+		cancelled: false
 	},
 	{
 		day: "15",
@@ -98,6 +107,7 @@ concerts = [
 		link: "https://www.fraunhofertheater.de/",
 		visibility: "",
 		linkText: "Infos",
+		cancelled: false
 	},
 	{
 		day: "07",
@@ -108,6 +118,7 @@ concerts = [
 		link: "https://hmtm.de/veranstaltungen/flower-power-festival-sommerkonzert-der-schlagzeugklasse-muenchen/",
 		visibility: "",
 		linkText: "Infos",
+		cancelled: false
 	},
 	{
 		day: "20",
@@ -118,6 +129,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "06",
@@ -128,6 +140,7 @@ concerts = [
 		link: "https://hmtm.de/veranstaltungen/lange-nacht-der-musik-eine-lange-kammermusik-nacht-2/",
 		visibility: "",
 		linkText: "Infos",
+		cancelled: false
 	},
 	{
 		day: "05",
@@ -138,6 +151,7 @@ concerts = [
 		link: "https://hmtm.de/veranstaltungen/chamberfest-abschlusskonzert-alles-moeglich/",
 		visibility: "",
 		linkText: "Infos",
+		cancelled: false
 	},
 	{
 		day: "18",
@@ -148,6 +162,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "06",
@@ -158,6 +173,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "17",
@@ -168,6 +184,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "13",
@@ -178,6 +195,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "22",
@@ -188,6 +206,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "28",
@@ -198,6 +217,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "26",
@@ -208,6 +228,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "25",
@@ -218,6 +239,7 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 	{
 		day: "02",
@@ -228,5 +250,6 @@ concerts = [
 		link: "",
 		visibility: "d-none",
 		linkText: "",
+		cancelled: false
 	},
 ];
