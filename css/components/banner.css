@@ -14,6 +14,12 @@
 	}
 }
 
+@media screen and (min-width: 480px) {
+	.banner {
+		padding: 12em;
+	}
+}
+
 @media screen and (min-width: 575px) {
 	.banner {
 		background-position: top -50px center;
@@ -56,14 +62,14 @@
 	}
 }
 
-@media screen and (min-width: 990px) {
+/* @media screen and (min-width: 990px) {
 	.banner {
 		background-position: top 6px center;
 		padding: 13em;
 		margin-bottom: -2.5em;
 		background-image: url(../../images/header-FINAL.jpg);
 	}
-}
+} */
 
 @media screen and (min-width: 991px) and (max-width: 1199px) {
 	.banner {
