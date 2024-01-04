@@ -1,10 +1,10 @@
 // Resize Youtube Iframes
 let videos = document.querySelectorAll(".video-center");
 const resizeVideos = () => {
-	videos.forEach((video) => {
-		let width = video.clientWidth;
-		video.style.height = width / (16 / 9) + "px";
-	});
+  videos.forEach((video) => {
+    let width = video.clientWidth;
+    video.style.height = width / (16 / 9) + "px";
+  });
 };
 
 resizeVideos();
@@ -14,8 +14,11 @@ window.addEventListener("resize", resizeVideos);
 const years = document.querySelectorAll(".year");
 let currentYear = new Date().getFullYear().toString();
 let currentEvent = document.getElementById(currentYear);
+document.querySelectorAll(".event-container").forEach(e => e.id == currentYear ? e.classList.remove("d-none") : e.classList.add("d-none"))
 
 years.forEach((year) => {
+  year.innerText.trim() == currentYear ? year.classList.add("current-year") : ""
+
   year.addEventListener("click", () => {
     let clickedYear = year.innerText.trim();
     let clickedEvent = document.getElementById(clickedYear);
@@ -36,7 +39,7 @@ years.forEach((year) => {
 });
 
 // Get month from date in German
-const getMonth = function(index) {
+const getMonth = function (index) {
 
   const objDate = new Date();
   objDate.setDate(1);
