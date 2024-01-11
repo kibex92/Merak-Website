@@ -35,3 +35,32 @@
     font-family: "Helvetica", sans-serif;
     color: #c0ccda;
 }
+
+.sib-form {
+    padding: 0 !important;
+}
+
+@media screen and (min-width: 992px) {
+    .sib-form {
+        text-align: center;
+    }
+}
+
+#sib-form {
+    height: 0px;
+    margin-bottom: 1em;
+}
+
+#sib-form-container {
+    margin-bottom: 1em;
+}
+
+#sib-container input::placeholder {
+    background-color: #26272b;
+    color: #6c757d;
+}
+
+.sib-form .entry__field {
+    color: var(--form-color) !important;
+    border: 1px solid var(--form-color) !important
+}
