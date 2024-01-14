@@ -36,13 +36,15 @@
     color: #c0ccda;
 }
 
+/* Brevo Form resets */
+
 .sib-form {
     padding: 0 !important;
 }
 
 @media screen and (min-width: 992px) {
-    .sib-form {
-        text-align: center;
+    #sib-container {
+        max-width: 350px !important;
     }
 }
 
@@ -55,6 +57,10 @@
     margin-bottom: 1em;
 }
 
+#sib-container {
+    padding: 0 !important;
+}
+
 #sib-container input::placeholder {
     background-color: #26272b;
     color: #6c757d;
@@ -62,5 +68,23 @@
 
 .sib-form .entry__field {
     color: var(--form-color) !important;
-    border: 1px solid var(--form-color) !important
+    border: 1px solid var(--form-color) !important;
+    background: unset !important;
+}
+
+.sib-form .entry__field:focus {
+    border-color: #a78049 !important;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #a78049 !important;
+
+}
+
+
+
+.sib-form .input_replaced:checked+.checkbox_tick_positive {
+    border-color: unset !important;
+    background: unset !important;
+}
+
+.sib-form-block {
+    padding: 0 !important;
 }
