@@ -54,7 +54,12 @@ h5 {
 .quotes {
 	text-align: center;
 	font-style: italic;
-	min-height: 350px;
+	min-height: 390px;
+}
+
+.quote-icon {
+	color: var(--merak-gold);
+	font-size: 2rem;
 }
 
 .long-text {
