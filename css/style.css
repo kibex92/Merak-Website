@@ -57,6 +57,12 @@ h5 {
 	min-height: 390px;
 }
 
+.round-indicators {
+	height: 10px !important;
+	width: 10px !important;
+	border-radius: 50%;
+}
+
 .quote-icon {
 	color: var(--merak-gold);
 	font-size: 2rem;
