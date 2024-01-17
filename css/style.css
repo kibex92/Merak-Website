@@ -63,6 +63,22 @@ h5 {
 	border-radius: 50%;
 }
 
+.carousel-indicators [data-bs-target] {
+	opacity: 1;
+	background-color: #EFEFEF;
+}
+
+.round-indicators.active {
+	background-color: var(--merak-gold) !important;
+}
+
+.carousel-item {
+	-webkit-transition: opacity 0.6s !important;
+	-o-transition: opacity 0.6s !important;
+	transition: opacity 0.6s !important;
+				
+}
+
 .quote-icon {
 	color: var(--merak-gold);
 	font-size: 2rem;
