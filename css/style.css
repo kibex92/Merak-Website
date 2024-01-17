@@ -47,14 +47,17 @@ h5 {
 .line-gold {
 	color: var(--merak-gold);
 	width: 30%;
-	margin: 4em auto;
+	margin: 2em auto;
 	opacity: 1;
 }
 
 .quotes {
 	text-align: center;
-	font-style: italic;
 	min-height: 390px;
+}
+
+.quote {
+	font-style: italic;
 }
 
 .round-indicators {
@@ -64,8 +67,8 @@ h5 {
 }
 
 .carousel-indicators [data-bs-target] {
-	opacity: 1;
-	background-color: #EFEFEF;
+	opacity: 1 !important;
+	background-color: #EFEFEF !important;
 }
 
 .round-indicators.active {
