@@ -47,19 +47,57 @@ h5 {
 .line-gold {
 	color: var(--merak-gold);
 	width: 30%;
-	margin: 4em auto;
+	margin: 2em auto;
 	opacity: 1;
 }
 
-.info {
-	margin-top: 5px;
-	padding: 0.5em;
+#carouselExampleFade {
+	min-height: 400px;
 }
 
-.info h1 {
-	margin-top: 2em;
-	font-size: 1.8rem;
-	font-weight: 400;
+.quotes {
+	text-align: center;
+	min-height: 390px;
+}
+
+@media screen and (min-width: 768px) {
+	#carouselExampleFade {
+		max-width: 800px;
+		margin: 0 auto;
+		min-height: 265px;
+	}
+
+	.quotes {
+		min-height: unset;
+	}
+}
+
+
+
+.quote {
+	font-style: italic;
+}
+
+.round-indicators {
+	height: 10px !important;
+	width: 10px !important;
+	border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+	opacity: 1 !important;
+	background-color: #EFEFEF !important;
+}
+
+.round-indicators.active {
+	background-color: var(--merak-gold) !important;
+}
+
+.carousel-item {
+	-webkit-transition: opacity 0.6s !important;
+	-o-transition: opacity 0.6s !important;
+	transition: opacity 0.6s !important;
+				
 }
 
 .long-text {
