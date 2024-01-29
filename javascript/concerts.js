@@ -16,9 +16,9 @@ concerts = [
 		city: "Gräfelfing",
 		year: 2024,
 		hall: "Bürgerhaus",
-		link: "",
-		visibility: "d-none",
-		linkText: "",
+		link: "https://www.muenchenticket.de/tickets/performances/e5usgx66gwjb/Trio-Merak",
+		visibility: "",
+		linkText: "Tickets",
 		cancelled: false
 	},
 	{
