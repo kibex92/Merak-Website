@@ -171,7 +171,7 @@
     "shortcuts": [
         {
             "name": "Kontakt",
-            "url": "/contact.html",
+            "url": "./#contact",
             "icons": [
                 {
                     "src": "/images/icons/icons8-mail-100.png",
