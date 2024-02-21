@@ -57,6 +57,7 @@ h5 {
 
 #carouselExampleFade {
 	min-height: 440px;
+	z-index: -1
 }
 
 .quotes {
