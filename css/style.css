@@ -57,7 +57,6 @@ h5 {
 
 #carouselExampleFade {
 	min-height: 440px;
-	z-index: -1
 }
 
 .quotes {
@@ -102,8 +101,9 @@ h5 {
 	-webkit-transition: opacity 0.6s !important;
 	-o-transition: opacity 0.6s !important;
 	transition: opacity 0.6s !important;
-				
+
 }
+
 
 .long-text {
 	font-size: 1.1rem;

@@ -52,10 +52,30 @@ const getMonth = function (index) {
 }
 
 console.log("Before IIFE");
-(function() {
-      // console.log("Inside IIFE");
-    if (window.location.pathname === '/index.html') {
-              console.log("Redirecting...");
-        window.location.href = '/';
-    }
+(function () {
+  // console.log("Inside IIFE");
+  if (window.location.pathname === '/index.html') {
+    console.log("Redirecting...");
+    window.location.href = '/';
+  }
 })();
+
+// Add negative z-index on menu btn click
+const menuBtn = document.querySelector(".menu-btn")
+const carousel = document.getElementById("carouselExampleFade")
+
+function hideCarousel() {
+  carousel.style.zIndex = '-1';
+}
+
+function showCarousel() {
+  carousel.style.zIndex = '0';
+}
+
+menuBtn.addEventListener("click", () => {
+  if (!menuBtn.checked) {
+    showCarousel()
+  } else {
+    hideCarousel()
+  }
+})
