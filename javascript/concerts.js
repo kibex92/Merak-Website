@@ -11,6 +11,17 @@ concerts = [
 		cancelled: false
 	},
 	{
+		day: "22",
+		month: "06",
+		year: 2024,
+		city: "Kunstnacht Ausgburg",
+		hall: "Moritzsaal | 21 & 22 Uhr",
+		link: "",
+		visibility: "d-none",
+		linkText: "Infos",
+		cancelled: false
+	},
+	{
 		day: "16",
 		month: "02",
 		city: "Gräfelfing",
