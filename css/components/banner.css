@@ -58,18 +58,8 @@
 		background-position: top 6px center;
 		padding: 13em;
 		margin-bottom: -2.5em;
-		background-image: url(../../images/header-FINAL-900.jpg);
 	}
 }
-
-/* @media screen and (min-width: 990px) {
-	.banner {
-		background-position: top 6px center;
-		padding: 13em;
-		margin-bottom: -2.5em;
-		background-image: url(../../images/header-FINAL.jpg);
-	}
-} */
 
 @media screen and (min-width: 991px) and (max-width: 1199px) {
 	.banner {
@@ -94,7 +84,6 @@
 		background-position: top 6px center;
 		padding: 17em;
 		margin-bottom: -0.5em;
-		background-image: url(../../images/header-FINAL-1400.jpg);
 	}
 }
 
@@ -103,7 +92,6 @@
 		background-position: top 5px center;
 		padding: 16em;
 		margin-bottom: 0.5em;
-		background-image: url(../../images/header-FINAL-1400.jpg);
 	}
 
 	.banner-container {
