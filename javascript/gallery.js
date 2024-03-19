@@ -80,7 +80,7 @@ nextImg = (next) => {
 
 // Function to find the closest available filename based on the device width
 function findClosestFilename(deviceWidth) {
-	let availableWidths = [320, 854, 1366, 1920]; // Example available widths
+	let availableWidths = [480, 720, 1152, 1620, 2033]; // Example available widths
 	let closestWidth = availableWidths.reduce((prev, curr) => Math.abs(curr - deviceWidth) < Math.abs(prev - deviceWidth) ? curr : prev);
 	return closestWidth;
 }
