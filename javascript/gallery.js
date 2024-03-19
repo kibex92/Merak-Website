@@ -65,12 +65,26 @@ nextImg = (next) => {
 			calcNewImg = galleryImages.length;
 		}
 	}
-	newImg.setAttribute("src", `./images/gallery/img-${calcNewImg}.jpg`);
+
+	// Construct the image filename based on the current device width
+	let deviceWidth = window.innerWidth;
+	let closestFilename = findClosestFilename(deviceWidth);
+	let imageFilename = `./images/gallery/img-${calcNewImg}-${closestFilename}.jpg`;
+
+	newImg.setAttribute("src", imageFilename);
 	newImg.classList.add("popup-img");
 	newImg.setAttribute("id", "current-img");
 
 	getLatestOpenedImg = calcNewImg;
 };
+
+// Function to find the closest available filename based on the device width
+function findClosestFilename(deviceWidth) {
+	let availableWidths = [320, 854, 1366, 1920]; // Example available widths
+	let closestWidth = availableWidths.reduce((prev, curr) => Math.abs(curr - deviceWidth) < Math.abs(prev - deviceWidth) ? curr : prev);
+	return closestWidth;
+}
+
 
 // Blur
 toggleBlur = () => {
