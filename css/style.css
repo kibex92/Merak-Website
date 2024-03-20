@@ -342,3 +342,10 @@ h5 {
 	display: inline-block;
 	color: red;
 }
+
+/* Captcha style */
+.grecaptcha-badge {
+	width: 72px !important;
+	bottom: 0px !important;
+	right: 0px !important;
+}
