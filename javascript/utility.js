@@ -1,5 +1,5 @@
 // Resize Youtube Iframes
-let videos = document.querySelectorAll(".video-center");
+let videos = document.querySelectorAll(".video");
 const resizeVideos = () => {
   videos.forEach((video) => {
     let width = video.clientWidth;
