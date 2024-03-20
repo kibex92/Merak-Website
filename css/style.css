@@ -127,10 +127,10 @@ h5 {
 
 .video {
 	border-style: none;
-	height: 200px;
 	width: 100%;
 	display: block;
 	margin: 1.25em auto;
+	aspect-ratio: 16 / 9;
 }
 
 #logo {

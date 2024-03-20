@@ -1,15 +1,3 @@
-// Resize Youtube Iframes
-let videos = document.querySelectorAll(".video");
-const resizeVideos = () => {
-  videos.forEach((video) => {
-    let width = video.clientWidth;
-    video.style.height = width / (16 / 9) + "px";
-  });
-};
-
-resizeVideos();
-window.addEventListener("resize", resizeVideos);
-
 // Show events per year
 const years = document.querySelectorAll(".year");
 let currentYear = new Date().getFullYear().toString();
