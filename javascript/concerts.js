@@ -15,7 +15,7 @@ concerts = [
 		month: "06",
 		year: 2024,
 		city: "Kunstnacht Ausgburg",
-		hall: "Moritzsaal | 21 & 22 Uhr",
+		hall: "Moritzsaal | 21:00 & 22:15 Uhr",
 		link: "",
 		visibility: "d-none",
 		linkText: "Infos",
