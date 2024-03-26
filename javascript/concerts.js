@@ -1,10 +1,21 @@
 concerts = [
 	{
+		day: "26",
+		month: "10",
+		year: 2024,
+		city: "München",
+		hall: "Seidlvilla | 18 Uhr",
+		link: "",
+		visibility: "d-none",
+		linkText: "Infos",
+		cancelled: false
+	},
+	{
 		day: "11",
 		month: "07",
 		year: 2024,
 		city: "Seeshaupt",
-		hall: "Seeresidenz Alte Post",
+		hall: "Seeresidenz Alte Post | 20 Uhr",
 		link: "https://www.seeresidenz-alte-post.de/kultur/programm/november-2023/",
 		visibility: "d-none",
 		linkText: "Infos",
