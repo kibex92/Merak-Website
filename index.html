@@ -14,7 +14,11 @@
 	<link rel="canonical" href="https://www.triomerak.de/" />
 	<meta charset="UTF-8" />
 
-	<link rel=" preconnect" href="https://fonts.gstatic.com/">
+	<!-- Youtube Lite -->
+	<link rel="stylesheet" href="node_modules/lite-youtube-embed/src/lite-yt-embed.css" />
+	<script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com/">
 	<link rel="preconnect" href="https://use.fontawesome.com">
 
 	<title>Trio Merak - Piano & Percussion</title>
@@ -108,18 +112,17 @@
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0"
 							class="active round-indicators" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
-							aria-label="Slide 2" class="round-indicators"></button>
-						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
-							aria-label="Slide 3" class="round-indicators"></button>
-						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"
-							aria-label="Slide 4" class="round-indicators"></button>
+						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"
+							class="round-indicators"></button>
+						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"
+							class="round-indicators"></button>
+						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 4"
+							class="round-indicators"></button>
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<p class="quote">
-								„Ich freue mich sehr darüber, dass unsere Hochschule ein so <span
-									class="gold-highlight">hochklassiges
+								„Ich freue mich sehr darüber, dass unsere Hochschule ein so <span class="gold-highlight">hochklassiges
 									Ensemble</span> wie das „Trio Merak“
 								hervorgebracht
 								hat. Für mich symbolisiert dieses Trio exemplarisch das, was ich mir von der jungen
@@ -144,8 +147,7 @@
 
 						<div class="carousel-item">
 							<p class="quote">
-								„Seine eigenen Talente finden und bestmöglich nutzen, sich in seiner <span
-									class="gold-highlight">
+								„Seine eigenen Talente finden und bestmöglich nutzen, sich in seiner <span class="gold-highlight">
 									eigenen
 									musikalischen Sprache</span> auszudrücken, und seine kulturellen Wurzeln nie zu
 								vergessen,
@@ -177,8 +179,7 @@
 						</div>
 						<div class="carousel-item">
 							<p class="quote">
-								"Merak: das sind drei Persönlichkeiten, die mit <span
-									class="gold-highlight">außergewöhnlicher
+								"Merak: das sind drei Persönlichkeiten, die mit <span class="gold-highlight">außergewöhnlicher
 									Besetzung</span> in ihrem Zusammenspiel den
 								berühmten Funken
 								überspringen lassen. <span class="gold-highlight">Pure Freude</span> - im wahrsten
@@ -226,25 +227,18 @@
 			<div class="videos">
 				<h2 class="text-center section-header">Videos</h2>
 				<div class="video-container mb-5">
-					<iframe class="video" src="" data-src="https://www.youtube-nocookie.com/embed/gpjuns8cnOA"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-
-					<iframe class="video" src="" data-src="https://www.youtube-nocookie.com/embed/kqLYJGHIdGU"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen></iframe>
-
-					<iframe class="video" src="" data-src="https://www.youtube.com/embed/c4LlvgZrDvM"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
-
-					<iframe class="video" src="" data-src="https://www.youtube.com/embed/lh2I3zo9PH4"
-						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen></iframe>
+					<lite-youtube class="video" videoid="gpjuns8cnOA" playlabel="Trio Merak: Balkan Suite by Bora Dugic"
+						title="Trio Merak - Balkan Suite (Bora Dugic - Obican balkanski dan)"
+						style="background-image: url('https://i.ytimg.com/vi_webp/gpjuns8cnOA/maxresdefault.webp');"></lite-youtube>
+					<lite-youtube class=" video" videoid="kqLYJGHIdGU" playlabel="Trio Merak: Zora by Boris Knezevic"
+						title="Trio Merak - Zora"
+						style="background-image: url('https://i.ytimg.com/vi_webp/kqLYJGHIdGU/maxresdefault.webp');"></lite-youtube>
+					<lite-youtube class="video" videoid="c4LlvgZrDvM" title="Trio Merak - Misirlou (Live-Performance)"
+						playlabel="Trio Merak: Misirlou"
+						style="background-image: url('https://i.ytimg.com/vi_webp/c4LlvgZrDvM/maxresdefault.webp');"></lite-youtube>
+					<lite-youtube class="video" videoid="lh2I3zo9PH4" title="Trio Merak - Live in concert"
+						playlabel="Trio Merak: Live in Concert"
+						style="background-image: url('https://i.ytimg.com/vi_webp/lh2I3zo9PH4/maxresdefault.webp');"></lite-youtube>
 				</div>
 			</div>
 			<hr class="line-gold">
@@ -294,8 +288,8 @@
 						Anregungen -
 						wir freuen uns von Ihnen zu hören!
 					</p>
-					<form action="https://send.pageclip.co/4yXfoYzNU3vU0IV7Vi3Afv0lbPciXnmY/contact-form"
-						class="pageclip-form" method="POST">
+					<form action="https://send.pageclip.co/4yXfoYzNU3vU0IV7Vi3Afv0lbPciXnmY/contact-form" class="pageclip-form"
+						method="POST">
 						<div class="form-floating mb-3">
 							<input type="text" class="form-control" id="name" name="name" placeholder="">
 							<label for="name">Vorname</label>
@@ -315,8 +309,7 @@
 						</div>
 						<input type="hidden" name="_subject" value="New submission from contact form" />
 						<div class="button-holder">
-							<button type="submit" id="form-send"
-								class="btn btn-gold pageclip-form__submit">Abschicken</button>
+							<button type="submit" id="form-send" class="btn btn-gold pageclip-form__submit">Abschicken</button>
 						</div>
 					</form>
 				</div>
@@ -362,8 +355,7 @@
 								</div>
 							</div>
 							<div></div>
-							<div id="sib-container"
-								class="sib-container--medium sib-container--vertical newsletter-form"
+							<div id="sib-container" class="sib-container--medium sib-container--vertical newsletter-form"
 								style="text-align:center; background-color:#26272b; direction:ltr; ">
 								<form id="sib-form" method="POST"
 									action="https://bb1af6f5.sibforms.com/serve/MUIFAK9HIbS6uqa882TPaZFiQ-VR9iEapNPuvKDHBm84OEqa6VcpuYxquwZ5cFTCjw363s4HK6XkgUsgULCwWbJx6U74s06WogHye2pLiZGiRr6EZGou1kxtAOvj-4pcCutYcluU9v9SlBl0Q5c5m2uhsB0mjVXVG992LiJHLEp1DGMBfq3-3y8hlbR0A1zMvSKoqCjB5Oyr-3LE"
@@ -374,8 +366,8 @@
 												<div class="form__label-row ">
 
 													<div class="entry__field">
-														<input class="input " maxlength="200" type="text" id="VORNAME"
-															name="VORNAME" autocomplete="off" placeholder="Vorname" />
+														<input class="input " maxlength="200" type="text" id="VORNAME" name="VORNAME"
+															autocomplete="off" placeholder="Vorname" />
 													</div>
 												</div>
 
@@ -391,8 +383,8 @@
 												<div class="form__label-row ">
 
 													<div class="entry__field">
-														<input class="input " maxlength="200" type="text" id="NACHNAME"
-															name="NACHNAME" autocomplete="off" placeholder="Nachname" />
+														<input class="input " maxlength="200" type="text" id="NACHNAME" name="NACHNAME"
+															autocomplete="off" placeholder="Nachname" />
 													</div>
 												</div>
 
@@ -408,9 +400,8 @@
 												<div class="form__label-row ">
 
 													<div class="entry__field">
-														<input class="input " type="text" id="EMAIL" name="EMAIL"
-															autocomplete="off" placeholder="E-mail" data-required="true"
-															required />
+														<input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
+															placeholder="E-mail" data-required="true" required />
 													</div>
 												</div>
 
@@ -426,13 +417,12 @@
 												<div class="form__label-row ">
 													<div class="entry__choice">
 														<label>
-															<input type="checkbox" class="input_replaced" value="1"
-																id="OPT_IN" name="OPT_IN" required />
+															<input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN"
+																required />
 															<span class="checkbox checkbox_tick_positive"></span><span
 																style="font-size:14px; text-align:left; font-family:Helvetica, sans-serif; color:#ffffff; background-color:transparent;">
 																<p>Ich möchte euren Newsletter erhalten und akzeptiere
-																	die Datenschutzerklärung.</p><span data-required="*"
-																	style="display: inline;"
+																	die Datenschutzerklärung.</p><span data-required="*" style="display: inline;"
 																	class="entry__label entry__label_optin"></span>
 															</span> </label>
 													</div>
@@ -460,8 +450,7 @@
 
 									<div style="padding: 8px 0;">
 										<div class="g-recaptcha" data-sitekey="6Lfxc1ApAAAAAJr_hqVz7Vy3uItN-dCC_LbuyHCT"
-											data-callback="invisibleCaptchaCallback" data-size="invisible"
-											onclick="executeCaptcha"></div>
+											data-callback="invisibleCaptchaCallback" data-size="invisible" onclick="executeCaptcha"></div>
 									</div>
 
 									<input type="text" name="email_address_check" value="" class="input--hidden">
@@ -489,10 +478,10 @@
 
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<ul class="social-icons">
-								<li><a class="facebook" href="https://www.facebook.com/triomerakmusic"
-										target="_blank"><i class="fab fa-facebook"></i></a></li>
-								<li><a class="instagram" href="https://www.instagram.com/triomerak/"><i
-											class="fab fa-instagram" target="_blank"></i></a></li>
+								<li><a class="facebook" href="https://www.facebook.com/triomerakmusic" target="_blank"><i
+											class="fab fa-facebook"></i></a></li>
+								<li><a class="instagram" href="https://www.instagram.com/triomerak/"><i class="fab fa-instagram"
+											target="_blank"></i></a></li>
 								<li><a class="youtube" href="https://www.youtube.com/@triomerak" target="_blank"><i
 											class="fab fa-youtube"></i></a></li>
 							</ul>
