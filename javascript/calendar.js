@@ -29,26 +29,37 @@ const generateConcertInfo = (concert) => {
   return concertInfo;
 }
 
+const sortedConcerts = concerts
+  .slice()
+  .sort((a, b) => {
+    const aDate = new Date(`${a.year}-${a.month}-${a.day}`);
+    const bDate = new Date(`${b.year}-${b.month}-${b.day}`);
+
+    if (aDate < today) {
+      return 1; 
+    }
+    if (bDate < today) {
+      return -1; 
+    }
+
+    return aDate - bDate; 
+  });
+
+concerts = sortedConcerts;
+
 concerts.forEach((concert) => {
-  // Create unique month key to be used with the monthsMap
   const monthKey = `${concert.month}-${concert.year}`;
 
-  // Check if the month-section already exists
   if (!monthsMap.has(monthKey)) {
-    // If not, create a new month-section
     let newMonthSection = monthTemplate.content.cloneNode(true);
     newMonthSection.querySelector('h3').textContent = `${getMonth(concert.month)}`;
     monthsMap.set(monthKey, newMonthSection);
   }
 
-  // Create a div with concert details to append to the month section
   const concertInfo = generateConcertInfo(concert);
-
-  // Append the concert info to the corresponding month-section
   monthsMap.get(monthKey).appendChild(concertInfo);
 });
 
-// Append the month-sections to the respective event containers
 for (let i = 0; i < eventContainers.length; i++) {
   const event = eventContainers[i];
   const year = event.id;
@@ -58,3 +69,4 @@ for (let i = 0; i < eventContainers.length; i++) {
     event.appendChild(monthsMap.get(monthKey).cloneNode(true));
   });
 }
+
