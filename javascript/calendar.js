@@ -73,7 +73,7 @@ for (let i = 0; i < eventContainers.length; i++) {
   let pastConcertsAddedForYear = false; // Flag to track if past concerts header added for current year
 
   yearMonths.forEach((monthKey) => {
-    if (!pastConcertsAddedForYear && monthsMap.get(monthKey).pastConcertsAdded) {
+    if (!pastConcertsAddedForYear && year === String(today.getFullYear()) && monthsMap.get(monthKey).pastConcertsAdded) {
       const pastConcertsHeader = document.createElement('h4');
       pastConcertsHeader.textContent = 'Vergangene Konzerte';
       pastConcertsHeader.classList.add("mt-4")
