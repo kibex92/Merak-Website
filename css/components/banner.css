@@ -22,7 +22,6 @@
     rgba(0, 0, 0, 0) 75%,
     rgba(0, 0, 0, 1) 100%
   );
-  z-index: 1;
 }
 
 #logo {
@@ -35,7 +34,6 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%) translateY(64%);
-	z-index: 2;
 }
 
 
