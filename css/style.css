@@ -63,6 +63,7 @@ h5 {
 .quotes {
 	text-align: center;
 	min-height: 390px;
+	margin-top: 5em;
 }
 
 @media screen and (min-width: 768px) {
@@ -132,9 +133,7 @@ h5 {
 }
 
 #logo {
-	width: 3.5rem;
-	height: auto;
-	margin: 1em auto;
+	height: 100px;
 	display: block;
 }
 
@@ -142,7 +141,7 @@ h5 {
 	margin-top: 3.5rem;
 }
 
-#banner-logo {
+/* #banner-logo {
 	width: 56%;
 	position: absolute;
 	margin-left: auto;
@@ -150,7 +149,7 @@ h5 {
 	left: 0;
 	right: 0;
 	top: 22%;
-}
+} */
 
 @media screen and (min-width: 576px) {
 	.info {
@@ -163,9 +162,9 @@ h5 {
 		margin: 0 auto;
 	}
 
-	#logo {
+	/* #logo {
 		width: 6.5em;
-	}
+	} */
 }
 
 @media screen and (min-width: 992px) {
@@ -176,10 +175,10 @@ h5 {
 		grid-gap: 1em;
 	}
 
-	#logo {
+	/* #logo {
 		width: 8.5em;
 		margin-top: 5em;
-	}
+	} */
 }
 
 @media screen and (min-width: 1200px) {
