@@ -3,126 +3,96 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
-	padding: 11em;
+	padding: 7em;
 	margin-bottom: -0.5em;
-	background-image: url(../../images/header-600.jpg);
+	background-image: url(../../images/header-480.jpg);
+	position: relative;
 }
 
-@media screen and (max-width: 360px) {
-	.banner {
-		padding: 9em;
-	}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 1;
 }
 
-@media screen and (min-width: 480px) {
-	.banner {
-		padding: 12em;
-	}
+#logo {
+	height: 300px;
+	display: block;
 }
 
-@media screen and (min-width: 575px) {
-	.banner {
-		background-position: top -50px center;
-		padding: 15em;
-		margin-bottom: -3.5em;
-	}
+.logo-container {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(64%);
+	z-index: 2;
 }
 
-@media screen and (min-width: 650px) {
+
+@media screen and (min-width: 520px) {
 	.banner {
-		background-position: top -65px center;
-		padding: 17em;
-		margin-bottom: -3.5em;
+		background-position: top -30px center;
+		padding: 8em;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	.banner {
-		background-position: top -52px center;
+		background-position: top -60px center;
+		padding: 14em;
+		background-image: url(../../images/header-720.jpg);
+	}
+
+	#logo {
+		height: 400px;
+	}
+}
+@media screen and (min-width: 920px) {
+	.banner {
 		padding: 18em;
-		margin-bottom: -3.5em;
 	}
-}
 
-@media screen and (min-width: 700px) and (min-height: 1024px) {
-	.banner {
-		background-position: top -64px center;
-		padding: 20em;
-		background-image: url(../../images/header-900.jpg);
-		margin-bottom: -2.5em;
-	}
-}
-
-@media screen and (min-width: 900px) {
-	.banner {
-		background-position: top 6px center;
-		padding: 13em;
-		margin-bottom: -2.5em;
-	}
-}
-
-@media screen and (min-width: 991px) and (max-width: 1199px) {
-	.banner {
-		background-position: top 6px center;
-		padding: 15em;
-		margin-bottom: -2.5em;
-		background-image: url(../../images/header-FINAL-900.jpg);
+	#logo {
+		height: 450px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.banner {
-		background-position: top 5px center;
-		padding: 16em;
-		margin-bottom: -2.5em;
-		background-image: url(../../images/header-FINAL-1400.jpg);
-	}
-}
-
-@media screen and (min-width: 1300px) and (max-width: 1399px) {
-	.banner {
-		background-position: top 6px center;
-		padding: 17em;
-		margin-bottom: -0.5em;
+		background-position: top -95px center;
+		padding: 15em;
+		background-image: url(../../images/header-1152.jpg);
 	}
 }
 
 @media screen and (min-width: 1400px) {
 	.banner {
-		background-position: top 5px center;
-		padding: 16em;
-		margin-bottom: 0.5em;
-	}
-
-	.banner-container {
-		width: 90%;
-		margin: 0 auto;
+		background-position: top -130px center;
+		padding: 17em;
+		background-image: url(../../images/header-1620.jpg);
 	}
 }
 
 @media screen and (min-width: 1800px) {
 	.banner {
-		background-position: top 5px center;
-		padding: 21em;
-		margin-bottom: -2.5em;
-		background-image: url(../../images/header-FINAL-1900.jpg);
-	}
-
-	.banner-container {
-		width: 85%;
-		margin: 0 auto;
+		padding: 22em;
 	}
 }
 
-@media screen and (min-width: 2400px) {
+@media screen and (min-width: 2200px) {
 	.banner {
-		background-position: top 5px center;
-		padding: 20em;
-		margin-bottom: 1em;
-	}
-
-	.banner-container {
-		width: 65%;
-		margin: 0 auto;
+		background-position: top -200px center;
+		padding: 27em;
+		background-image: url(../../images/header-2914.jpg);
 	}
 }

@@ -44,6 +44,14 @@
 	<meta property="og:site_name" content="Trio Merak" />
 	<meta property="og:type" content="Website" />
 
+	<!-- Preload banner image -->
+	<link rel="preload" as="image" href="images/logo.svg" />
+	<link rel="preload" as="image" href="images/header-480.jpg" media="(max-width: 640px)" />
+	<link rel="preload" as="image" href="images/header-720.jpg" media="(min-width: 641px) and (max-width: 920px)" />
+	<link rel="preload" as="image" href="images/header-1152.jpg" media="(min-width: 1200px)" />
+	<link rel="preload" as="image" href="images/header-1620.jpg" media="(min-width: 1400px)" />
+	<link rel="preload" as="image" href="images/header-2914.jpg" media="(min-width: 2200px)" />
+
 	<!-- ****** faviconit.com favicons ****** -->
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
@@ -98,13 +106,17 @@
 		</ul>
 	</header>
 	<div class="banner-container">
-		<div class="banner"></div>
+		<div class="banner">
+			<div class="logo-container">
+				<img id="logo" src="" data-src="images/logo.svg" alt="Symbol von Merak">
+			</div>
+		</div>
 	</div>
 
 	<main>
 		<div class="container" id="blur">
 			<section class="quotes">
-				<img class="mt-5" src="./images/icons/quote.png" alt="Quote icon">
+				<img src="./images/icons/quote.png" alt="Quote icon">
 				<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0"
