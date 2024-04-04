@@ -71,6 +71,13 @@ h5 {
 	font-style: italic;
 }
 
+#symbol {
+	width: 3.5em;
+	height: auto;
+	margin: 1em auto;
+	display: block;
+}
+
 @media screen and (min-width: 768px) {
 	#carouselExampleFade {
 		max-width: 800px;
