@@ -9,13 +9,19 @@
 	position: relative;
 }
 
+#logo {
+	height: 330px;
+	display: block;
+}
+
 .logo-container {
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(64%);
   /* Adjust the translateY value based on the logo's height to ensure half is inside and half is outside */
 }
+
 /* 
 @media screen and (max-width: 360px) {
 	.banner {
