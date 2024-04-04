@@ -5,7 +5,7 @@
 	width: 100%;
 	padding: 7em;
 	margin-bottom: -0.5em;
-	background-image: url(../../images/header.jpg);
+	background-image: url(../../images/header-480.jpg);
 	position: relative;
 }
 
@@ -39,7 +39,6 @@
 }
 
 
-
 @media screen and (min-width: 520px) {
 	.banner {
 		background-position: top -30px center;
@@ -51,6 +50,7 @@
 	.banner {
 		background-position: top -60px center;
 		padding: 14em;
+		background-image: url(../../images/header-720.jpg);
 	}
 
 	#logo {
@@ -71,6 +71,7 @@
 	.banner {
 		background-position: top -95px center;
 		padding: 15em;
+		background-image: url(../../images/header-1152.jpg);
 	}
 }
 
@@ -78,6 +79,7 @@
 	.banner {
 		background-position: top -130px center;
 		padding: 17em;
+		background-image: url(../../images/header-1620.jpg);
 	}
 }
 
@@ -91,5 +93,6 @@
 	.banner {
 		background-position: top -200px center;
 		padding: 27em;
+		background-image: url(../../images/header-2914.jpg);
 	}
 }
