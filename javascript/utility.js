@@ -93,12 +93,17 @@ function loadCSS(options) {
   if (options.integrity) {
     linkElement.integrity = options.integrity;
   }
-  if (options.crossOrigin) {
-    linkElement.crossOrigin = options.crossOrigin;
+  if (options.crossorigin) {
+    linkElement.crossOrigin = options.crossorigin;
   }
   document.head.appendChild(linkElement);
 }
 
+function loadJS(url) {
+  const scriptElement = document.createElement("script");
+  scriptElement.src = url;
+  document.head.appendChild(scriptElement);
+}
 // Function to handle scroll event to load external CSS
 function handleScroll() {
   var triggerScrollPosition = 500;
@@ -108,7 +113,7 @@ function handleScroll() {
     loadCSS({url: "https://sibforms.com/forms/end-form/build/sib-styles.css"});
     loadCSS({url: "https://s.pageclip.co/v1/pageclip.css"});
     loadCSS({url: "https://use.fontawesome.com/releases/v5.15.4/css/all.css", integrity: "sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm", crossorigin: "anonymous"});
-    
+    loadJS("https://sibforms.com/forms/end-form/build/main.js")
     window.removeEventListener("scroll", handleScroll);
   }
 }
