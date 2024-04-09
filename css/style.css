@@ -64,11 +64,11 @@ h5 {
 	text-align: center;
 	min-height: 390px;
 	margin-top: 7em;
-}
 
-.quotes h1 {
+	h1 {
 	font-size: inherit;
 	font-style: italic;
+	}
 }
 
 #symbol {
@@ -76,18 +76,6 @@ h5 {
 	height: auto;
 	margin: 1em auto;
 	display: block;
-}
-
-@media screen and (min-width: 768px) {
-	#carouselExampleFade {
-		max-width: 800px;
-		margin: 0 auto;
-		min-height: 265px;
-	}
-
-	.quotes {
-		min-height: unset;
-	}
 }
 
 .quote {
@@ -115,7 +103,6 @@ h5 {
 	transition: opacity 0.6s !important;
 
 }
-
 
 .long-text {
 	font-size: 1.1rem;
@@ -146,60 +133,15 @@ h5 {
 	margin-top: 3.5rem;
 }
 
-@media screen and (min-width: 576px) {
-	.info {
-		max-width: 650px;
-		margin: 0 auto;
-	}
-
-	.event-container {
-		max-width: 800px;
-		margin: 0 auto;
-	} 
-}
-
-@media screen and (min-width: 768px) {
-	.quotes {
-		margin-top: 10em;
-	}
-}
-
-@media screen and (min-width: 992px) {
-	.video-container {
-		display: grid;
-		grid-auto-flow: row;
-		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 1em;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.event-info {
-		font-size: 1em;
-	}
-}
-
-@media screen and (min-width: 1400px) {
-	.gallery {
-		max-width: 1070px;
-		margin: 0 auto;
-	}
-
-	.contact-form {
-		max-width: 1070px;
-		margin: 0 auto;
-	}
-}
-
 /* Events */
 .years-container {
 	display: flex;
 	justify-content: center;
-}
 
-.years-container h2 {
+	h2 {
 	padding: 1em;
 	color: #a78049;
+	}
 }
 
 .year {
@@ -215,27 +157,6 @@ h5 {
 	min-height: 100%;
 }
 
-.text-center {
-	margin-bottom: 1em;
-}
-
-#pdfViewer {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: none;
-	margin-left: 0;
-}
-
-#pdf-viewer {
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
-	overflow: auto;
-}
-
 .pdf-page-canvas {
 	display: block;
 	margin: 5px auto;
@@ -246,20 +167,12 @@ h5 {
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 480px) {
-
-	/* bootstrap img-fluid for pdf responsiveness */
-	.pdf-page-canvas {
-		height: auto;
-		max-width: 100%;
-	}
-}
-
 .event-info {
 	font-size: var(--body-font-size);
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	margin-top: 2em;
+	align-items: center;
 }
 
 .date {
@@ -303,23 +216,8 @@ h5 {
 	width: 125px;
 }
 
-@media screen and (min-width: 900px) {
-	.tickets {
-		grid-column: 6 / 4;
-		font-size: 1rem;
-	}
-}
-
-.event-info.past {
-	color: gray;
-}
-
 .current-year {
 	text-decoration: underline;
-}
-
-.city.past {
-	color: gray;
 }
 
 .line-through {
@@ -338,3 +236,71 @@ h5 {
 	bottom: 0px !important;
 	right: 0px !important;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+	/* bootstrap img-fluid for pdf responsiveness */
+	.pdf-page-canvas {
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.info {
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	.event-container {
+		max-width: 800px;
+		margin: 0 auto;
+	} 
+}
+
+@media screen and (min-width: 768px) {
+	#carouselExampleFade {
+		max-width: 800px;
+		margin: 0 auto;
+		min-height: 265px;
+	}
+
+	.quotes {
+		min-height: unset;
+		margin-top: 10em;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.video-container {
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1em;
+	}
+
+	.tickets {
+		grid-column: 6 / 4;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.event-info {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.gallery {
+		max-width: 1070px;
+		margin: 0 auto;
+	}
+
+	.contact-form {
+		max-width: 1070px;
+		margin: 0 auto;
+	}
+}
+

@@ -44,6 +44,7 @@ button:focus {
 	text-align: center;
 	line-height: 13px;
 }
+
 .button-holder {
 	text-align: center;
 }
@@ -68,12 +69,4 @@ button:focus {
 	.event-info {
 		font-size: 1.5rem;
 	}
-
-	/* .events {
-		max-width: 580px;
-		margin: 0 auto;
-	} */
-}
-.event-info {
-	align-items: center;
 }
