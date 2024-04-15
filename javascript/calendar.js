@@ -1,28 +1,20 @@
 const today = new Date();
 const eventContainers = document.querySelector(".events").getElementsByClassName("event-container");
 
-// Function to generate concert info
 const generateConcertInfo = (concert) => {
-  const concertInfo = document.createElement('div');
-  concertInfo.classList.add('event-info');
+  const eventInfo = document.createElement('div');
+  eventInfo.classList.add('event-info');
 
-  if (concert.cancelled) {
-    concertInfo.innerHTML = `
-      <h3 class="date line-through">${concert.day}.${concert.month}</h3>
-      <h3 class="city line-through">${concert.city} </h3>
-      <p class="venue line-through">${concert.hall}</p>
-      <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
-    `;
-  } else {
-    concertInfo.innerHTML = `
-      <h3 class="date">${concert.day}.${concert.month}</h3>
-      <h3 class="city">${concert.city}</h3>
-      <p class="venue">${concert.hall}</p>
-      <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
-    `;
-  }
+  const cancelled = concert.cancelled ? 'line-through' : '';
 
-  return concertInfo;
+  eventInfo.innerHTML = `
+    <h3 class="date ${cancelled}">${concert.day}.${concert.month}</h3>
+    <h3 class="city ${cancelled}">${concert.city}</h3>
+    <p class="venue">${concert.hall}</p>
+    <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
+  `;
+
+  return eventInfo;
 }
 
 // Sort concerts based on date
