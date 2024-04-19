@@ -3,46 +3,53 @@ let galleryImages = document.querySelectorAll(".img-grid");
 let getLatestOpenedImg;
 let windowWith = window.innerWidth;
 
+
+function createGalleryImagePopup(img) {
+	const container = document.body;
+	const newImgWindow = document.createElement("div");
+	container.appendChild(newImgWindow);
+	newImgWindow.classList.add("img-window");
+	newImgWindow.setAttribute("onclick", "closeImg()");
+
+	const newImg = img.cloneNode(true);
+	newImgWindow.appendChild(newImg);
+	newImg.classList.remove("img-grid");
+	newImg.classList.add("popup-img");
+	newImg.setAttribute("id", "current-img");
+
+	newImg.onload = () => {
+		const newNextBtn = createButton("img-btn-next", "fas fa-chevron-right", "nextImg(1)");
+		container.appendChild(newNextBtn);
+
+		const newPrevBtn = createButton("img-btn-prev", "fas fa-chevron-left", "nextImg(0)");
+		container.appendChild(newPrevBtn);
+	};
+}
+
+function createButton(className, iconClass, onclick) {
+	const newBtn = document.createElement("a");
+	newBtn.innerHTML = `<i class="${iconClass}"></i>`;
+	newBtn.classList.add(className);
+	newBtn.setAttribute("onclick", onclick);
+	return newBtn;
+}
+
 galleryImages.forEach((img, index) => {
 	img.onclick = () => {
 		toggleBlur();
 		getLatestOpenedImg = index + 1;
-		let container = document.body;
-		let newImgWindow = document.createElement("div");
-		container.appendChild(newImgWindow);
-		newImgWindow.classList.add("img-window");
-		newImgWindow.setAttribute("onclick", "closeImg()");
-
-		let newImg = img.cloneNode(true);
-		newImgWindow.appendChild(newImg);
-		newImg.classList.remove("img-grid");
-		newImg.classList.add("popup-img");
-		newImg.setAttribute("id", "current-img");
-
-		newImg.onload = () => {
-			let newNextBtn = document.createElement("a");
-			newNextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
-			container.appendChild(newNextBtn);
-			newNextBtn.classList.add("img-btn-next");
-			newNextBtn.setAttribute("onclick", "nextImg(1)");
-
-			let newPrevBtn = document.createElement("a");
-			newPrevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
-			container.appendChild(newPrevBtn);
-			newPrevBtn.classList.add("img-btn-prev");
-			newPrevBtn.setAttribute("onclick", "nextImg(0)");
-		};
+		createGalleryImagePopup(img, index);
 	};
 });
 
-closeImg = () => {
+const closeImg = () => {
 	document.querySelector(".img-window").remove();
 	document.querySelector(".img-btn-next").remove();
 	document.querySelector(".img-btn-prev").remove();
 	toggleBlur();
 };
 
-nextImg = (next) => {
+const nextImg = (next) => {
 	document.querySelector("#current-img").remove();
 
 	let getImgWindow = document.querySelector(".img-window");
@@ -87,19 +94,25 @@ function findClosestFilename(deviceWidth) {
 
 
 // Blur
-toggleBlur = () => {
+const toggleBlur = () => {
 	const blur = document.getElementById("blur");
 	blur.classList.toggle("active");
 };
 
-document.addEventListener("keydown", (e) => {
-	if (e.key == "ArrowLeft") {
-		nextImg(0);
+function handleKeydown(event) {
+	switch (event.key) {
+		case "ArrowLeft":
+			nextImg(0);
+			break;
+		case "ArrowRight":
+			nextImg(1);
+			break;
+		case "Escape":
+			closeImg();
+			break;
+		default:
+			return;
 	}
-	if (e.key == "ArrowRight") {
-		nextImg(1);
-	}
-	if (e.key == "Escape") {
-		closeImg();
-	}
-});
+}
+
+document.addEventListener("keydown", handleKeydown);
