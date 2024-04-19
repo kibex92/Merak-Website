@@ -18,20 +18,21 @@ const generateConcertInfo = (concert) => {
 }
 
 // Sort concerts based on date
-const sortedConcerts = concerts.slice().sort((a, b) => {
-  const aDate = new Date(`${a.year}-${a.month}-${a.day}`);
-  const bDate = new Date(`${b.year}-${b.month}-${b.day}`);
+const sortConcerts = (concerts) => {
+  return concerts.slice().sort((a,b) => {
+    const aDate = new Date(`${a.year}-${a.month}-${a.day}`);
+    const bDate = new Date(`${b.year}-${b.month}-${b.day}`);
 
-  if (aDate < today) {
-    return 1;
-  }
-  if (bDate < today) {
-    return -1;
-  }
+    if (aDate < today) {
+      return 1;
+    }
+    if (bDate < today) {
+      return -1;
+    }
 
-  return aDate - bDate;
-});
-
+    return aDate - bDate;
+  })
+}
 // Group concerts by month and year
 function groupConcertsByMonthAndYear(concerts) {
   const monthsMap = new Map();
@@ -84,4 +85,4 @@ function addConcertSectionsToEventContainers(eventContainers, monthsMap) {
   }
 }
 
-addConcertSectionsToEventContainers(eventContainers, monthsMap);
+export { addConcertSectionsToEventContainers, groupConcertsByMonthAndYear, sortConcerts, eventContainers }
