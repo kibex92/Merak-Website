@@ -22,6 +22,18 @@ export class Calendar {
   return eventInfo;
 }
 
+  // Get month from date in German
+  getMonth(index) {
+
+    const objDate = new Date();
+    objDate.setDate(1);
+    objDate.setMonth(index - 1);
+
+    const locale = "de"
+    const month = objDate.toLocaleString(locale, { month: "long" });
+
+    return month;
+  }
   // Group concerts by month and year
   groupConcertsByMonthAndYear(concerts) {
     const monthsMap = new Map();
@@ -34,7 +46,7 @@ export class Calendar {
           pastConcertsAdded: false
         });
         monthsMap.get(monthKey).monthSection.classList.add('month-section', 'mt-4');
-        monthsMap.get(monthKey).monthSection.innerHTML = `<h3 class="month">${getMonth(concert.month)}</h3><hr>`;
+        monthsMap.get(monthKey).monthSection.innerHTML = `<h3 class="month">${this.getMonth(concert.month)}</h3><hr>`;
       }
 
       const concertInfo = this.generateConcertInfo(concert);
