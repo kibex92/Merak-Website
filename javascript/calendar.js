@@ -69,9 +69,9 @@ export class Calendar {
       const event = this.eventContainers[i];
       const year = event.id;
       const yearMonths = [...monthsMap.keys()].filter(key => key.endsWith(`-${year}`));
-
+      
       let pastConcertsAddedForYear = false; // Flag to track if past concerts header added for current year
-
+      
       yearMonths.forEach((monthKey) => {
         if (!pastConcertsAddedForYear && year === String(this.today.getFullYear()) && monthsMap.get(monthKey).pastConcertsAdded) {
           const pastConcertsHeader = document.createElement('h4');
