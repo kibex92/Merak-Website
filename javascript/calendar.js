@@ -1,7 +1,12 @@
-const today = new Date();
-const eventContainers = document.querySelector(".events").getElementsByClassName("event-container");
+import { API } from "./api.js";
 
-const generateConcertInfo = (concert) => {
+export class Calendar {
+  constructor(eventSelector) {
+    this.today = new Date();
+    this.eventContainers = document.querySelector(eventSelector).getElementsByClassName("event-container");
+  }
+
+  generateConcertInfo = (concert) => {
   const eventInfo = document.createElement('div');
   eventInfo.classList.add('event-info');
 
@@ -17,72 +22,59 @@ const generateConcertInfo = (concert) => {
   return eventInfo;
 }
 
-// Sort concerts based on date
-const sortConcerts = (concerts) => {
-  return concerts.slice().sort((a,b) => {
-    const aDate = new Date(`${a.year}-${a.month}-${a.day}`);
-    const bDate = new Date(`${b.year}-${b.month}-${b.day}`);
+  // Group concerts by month and year
+  groupConcertsByMonthAndYear(concerts) {
+    const monthsMap = new Map();
+    concerts.forEach((concert) => {
+      const monthKey = `${concert.month}-${concert.year}`;
 
-    if (aDate < today) {
-      return 1;
-    }
-    if (bDate < today) {
-      return -1;
-    }
-
-    return aDate - bDate;
-  })
-}
-// Group concerts by month and year
-function groupConcertsByMonthAndYear(concerts) {
-  const monthsMap = new Map();
-  concerts.forEach((concert) => {
-    const monthKey = `${concert.month}-${concert.year}`;
-
-    if (!monthsMap.has(monthKey)) {
-      monthsMap.set(monthKey, {
-        monthSection: document.createElement('section'),
-        pastConcertsAdded: false
-      });
-      monthsMap.get(monthKey).monthSection.classList.add('month-section', 'mt-4');
-      monthsMap.get(monthKey).monthSection.innerHTML = `<h3 class="month">${getMonth(concert.month)}</h3><hr>`;
-    }
-
-    const concertInfo = generateConcertInfo(concert);
-    monthsMap.get(monthKey).monthSection.appendChild(concertInfo);
-
-    // Check if the concert is in the past and mark it as added if so
-    const concertDate = new Date(`${concert.year}-${concert.month}-${concert.day}`);
-    if (concertDate < today) {
-      monthsMap.get(monthKey).pastConcertsAdded = true;
-    }
-  });
-
-  return monthsMap;
-}
-
-// Add concert sections to respective event containers
-
-function addConcertSectionsToEventContainers(eventContainers, monthsMap) {
-  for (let i = 0; i < eventContainers.length; i++) {
-    const event = eventContainers[i];
-    const year = event.id;
-    const yearMonths = [...monthsMap.keys()].filter(key => key.endsWith(`-${year}`));
-
-    let pastConcertsAddedForYear = false; // Flag to track if past concerts header added for current year
-
-    yearMonths.forEach((monthKey) => {
-      if (!pastConcertsAddedForYear && year === String(today.getFullYear()) && monthsMap.get(monthKey).pastConcertsAdded) {
-        const pastConcertsHeader = document.createElement('h4');
-        pastConcertsHeader.textContent = 'Vergangene Konzerte';
-        pastConcertsHeader.classList.add("mt-4")
-        event.appendChild(pastConcertsHeader);
-        pastConcertsAddedForYear = true; // Set flag to true once header added for current year
+      if (!monthsMap.has(monthKey)) {
+        monthsMap.set(monthKey, {
+          monthSection: document.createElement('section'),
+          pastConcertsAdded: false
+        });
+        monthsMap.get(monthKey).monthSection.classList.add('month-section', 'mt-4');
+        monthsMap.get(monthKey).monthSection.innerHTML = `<h3 class="month">${getMonth(concert.month)}</h3><hr>`;
       }
 
-      event.appendChild(monthsMap.get(monthKey).monthSection.cloneNode(true));
+      const concertInfo = this.generateConcertInfo(concert);
+      monthsMap.get(monthKey).monthSection.appendChild(concertInfo);
+
+      // Check if the concert is in the past and mark it as added if so
+      const concertDate = new Date(`${concert.year}-${concert.month}-${concert.day}`);
+      if (concertDate < this.today) {
+        monthsMap.get(monthKey).pastConcertsAdded = true;
+      }
     });
+
+    return monthsMap;
+  }
+
+  // Add concert sections to respective event containers
+
+  addConcertSectionsToEventContainers(monthsMap) {
+    for (let i = 0; i < this.eventContainers.length; i++) {
+      const event = this.eventContainers[i];
+      const year = event.id;
+      const yearMonths = [...monthsMap.keys()].filter(key => key.endsWith(`-${year}`));
+
+      let pastConcertsAddedForYear = false; // Flag to track if past concerts header added for current year
+
+      yearMonths.forEach((monthKey) => {
+        if (!pastConcertsAddedForYear && year === String(this.today.getFullYear()) && monthsMap.get(monthKey).pastConcertsAdded) {
+          const pastConcertsHeader = document.createElement('h4');
+          pastConcertsHeader.textContent = 'Vergangene Konzerte';
+          pastConcertsHeader.classList.add("mt-4")
+          event.appendChild(pastConcertsHeader);
+          pastConcertsAddedForYear = true; // Set flag to true once header added for current year
+        }
+
+        event.appendChild(monthsMap.get(monthKey).monthSection.cloneNode(true));
+      });
+    }
+  }
+
+  async fetchConcerts() {
+    return await API.fetchConcerts();
   }
 }
-
-export { addConcertSectionsToEventContainers, groupConcertsByMonthAndYear, sortConcerts, eventContainers }
