@@ -7,26 +7,6 @@ console.log("Before IIFE");
   }
 })();
 
-
-
-// Lazy load recaptcha API on form focus
-function reCaptchaOnFocus() {
-  var head = document.getElementsByTagName('head')[0]
-  var script = document.createElement('script')
-  script.type = 'text/javascript';
-  script.src = 'https://www.google.com/recaptcha/api.js?hl=de'
-  head.appendChild(script);
-
-  // remove focus to avoid js error:
-  document.getElementById('VORNAME').removeEventListener('focus', reCaptchaOnFocus)
-  document.getElementById('NACHNAME').removeEventListener('focus', reCaptchaOnFocus)
-  document.getElementById('EMAIL').removeEventListener('focus', reCaptchaOnFocus)
-};
-// add initial event listener to the form inputs
-document.getElementById('VORNAME').addEventListener('focus', reCaptchaOnFocus, false);
-document.getElementById('NACHNAME').addEventListener('focus', reCaptchaOnFocus, false);
-document.getElementById('EMAIL').addEventListener('focus', reCaptchaOnFocus, false);
-
 function loadCSS(options) {
   const linkElement = document.createElement("link");
   linkElement.rel = "stylesheet";
