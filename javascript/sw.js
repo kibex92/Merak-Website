@@ -1,13 +1,8 @@
-const staticCacheName = "site-static-v1";
+const staticCacheName = "site-static-v2";
 const dynamicCache = "site-dynamic-v1";
 const assets = [
   "/",
-  "/../index.html",
-  "/calendar.js",
-  "/serviceWorker.js",
-  "/concerts.js",
-  "/gallery.js",
-  "/utility.js",
+  "/../javascript/main.js",
   "/../css/style.css",
   "/../css/animations.css",
   "/../css/gallery.css",
@@ -17,10 +12,8 @@ const assets = [
   "/../css/components/footer.css",
   "/../css/components/form.css",
   "/../css/components/menu.css",
-  "/../images/header-FINAL.jpg",
-  "/../images/merak-website-header.jpg",
+  "/../images/header-1620.jpg",
   "/../images/symbol.png",
-  "/../images/gallery/boris.jpg",
   "https://use.fontawesome.com/releases/v5.15.4/css/all.css",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
   "https://s.pageclip.co/v1/pageclip.css",
