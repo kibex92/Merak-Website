@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   GeneralUtils.addScrolledClassToHeader(".main-header");
   GeneralUtils.redirectFromIndex();
   GeneralUtils.registerServiceWorker();
+  GeneralUtils.initializeGlobalConfigurations();
   new LazyLoader();
   new Gallery(".img-grid", "blur");
   const myCalendar = new Calendar(".events");
