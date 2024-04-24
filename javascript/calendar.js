@@ -7,20 +7,20 @@ export class Calendar {
   }
 
   generateConcertInfo = (concert) => {
-  const eventInfo = document.createElement('div');
-  eventInfo.classList.add('event-info');
+    const eventInfo = document.createElement('div');
+    eventInfo.classList.add('event-info');
 
-  const cancelled = concert.cancelled ? 'line-through' : '';
+    const cancelled = concert.cancelled ? 'line-through' : '';
 
-  eventInfo.innerHTML = `
-    <h3 class="date ${cancelled}">${concert.day}.${concert.month}</h3>
-    <h3 class="city ${cancelled}">${concert.city}</h3>
-    <p class="venue">${concert.hall}</p>
-    <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
-  `;
+    eventInfo.innerHTML = `
+      <h3 class="date ${cancelled}">${concert.day}.${concert.month}</h3>
+      <h3 class="city ${cancelled}">${concert.city}</h3>
+      <p class="venue">${concert.hall}</p>
+      <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
+    `;
 
-  return eventInfo;
-}
+    return eventInfo;
+  }
 
   // Get month from date in German
   getMonth(index) {
@@ -33,6 +33,22 @@ export class Calendar {
     const month = objDate.toLocaleString(locale, { month: "long" });
 
     return month;
+  }
+
+  sortConcerts(concerts) {
+    return concerts.slice().sort((a, b) => {
+      const aDate = new Date(`${a.year}-${a.month}-${a.day}`);
+      const bDate = new Date(`${b.year}-${b.month}-${b.day}`);
+
+      if (aDate < this.today) {
+        return 1;
+      }
+      if (bDate < this.today) {
+        return -1;
+      }
+
+      return aDate - bDate;
+    });
   }
   // Group concerts by month and year
   groupConcertsByMonthAndYear(concerts) {
@@ -63,7 +79,6 @@ export class Calendar {
   }
 
   // Add concert sections to respective event containers
-
   addConcertSectionsToEventContainers(monthsMap) {
     for (let i = 0; i < this.eventContainers.length; i++) {
       const event = this.eventContainers[i];
@@ -87,6 +102,7 @@ export class Calendar {
   }
 
   async fetchConcerts() {
-    return await API.fetchConcerts();
+    const concerts = await API.fetchConcerts();
+    return this.sortConcerts(concerts)
   }
 }
