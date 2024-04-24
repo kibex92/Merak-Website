@@ -7,38 +7,6 @@ console.log("Before IIFE");
   }
 })();
 
-function loadCSS(options) {
-  const linkElement = document.createElement("link");
-  linkElement.rel = "stylesheet";
-  linkElement.href = options.url;
-  if (options.integrity) {
-    linkElement.integrity = options.integrity;
-  }
-  if (options.crossorigin) {
-    linkElement.crossOrigin = options.crossorigin;
-  }
-  document.head.appendChild(linkElement);
-}
-
-function loadJS(url) {
-  const scriptElement = document.createElement("script");
-  scriptElement.src = url;
-  document.head.appendChild(scriptElement);
-}
-// Function to handle scroll event to load external CSS
-function handleScroll() {
-  var triggerScrollPosition = 500;
-
-  if (window.scrollY >= triggerScrollPosition) {
-    // Perform your desired action here, such as loading CSS
-    loadCSS({url: "https://sibforms.com/forms/end-form/build/sib-styles.css"});
-    loadCSS({url: "https://s.pageclip.co/v1/pageclip.css"});
-    loadCSS({url: "https://use.fontawesome.com/releases/v5.15.4/css/all.css", integrity: "sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm", crossorigin: "anonymous"});
-    loadJS("https://sibforms.com/forms/end-form/build/main.js")
-    window.removeEventListener("scroll", handleScroll);
-  }
-}
-
 // Add "scrolled" class to header on scroll
 const header = document.querySelector(".main-header");
 window.addEventListener("scroll", () => {
@@ -49,5 +17,3 @@ window.addEventListener("scroll", () => {
 		header.classList.remove("scrolled");
 	}
 });
-
-window.addEventListener("scroll", handleScroll);
