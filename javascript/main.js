@@ -5,12 +5,12 @@ import { CarouselUtils } from "./utilities/carouselUtils.js";
 import { RecaptchaUtils } from "./utilities/recaptchaUtils.js";
 import { LoadResourceUtils } from "./utilities/loadResourceUtils.js";
 import { GeneralUtils } from "./utilities/generalUtils.js";
+import { LazyLoader } from "./utilities/lazyloader.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     EventUtils.showEventsPerYear(".year", ".event-container");
     CarouselUtils.toggleCarousel(".menu-btn", "#carouselExampleFade")
     new RecaptchaUtils(["VORNAME", "NACHNAME", "EMAIL"]).init();
-
     const resources = {
         css: [
             { url: "https://sibforms.com/forms/end-form/build/sib-styles.css" },
@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "https://sibforms.com/forms/end-form/build/main.js"
         ]
     };
-
     LoadResourceUtils.handleScroll(500, resources)
     GeneralUtils.addScrolledClassToHeader(".main-header")
     GeneralUtils.redirectFromIndex();
+    new LazyLoader;
     new Gallery(".img-grid", "blur");
     const myCalendar = new Calendar(".events");
     myCalendar.fetchConcerts().then(concerts => {
