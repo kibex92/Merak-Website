@@ -4,6 +4,7 @@ import { EventUtils } from "./utilities/eventUtils.js";
 import { CarouselUtils } from "./utilities/carouselUtils.js";
 import { RecaptchaUtils } from "./utilities/recaptchaUtils.js";
 import { LoadResourceUtils } from "./utilities/loadResourceUtils.js";
+import { GeneralUtils } from "./utilities/generalUtils.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     EventUtils.showEventsPerYear(".year", ".event-container");
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     LoadResourceUtils.handleScroll(500, resources)
+    GeneralUtils.addScrolledClassToHeader(".main-header")
     new Gallery(".img-grid", "blur");
     const myCalendar = new Calendar(".events");
     myCalendar.fetchConcerts().then(concerts => {
