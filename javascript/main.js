@@ -6,6 +6,7 @@ import { RecaptchaUtils } from "./utilities/recaptchaUtils.js";
 import { LoadResourceUtils } from "./utilities/loadResourceUtils.js";
 import { GeneralUtils } from "./utilities/generalUtils.js";
 import { LazyLoader } from "./utilities/lazyloader.js";
+import { LiteYTEmbed } from "./utilities/lite-embed-yt.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     EventUtils.showEventsPerYear(".year", ".event-container");
