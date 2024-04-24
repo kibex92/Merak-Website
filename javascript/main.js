@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resources = {
     css: [
       { url: "https://sibforms.com/forms/end-form/build/sib-styles.css" },
-      { url: "https://pageclip.com/theme.css" },
+      { url: "https://s.pageclip.co/v1/pageclip.css" },
       {
         url: "https://use.fontawesome.com/releases/v5.15.4/css/all.css",
         integrity:
