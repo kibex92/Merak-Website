@@ -12,4 +12,10 @@ export class GeneralUtils {
 
     window.addEventListener("scroll", handleScroll);
   }
+
+  static redirectFromIndex() {
+    if (window.location.pathname === '/index.html') {
+        window.location.href = '/';
+    }
+  }
 }

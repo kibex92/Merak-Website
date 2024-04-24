@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     LoadResourceUtils.handleScroll(500, resources)
     GeneralUtils.addScrolledClassToHeader(".main-header")
+    GeneralUtils.redirectFromIndex();
     new Gallery(".img-grid", "blur");
     const myCalendar = new Calendar(".events");
     myCalendar.fetchConcerts().then(concerts => {
