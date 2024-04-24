@@ -1,12 +1,12 @@
 export class CarouselUtils {
   static hideCarousel(carouselSelector) {
     const carousel = document.querySelector(carouselSelector);
-    carousel.style.zIndex = '-1';
+    carousel.style.zIndex = "-1";
   }
 
   static showCarousel(carouselSelector) {
     const carousel = document.querySelector(carouselSelector);
-    carousel.style.zIndex = '0';
+    carousel.style.zIndex = "0";
   }
 
   // Add negative z-index on menu btn click

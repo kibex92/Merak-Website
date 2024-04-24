@@ -14,8 +14,23 @@ export class GeneralUtils {
   }
 
   static redirectFromIndex() {
-    if (window.location.pathname === '/index.html') {
-        window.location.href = '/';
+    if (window.location.pathname === "/index.html") {
+      window.location.href = "/";
+    }
+  }
+
+  static registerServiceWorker(scriptURL = "/javascript/sw.js") {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register(scriptURL)
+        .then((registration) => {
+          console.log("Service worker registered", registration);
+        })
+        .catch((error) => {
+          console.error("Service worker not registered", error);
+        });
+    } else {
+      console.error("Service workers are not supported by this browser.");
     }
   }
 }

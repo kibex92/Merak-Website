@@ -3,14 +3,16 @@ import { API } from "./api.js";
 export class Calendar {
   constructor(eventSelector) {
     this.today = new Date();
-    this.eventContainers = document.querySelector(eventSelector).getElementsByClassName("event-container");
+    this.eventContainers = document
+      .querySelector(eventSelector)
+      .getElementsByClassName("event-container");
   }
 
   generateConcertInfo = (concert) => {
-    const eventInfo = document.createElement('div');
-    eventInfo.classList.add('event-info');
+    const eventInfo = document.createElement("div");
+    eventInfo.classList.add("event-info");
 
-    const cancelled = concert.cancelled ? 'line-through' : '';
+    const cancelled = concert.cancelled ? "line-through" : "";
 
     eventInfo.innerHTML = `
       <h3 class="date ${cancelled}">${concert.day}.${concert.month}</h3>
@@ -20,16 +22,15 @@ export class Calendar {
     `;
 
     return eventInfo;
-  }
+  };
 
   // Get month from date in German
   getMonth(index) {
-
     const objDate = new Date();
     objDate.setDate(1);
     objDate.setMonth(index - 1);
 
-    const locale = "de"
+    const locale = "de";
     const month = objDate.toLocaleString(locale, { month: "long" });
 
     return month;
@@ -58,18 +59,26 @@ export class Calendar {
 
       if (!monthsMap.has(monthKey)) {
         monthsMap.set(monthKey, {
-          monthSection: document.createElement('section'),
-          pastConcertsAdded: false
+          monthSection: document.createElement("section"),
+          pastConcertsAdded: false,
         });
-        monthsMap.get(monthKey).monthSection.classList.add('month-section', 'mt-4');
-        monthsMap.get(monthKey).monthSection.innerHTML = `<h3 class="month">${this.getMonth(concert.month)}</h3><hr>`;
+        monthsMap
+          .get(monthKey)
+          .monthSection.classList.add("month-section", "mt-4");
+        monthsMap.get(
+          monthKey
+        ).monthSection.innerHTML = `<h3 class="month">${this.getMonth(
+          concert.month
+        )}</h3><hr>`;
       }
 
       const concertInfo = this.generateConcertInfo(concert);
       monthsMap.get(monthKey).monthSection.appendChild(concertInfo);
 
       // Check if the concert is in the past and mark it as added if so
-      const concertDate = new Date(`${concert.year}-${concert.month}-${concert.day}`);
+      const concertDate = new Date(
+        `${concert.year}-${concert.month}-${concert.day}`
+      );
       if (concertDate < this.today) {
         monthsMap.get(monthKey).pastConcertsAdded = true;
       }
@@ -83,15 +92,21 @@ export class Calendar {
     for (let i = 0; i < this.eventContainers.length; i++) {
       const event = this.eventContainers[i];
       const year = event.id;
-      const yearMonths = [...monthsMap.keys()].filter(key => key.endsWith(`-${year}`));
-      
+      const yearMonths = [...monthsMap.keys()].filter((key) =>
+        key.endsWith(`-${year}`)
+      );
+
       let pastConcertsAddedForYear = false; // Flag to track if past concerts header added for current year
-      
+
       yearMonths.forEach((monthKey) => {
-        if (!pastConcertsAddedForYear && year === String(this.today.getFullYear()) && monthsMap.get(monthKey).pastConcertsAdded) {
-          const pastConcertsHeader = document.createElement('h4');
-          pastConcertsHeader.textContent = 'Vergangene Konzerte';
-          pastConcertsHeader.classList.add("mt-4")
+        if (
+          !pastConcertsAddedForYear &&
+          year === String(this.today.getFullYear()) &&
+          monthsMap.get(monthKey).pastConcertsAdded
+        ) {
+          const pastConcertsHeader = document.createElement("h4");
+          pastConcertsHeader.textContent = "Vergangene Konzerte";
+          pastConcertsHeader.classList.add("mt-4");
           event.appendChild(pastConcertsHeader);
           pastConcertsAddedForYear = true; // Set flag to true once header added for current year
         }
@@ -103,6 +118,6 @@ export class Calendar {
 
   async fetchConcerts() {
     const concerts = await API.fetchConcerts();
-    return this.sortConcerts(concerts)
+    return this.sortConcerts(concerts);
   }
 }
