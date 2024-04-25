@@ -1,105 +1,114 @@
-// Gallery Slider
-let galleryImages = document.querySelectorAll(".img-grid");
-let getLatestOpenedImg;
-let windowWith = window.innerWidth;
+// gallery.js
+export class Gallery {
+  constructor(gallerySelector, blurSelector) {
+    this.galleryImages = document.querySelectorAll(gallerySelector);
+    this.blurElement = document.getElementById(blurSelector);
+    this.latestOpenedImg = null;
+    this.initGallery();
+  }
 
-galleryImages.forEach((img, index) => {
-	img.onclick = () => {
-		toggleBlur();
-		getLatestOpenedImg = index + 1;
-		let container = document.body;
-		let newImgWindow = document.createElement("div");
-		container.appendChild(newImgWindow);
-		newImgWindow.classList.add("img-window");
-		newImgWindow.setAttribute("onclick", "closeImg()");
+  initGallery() {
+    this.galleryImages.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        this.toggleBlur();
+        this.latestOpenedImg = index + 1;
+        this.createGalleryImagePopup(img);
+      });
+    });
 
-		let newImg = img.cloneNode(true);
-		newImgWindow.appendChild(newImg);
-		newImg.classList.remove("img-grid");
-		newImg.classList.add("popup-img");
-		newImg.setAttribute("id", "current-img");
+    document.addEventListener("keydown", this.handleKeydown.bind(this));
+  }
 
-		newImg.onload = () => {
-			let newNextBtn = document.createElement("a");
-			newNextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
-			container.appendChild(newNextBtn);
-			newNextBtn.classList.add("img-btn-next");
-			newNextBtn.setAttribute("onclick", "nextImg(1)");
+  createGalleryImagePopup(img) {
+    const container = document.body;
+    const newImgWindow = document.createElement("div");
+    container.appendChild(newImgWindow);
+    newImgWindow.classList.add("img-window");
+    newImgWindow.addEventListener("click", this.closeImg.bind(this));
 
-			let newPrevBtn = document.createElement("a");
-			newPrevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
-			container.appendChild(newPrevBtn);
-			newPrevBtn.classList.add("img-btn-prev");
-			newPrevBtn.setAttribute("onclick", "nextImg(0)");
-		};
-	};
-});
+    const newImg = img.cloneNode(true);
+    newImgWindow.appendChild(newImg);
+    newImg.classList.remove("img-grid");
+    newImg.classList.add("popup-img");
+    newImg.id = "current-img";
 
-closeImg = () => {
-	document.querySelector(".img-window").remove();
-	document.querySelector(".img-btn-next").remove();
-	document.querySelector(".img-btn-prev").remove();
-	toggleBlur();
-};
+    newImg.onload = () => {
+      const newNextBtn = this.createButton(
+        "img-btn-next",
+        "fas fa-chevron-right",
+        () => this.nextImg(1)
+      );
+      container.appendChild(newNextBtn);
 
-nextImg = (next) => {
-	document.querySelector("#current-img").remove();
+      const newPrevBtn = this.createButton(
+        "img-btn-prev",
+        "fas fa-chevron-left",
+        () => this.nextImg(0)
+      );
+      container.appendChild(newPrevBtn);
+    };
+  }
 
-	let getImgWindow = document.querySelector(".img-window");
-	let newImg = document.createElement("img");
-	getImgWindow.appendChild(newImg);
-	let calcNewImg;
-	if (next === 1) {
-		console.log("next is", next);
-		console.log("latest opened img is", getLatestOpenedImg);
+  createButton(className, iconClass, onclick) {
+    const newBtn = document.createElement("a");
+    newBtn.innerHTML = `<i class="${iconClass}"></i>`;
+    newBtn.classList.add(className);
+    newBtn.addEventListener("click", onclick);
+    return newBtn;
+  }
 
-		calcNewImg = getLatestOpenedImg + 1;
-		console.log("calc new img is ", calcNewImg);
-		if (calcNewImg > galleryImages.length) {
-			calcNewImg = 1;
-		}
-	} else if (next === 0) {
-		calcNewImg = getLatestOpenedImg - 1;
+  closeImg() {
+    document.querySelector(".img-window")?.remove();
+    document.querySelector(".img-btn-next")?.remove();
+    document.querySelector(".img-btn-prev")?.remove();
+    this.toggleBlur();
+  }
 
-		if (calcNewImg < 1) {
-			calcNewImg = galleryImages.length;
-		}
-	}
+  nextImg(next) {
+    const currentImg = document.querySelector("#current-img");
+    currentImg?.remove();
 
-	// Construct the image filename based on the current device width
-	let deviceWidth = window.innerWidth;
-	let closestFilename = findClosestFilename(deviceWidth);
-	let imageFilename = `./images/gallery/img-${calcNewImg}-${closestFilename}.jpg`;
+    const getImgWindow = document.querySelector(".img-window");
+    const newImg = document.createElement("img");
+    getImgWindow.appendChild(newImg);
 
-	newImg.setAttribute("src", imageFilename);
-	newImg.classList.add("popup-img");
-	newImg.setAttribute("id", "current-img");
+    let calcNewImg =
+      next === 1 ? this.latestOpenedImg + 1 : this.latestOpenedImg - 1;
+    if (calcNewImg > this.galleryImages.length) calcNewImg = 1;
+    if (calcNewImg < 1) calcNewImg = this.galleryImages.length;
 
-	getLatestOpenedImg = calcNewImg;
-};
+    const imageFilename = `./images/gallery/img-${calcNewImg}-${this.findClosestFilename(
+      window.innerWidth
+    )}.jpg`;
+    newImg.src = imageFilename;
+    newImg.classList.add("popup-img");
+    newImg.id = "current-img";
 
-// Function to find the closest available filename based on the device width
-function findClosestFilename(deviceWidth) {
-	let availableWidths = [480, 720, 1152, 1620, 2033]; // Example available widths
-	let closestWidth = availableWidths.reduce((prev, curr) => Math.abs(curr - deviceWidth) < Math.abs(prev - deviceWidth) ? curr : prev);
-	return closestWidth;
+    this.latestOpenedImg = calcNewImg;
+  }
+
+  findClosestFilename(deviceWidth) {
+    const availableWidths = [480, 720, 1152, 1620, 2033];
+    return availableWidths.reduce((prev, curr) =>
+      Math.abs(curr - deviceWidth) < Math.abs(prev - deviceWidth) ? curr : prev
+    );
+  }
+
+  toggleBlur() {
+    this.blurElement.classList.toggle("active");
+  }
+
+  handleKeydown(event) {
+    switch (event.key) {
+      case "ArrowLeft":
+        this.nextImg(0);
+        break;
+      case "ArrowRight":
+        this.nextImg(1);
+        break;
+      case "Escape":
+        this.closeImg();
+        break;
+    }
+  }
 }
-
-
-// Blur
-toggleBlur = () => {
-	const blur = document.getElementById("blur");
-	blur.classList.toggle("active");
-};
-
-document.addEventListener("keydown", (e) => {
-	if (e.key == "ArrowLeft") {
-		nextImg(0);
-	}
-	if (e.key == "ArrowRight") {
-		nextImg(1);
-	}
-	if (e.key == "Escape") {
-		closeImg();
-	}
-});
