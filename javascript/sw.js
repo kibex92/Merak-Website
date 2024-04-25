@@ -2,6 +2,7 @@ const staticCacheName = "site-static-v2";
 const dynamicCache = "site-dynamic-v1";
 const assets = [
   "/",
+  "/../data",
   "/../javascript/main.js",
   "/../css/style.css",
   "/../css/animations.css",
