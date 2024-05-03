@@ -1,5 +1,16 @@
 [
   {
+    "day": "23",
+    "month": "11",
+    "year": 2024,
+    "city": "Neubiberg",
+    "hall": "Aula der Grundschule Neubiberg Benefizkonzert Helferkreis Asyl",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Infos",
+    "cancelled": false
+  },
+  {
     "day": "26",
     "month": "10",
     "year": 2024,
