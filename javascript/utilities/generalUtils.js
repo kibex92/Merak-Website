@@ -19,7 +19,7 @@ export class GeneralUtils {
     }
   }
 
-  static registerServiceWorker(scriptURL = "/javascript/sw.js") {
+  static registerServiceWorker(scriptURL = "../../sw.js") {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
         .register(scriptURL)
