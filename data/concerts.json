@@ -94,7 +94,7 @@
     "city": "Seeshaupt",
     "hall": "Seeresidenz Alte Post",
     "link": "https://www.seeresidenz-alte-post.de/kultur/programm/november-2023/",
-    "visibility": "",
+    "visibility": "d-none",
     "linkText": "Infos",
     "cancelled": true
   },
@@ -171,7 +171,7 @@
     "city": "Flower Power Festival",
     "hall": "Reaktorhalle - 18 Uhr | Luisenstr. 37a | Eintritt frei!",
     "link": "https://hmtm.de/veranstaltungen/flower-power-festival-sommerkonzert-der-schlagzeugklasse-muenchen/",
-    "visibility": "",
+    "visibility": "d-none",
     "linkText": "Infos",
     "cancelled": false
   },
@@ -193,7 +193,7 @@
     "city": "Lange Nacht der Musik München",
     "hall": "Großer Konzertsaal - 20 Uhr | Arcisstr. 12",
     "link": "https://hmtm.de/veranstaltungen/lange-nacht-der-musik-eine-lange-kammermusik-nacht-2/",
-    "visibility": "",
+    "visibility": "d-none",
     "linkText": "Infos",
     "cancelled": false
   },
@@ -204,7 +204,7 @@
     "city": "Chamberfest HMT München",
     "hall": "Großer Konzertsaal - 19 Uhr | Arcisstr. 12",
     "link": "https://hmtm.de/veranstaltungen/chamberfest-abschlusskonzert-alles-moeglich/",
-    "visibility": "",
+    "visibility": "d-none",
     "linkText": "Infos",
     "cancelled": false
   },
