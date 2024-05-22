@@ -29,6 +29,7 @@ export class Gallery {
     const newImg = img.cloneNode(true);
     newImgWindow.appendChild(newImg);
     newImg.classList.remove("img-grid");
+    newImg.className = "";
     newImg.classList.add("popup-img");
     newImg.id = "current-img";
 
@@ -77,21 +78,12 @@ export class Gallery {
     if (calcNewImg > this.galleryImages.length) calcNewImg = 1;
     if (calcNewImg < 1) calcNewImg = this.galleryImages.length;
 
-    const imageFilename = `./images/gallery/img-${calcNewImg}-${this.findClosestFilename(
-      window.innerWidth
-    )}.jpg`;
+    const imageFilename = `./images/gallery/img-${calcNewImg}-2033.jpg`;
     newImg.src = imageFilename;
     newImg.classList.add("popup-img");
     newImg.id = "current-img";
 
     this.latestOpenedImg = calcNewImg;
-  }
-
-  findClosestFilename(deviceWidth) {
-    const availableWidths = [480, 720, 1152, 1620, 2033];
-    return availableWidths.reduce((prev, curr) =>
-      Math.abs(curr - deviceWidth) < Math.abs(prev - deviceWidth) ? curr : prev
-    );
   }
 
   toggleBlur() {
