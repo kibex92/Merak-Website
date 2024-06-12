@@ -59,9 +59,9 @@
     "month": "06",
     "year": 2024,
     "city": "Kunstnacht Ausgburg",
-    "hall": "Moritzsaal | 21:00 & 22:15 Uhr",
-    "link": "",
-    "visibility": "d-none",
+    "hall": "Moritzsaal | 21:15 & 22:15 Uhr",
+    "link": "https://www.langekunstnacht.de/programm/701-grooves_ohne_grenzen",
+    "visibility": "",
     "linkText": "Infos",
     "cancelled": false
   },
