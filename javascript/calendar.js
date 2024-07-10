@@ -17,7 +17,7 @@ export class Calendar {
     eventInfo.innerHTML = `
       <h3 class="date ${cancelled}">${concert.day}.${concert.month}</h3>
       <h3 class="city ${cancelled}">${concert.city}</h3>
-      <p class="venue">${concert.hall}</p>
+      <p class="venue ${cancelled}">${concert.hall}</p>
       <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
     `;
 
