@@ -3,6 +3,7 @@ import { API } from "./api.js";
 export class Calendar {
   constructor(eventSelector) {
     this.today = new Date();
+    this.today.setHours(0, 0, 0, 0);
     this.eventContainers = document
       .querySelector(eventSelector)
       .getElementsByClassName("event-container");
@@ -40,7 +41,9 @@ export class Calendar {
     return concerts.slice().sort((a, b) => {
       const aDate = new Date(`${a.year}-${a.month}-${a.day}`);
       const bDate = new Date(`${b.year}-${b.month}-${b.day}`);
-
+      
+      aDate.setHours(0, 0, 0, 0); 
+      bDate.setHours(0, 0, 0, 0); 
       if (aDate < this.today) {
         return 1;
       }
@@ -79,6 +82,7 @@ export class Calendar {
       const concertDate = new Date(
         `${concert.year}-${concert.month}-${concert.day}`
       );
+      concertDate.setHours(0, 0, 0, 0); 
       if (concertDate < this.today) {
         monthsMap.get(monthKey).pastConcertsAdded = true;
       }
