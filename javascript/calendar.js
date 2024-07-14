@@ -86,6 +86,7 @@ export class Calendar {
     for (let i = 0; i < this.eventContainers.length; i++) {
       const event = this.eventContainers[i];
       const year = event.id;
+      const currentYear = String(this.today.getFullYear());
 
       const futureYearMonths = [...futureConcertsMap.keys()].filter((key) =>
         key.endsWith(`-${year}`)
@@ -99,7 +100,7 @@ export class Calendar {
         event.appendChild(futureConcertsMap.get(monthKey).monthSection.cloneNode(true));
       });
 
-      if (pastYearMonths.length > 0) {
+      if (year === currentYear && pastYearMonths.length > 0) {
         const pastConcertsHeader = document.createElement("h4");
         pastConcertsHeader.textContent = "Vergangene Konzerte";
         pastConcertsHeader.classList.add("mt-4");
