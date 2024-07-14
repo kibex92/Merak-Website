@@ -44,31 +44,30 @@ export class Calendar {
       
       aDate.setHours(0, 0, 0, 0); 
       bDate.setHours(0, 0, 0, 0); 
-      if (aDate < this.today) {
-        return 1;
-      }
-      if (bDate < this.today) {
-        return -1;
-      }
-
       return aDate - bDate;
     });
   }
+
   // Group concerts by month and year
   groupConcertsByMonthAndYear(concerts) {
-    const monthsMap = new Map();
+    const futureConcertsMap = new Map();
+    const pastConcertsMap = new Map();
+
     concerts.forEach((concert) => {
       const monthKey = `${concert.month}-${concert.year}`;
+      const concertDate = new Date(
+        `${concert.year}-${concert.month}-${concert.day}`
+      );
+      concertDate.setHours(0, 0, 0, 0); 
 
-      if (!monthsMap.has(monthKey)) {
-        monthsMap.set(monthKey, {
+      const targetMap = concertDate < this.today ? pastConcertsMap : futureConcertsMap;
+
+      if (!targetMap.has(monthKey)) {
+        targetMap.set(monthKey, {
           monthSection: document.createElement("section"),
-          pastConcertsAdded: false,
         });
-        monthsMap
-          .get(monthKey)
-          .monthSection.classList.add("month-section", "mt-4");
-        monthsMap.get(
+        targetMap.get(monthKey).monthSection.classList.add("month-section", "mt-4");
+        targetMap.get(
           monthKey
         ).monthSection.innerHTML = `<h3 class="month">${this.getMonth(
           concert.month
@@ -76,46 +75,39 @@ export class Calendar {
       }
 
       const concertInfo = this.generateConcertInfo(concert);
-      monthsMap.get(monthKey).monthSection.appendChild(concertInfo);
-
-      // Check if the concert is in the past and mark it as added if so
-      const concertDate = new Date(
-        `${concert.year}-${concert.month}-${concert.day}`
-      );
-      concertDate.setHours(0, 0, 0, 0); 
-      if (concertDate < this.today) {
-        monthsMap.get(monthKey).pastConcertsAdded = true;
-      }
+      targetMap.get(monthKey).monthSection.appendChild(concertInfo);
     });
 
-    return monthsMap;
+    return { futureConcertsMap, pastConcertsMap };
   }
 
   // Add concert sections to respective event containers
-  addConcertSectionsToEventContainers(monthsMap) {
+  addConcertSectionsToEventContainers({ futureConcertsMap, pastConcertsMap }) {
     for (let i = 0; i < this.eventContainers.length; i++) {
       const event = this.eventContainers[i];
       const year = event.id;
-      const yearMonths = [...monthsMap.keys()].filter((key) =>
+
+      const futureYearMonths = [...futureConcertsMap.keys()].filter((key) =>
         key.endsWith(`-${year}`)
       );
 
-      let pastConcertsAddedForYear = false; // Flag to track if past concerts header added for current year
+      const pastYearMonths = [...pastConcertsMap.keys()].filter((key) =>
+        key.endsWith(`-${year}`)
+      );
 
-      yearMonths.forEach((monthKey) => {
-        if (
-          !pastConcertsAddedForYear &&
-          year === String(this.today.getFullYear()) &&
-          monthsMap.get(monthKey).pastConcertsAdded
-        ) {
-          const pastConcertsHeader = document.createElement("h4");
-          pastConcertsHeader.textContent = "Vergangene Konzerte";
-          pastConcertsHeader.classList.add("mt-4");
-          event.appendChild(pastConcertsHeader);
-          pastConcertsAddedForYear = true; // Set flag to true once header added for current year
-        }
+      futureYearMonths.forEach((monthKey) => {
+        event.appendChild(futureConcertsMap.get(monthKey).monthSection.cloneNode(true));
+      });
 
-        event.appendChild(monthsMap.get(monthKey).monthSection.cloneNode(true));
+      if (pastYearMonths.length > 0) {
+        const pastConcertsHeader = document.createElement("h4");
+        pastConcertsHeader.textContent = "Vergangene Konzerte";
+        pastConcertsHeader.classList.add("mt-4");
+        event.appendChild(pastConcertsHeader);
+      }
+
+      pastYearMonths.forEach((monthKey) => {
+        event.appendChild(pastConcertsMap.get(monthKey).monthSection.cloneNode(true));
       });
     }
   }
