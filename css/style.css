@@ -238,6 +238,11 @@ h5 {
   right: 0px !important;
 }
 
+#startnext {
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
 /* Media Queries */
 
 @media screen and (max-width: 480px) {
@@ -284,6 +289,17 @@ h5 {
   .tickets {
     grid-column: 6 / 4;
     font-size: 1rem;
+  }
+
+  .cf-extwidget .project-box--external {
+    max-width: 500px !important;
+    font-size: 1rem !important;
+  }
+
+  #startnext {
+    height: 200px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
