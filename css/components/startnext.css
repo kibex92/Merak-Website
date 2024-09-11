@@ -1,0 +1,31 @@
+.project-box {
+  margin: 0 auto;
+  border: 2px solid var(--font-color);
+}
+
+.project-box__stat {
+  color: var(--font-color);
+}
+
+.project-box__content {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+.project-box__content h4 {
+  color: var(--font-color) !important;
+}
+
+.project-box__footer {
+  background-color: var(--background-color);
+}
+
+.funding-bar {
+  background-color: var(--background-color);
+}
+
+.project-box__btn {
+  background-color: var(--merak-gold) !important;
+  color: var(--font-color) !important;
+  border: unset !important;
+}

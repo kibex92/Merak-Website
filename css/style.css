@@ -9,6 +9,7 @@
 @import url("components/form.css");
 @import url("components/newsletter.css");
 @import url("components/lite-yt.css");
+@import url("components/startnext.css");
 @import url("gallery.css");
 @import url("about.css");
 @import url("animations.css");
@@ -237,6 +238,15 @@ h5 {
   right: 0px !important;
 }
 
+.crowdfunding > p {
+  margin: 1em auto;
+}
+
+#startnext {
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
 /* Media Queries */
 
 @media screen and (max-width: 480px) {
@@ -283,6 +293,21 @@ h5 {
   .tickets {
     grid-column: 6 / 4;
     font-size: 1rem;
+  }
+
+  .cf-extwidget .project-box--external {
+    max-width: 500px !important;
+    font-size: 1rem !important;
+  }
+
+  .crowdfunding > p {
+    width: 60%;
+  }
+
+  #startnext {
+    height: 200px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
