@@ -238,6 +238,10 @@ h5 {
   right: 0px !important;
 }
 
+.crowdfunding > p {
+  margin: 1em auto;
+}
+
 #startnext {
   height: 100px;
   display: block;
@@ -294,6 +298,10 @@ h5 {
   .cf-extwidget .project-box--external {
     max-width: 500px !important;
     font-size: 1rem !important;
+  }
+
+  .crowdfunding > p {
+    width: 60%;
   }
 
   #startnext {
