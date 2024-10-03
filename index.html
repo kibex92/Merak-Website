@@ -38,11 +38,12 @@
 
 	<!-- Preload banner image -->
 	<link rel="preload" as="image" href="images/logo.svg" />
-	<link rel="preload" as="image" href="images/header-480.jpg" media="(max-width: 640px)" />
-	<link rel="preload" as="image" href="images/header-720.jpg" media="(min-width: 641px) and (max-width: 920px)" />
-	<link rel="preload" as="image" href="images/header-1152.jpg" media="(min-width: 1200px)" />
-	<link rel="preload" as="image" href="images/header-1620.jpg" media="(min-width: 1400px)" />
-	<link rel="preload" as="image" href="images/header-2914.jpg" media="(min-width: 2200px)" />
+  <!-- Commented out for now till I test it properly -->
+	<!-- <link rel="preload" as="image" href="images/banner-360.jpg" media="(max-width: 640px)" />
+	<link rel="preload" as="image" href="images/banner-720.jpg" media="(min-width: 641px) and (max-width: 920px)" />
+	<link rel="preload" as="image" href="images/banner-1080.jpg" media="(min-width: 1200px)" />
+	<link rel="preload" as="image" href="images/banner-1920.jpg" media="(min-width: 1400px)" />
+	<link rel="preload" as="image" href="images/banner-3840.jpg" media="(min-width: 2200px)" /> -->
 
 	<!-- ****** faviconit.com favicons ****** -->
 	<link rel="shortcut icon" href="/favicon.ico">
@@ -97,13 +98,27 @@
 			</li>
 		</ul>
 	</header>
-	<div class="banner-container">
 		<div class="banner">
+			<img 
+        src="images/banner-3840.jpg" 
+        srcset="
+          images/banner-360.jpg 360w, 
+          images/banner-720.jpg 720w, 
+          images/banner-1080.jpg 1080w, 
+          images/banner-crop-1920.jpg 1920w, 
+          images/banner-crop-3840.jpg 3840w" 
+        sizes="
+          (max-width: 600px) 360px, 
+          (max-width: 768px) 720px, 
+          (max-width: 1024px) 1080px, 
+          (max-width: 1366px) 1920px, 
+          (min-width: 1367px) 3840px" 
+        alt="Your Trio Banner Image">
+
 			<div class="logo-container">
 				<img id="logo" src="" data-src="images/logo.svg" alt="Logo vom Trio Merak">
 			</div>
 		</div>
-	</div>
 
 	<main>
 		<div class="container" id="blur">
