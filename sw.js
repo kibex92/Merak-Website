@@ -27,9 +27,9 @@ const assets = [
   "/javascript/utilities/lite-embed-yt.js",
   "/javascript/utilities/loadResourceUtils.js",
   "/javascript/utilities/recaptchaUtils.js",
-  "/images/header-1620.jpg",
   "/images/logo.svg",
   "/images/symbol.png",
+  "/images/banner-1080.jpg",
   "/images/gallery/boris-1231.jpg",
   "/images/gallery/cris-1231.jpg",
   "/images/gallery/moritz-1231.jpg",
@@ -48,7 +48,7 @@ const assets = [
   "https://s.pageclip.co/v1/pageclip.css",
   "https://s.pageclip.co/v1/pageclip.js",
   "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap",
-  "https://sibforms.com/forms/end-form/build/main.js"
+  "https://sibforms.com/forms/end-form/build/main.js",
 ];
 
 // cache size limit function
