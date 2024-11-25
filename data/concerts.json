@@ -5,8 +5,8 @@
     "year": 2024,
     "city": "Schweinfurt",
     "hall": "Silvesterkonzert | St. Johanniskirche",
-    "link": "",
-    "visibility": "d-none",
+    "link": "https://www.schweinfurt-stjohannis.de/silvesterkonzert-der-st-johannis-kirche",
+    "visibility": "",
     "linkText": "Infos",
     "cancelled": false
   },
