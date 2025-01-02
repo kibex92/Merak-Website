@@ -1,5 +1,16 @@
 [
   {
+    "day": "22",
+    "month": "02",
+    "year": 2025,
+    "city": "FAMILIENKONZERT PREMIERE Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
+    "hall": "Gasteig brummt | Saal X | 10:30 Uhr",
+    "link": "https://www.gasteig.de/festivals/der-gasteig-brummt/",
+    "visibility": "",
+    "linkText": "Infos",
+    "cancelled": false
+  },
+  {
     "day": "31",
     "month": "12",
     "year": 2024,
