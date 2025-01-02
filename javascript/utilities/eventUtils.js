@@ -1,15 +1,21 @@
 export class EventUtils {
   static showEventsPerYear(yearsSelector, eventContainerSelector) {
+    let eventContainers = document.querySelectorAll(eventContainerSelector);
+    let eventContainerIds = Array.from(eventContainers).map((e) => e.id);
     const years = document.querySelectorAll(yearsSelector);
-    let currentYear = new Date().getFullYear().toString();
+
+    let currentYear = new Date().getFullYear();
+    currentYear = eventContainerIds.includes(currentYear.toString())
+      ? currentYear.toString()
+      : (currentYear - 1).toString();
+
     let currentEvent = document.getElementById(currentYear);
-    document
-      .querySelectorAll(eventContainerSelector)
-      .forEach((e) =>
-        e.id === currentYear
-          ? e.classList.remove("d-none")
-          : e.classList.add("d-none")
-      );
+
+    eventContainers.forEach((e) =>
+      e.id === currentYear
+        ? e.classList.remove("d-none")
+        : e.classList.add("d-none")
+    );
 
     years.forEach((year) => {
       year.innerText.trim() === currentYear
@@ -18,6 +24,7 @@ export class EventUtils {
 
       year.addEventListener("click", () => {
         let clickedYear = year.innerText.trim();
+
         let clickedEvent = document.getElementById(clickedYear);
 
         // Toggle visibility for the clicked event container
