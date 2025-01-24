@@ -1,5 +1,38 @@
 [
   {
+    "day": "13",
+    "month": "12",
+    "year": 2025,
+    "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
+    "hall": "Benefizkonzert für Friends for Hope | Trudering | 16 Uhr",
+    "link": "https://www.gasteig.de/veranstaltungen/die-legende-des-klangkristalls-ein-abenteuer-in-harmonia/",
+    "visibility": "d-none",
+    "linkText": "Infos",
+    "cancelled": false
+  },
+  {
+    "day": "18",
+    "month": "05",
+    "year": 2025,
+    "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
+    "hall": "Saal X | 11 Uhr",
+    "link": "https://www.gasteig.de/veranstaltungen/die-legende-des-klangkristalls-ein-abenteuer-in-harmonia/",
+    "visibility": "d-none",
+    "linkText": "Infos",
+    "cancelled": false
+  },
+  {
+    "day": "22",
+    "month": "03",
+    "year": 2025,
+    "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
+    "hall": "Brainlab | 11 Uhr",
+    "link": "https://www.gasteig.de/veranstaltungen/die-legende-des-klangkristalls-ein-abenteuer-in-harmonia/",
+    "visibility": "d-none",
+    "linkText": "Infos",
+    "cancelled": false
+  },
+  {
     "day": "22",
     "month": "02",
     "year": 2025,
