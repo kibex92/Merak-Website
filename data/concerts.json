@@ -41,7 +41,8 @@
     "link": "https://www.gasteig.de/veranstaltungen/die-legende-des-klangkristalls-ein-abenteuer-in-harmonia/",
     "visibility": "",
     "linkText": "Infos",
-    "cancelled": false
+    "cancelled": false,
+    "soldOut": true
   },
   {
     "day": "31",

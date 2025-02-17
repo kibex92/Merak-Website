@@ -224,11 +224,19 @@ h5 {
   text-decoration: line-through;
 }
 
-.city.line-through::after {
-  content: "  ABGESAGT";
-  display: inline-block;
-  color: red;
-  margin-left: 1em;
+.city {
+  &.line-through::after {
+    content: "  ABGESAGT";
+    display: inline-block;
+    color: red;
+    margin-left: 1em;
+  }
+
+  &.sold-out::after {
+    content: "AUSVERKAUFT";
+    display: inline-block;
+    color: red;
+  }
 }
 
 /* Captcha style */

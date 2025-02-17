@@ -14,10 +14,11 @@ export class Calendar {
     eventInfo.classList.add("event-info");
 
     const cancelled = concert.cancelled ? "line-through" : "";
+    const soldOut = concert.soldOut ? "sold-out" : "";
 
     eventInfo.innerHTML = `
       <h3 class="date ${cancelled}">${concert.day}.${concert.month}</h3>
-      <h3 class="city ${cancelled}">${concert.city}</h3>
+      <h3 class="city ${cancelled} ${soldOut}">${concert.city}</h3>
       <p class="venue ${cancelled}">${concert.hall}</p>
       <a href="${concert.link}" class="tickets btn-gold ${concert.visibility}" target="_blank">${concert.linkText}</a>
     `;
@@ -41,9 +42,9 @@ export class Calendar {
     return concerts.slice().sort((a, b) => {
       const aDate = new Date(`${a.year}-${a.month}-${a.day}`);
       const bDate = new Date(`${b.year}-${b.month}-${b.day}`);
-      
-      aDate.setHours(0, 0, 0, 0); 
-      bDate.setHours(0, 0, 0, 0); 
+
+      aDate.setHours(0, 0, 0, 0);
+      bDate.setHours(0, 0, 0, 0);
       return aDate - bDate;
     });
   }
@@ -58,15 +59,18 @@ export class Calendar {
       const concertDate = new Date(
         `${concert.year}-${concert.month}-${concert.day}`
       );
-      concertDate.setHours(0, 0, 0, 0); 
+      concertDate.setHours(0, 0, 0, 0);
 
-      const targetMap = concertDate < this.today ? pastConcertsMap : futureConcertsMap;
+      const targetMap =
+        concertDate < this.today ? pastConcertsMap : futureConcertsMap;
 
       if (!targetMap.has(monthKey)) {
         targetMap.set(monthKey, {
           monthSection: document.createElement("section"),
         });
-        targetMap.get(monthKey).monthSection.classList.add("month-section", "mt-4");
+        targetMap
+          .get(monthKey)
+          .monthSection.classList.add("month-section", "mt-4");
         targetMap.get(
           monthKey
         ).monthSection.innerHTML = `<h3 class="month">${this.getMonth(
@@ -97,7 +101,9 @@ export class Calendar {
       );
 
       futureYearMonths.forEach((monthKey) => {
-        event.appendChild(futureConcertsMap.get(monthKey).monthSection.cloneNode(true));
+        event.appendChild(
+          futureConcertsMap.get(monthKey).monthSection.cloneNode(true)
+        );
       });
 
       if (year === currentYear && pastYearMonths.length > 0) {
@@ -108,7 +114,9 @@ export class Calendar {
       }
 
       pastYearMonths.forEach((monthKey) => {
-        event.appendChild(pastConcertsMap.get(monthKey).monthSection.cloneNode(true));
+        event.appendChild(
+          pastConcertsMap.get(monthKey).monthSection.cloneNode(true)
+        );
       });
     }
   }
