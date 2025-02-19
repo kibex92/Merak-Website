@@ -11,6 +11,17 @@
     "cancelled": false
   },
   {
+    "day": "07",
+    "month": "12",
+    "year": 2025,
+    "city": "Portraitkonzert der Komponistin Abigél Varga",
+    "hall": "Seidlvilla | 20 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Infos",
+    "cancelled": false
+  },
+  {
     "day": "14",
     "month": "11",
     "year": 2025,
