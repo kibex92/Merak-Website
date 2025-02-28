@@ -44,6 +44,17 @@
     "cancelled": false
   },
   {
+    "day": "28",
+    "month": "03",
+    "year": 2025,
+    "city": "Literaturhaus München",
+    "hall": "Privatkonzert",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "",
+    "cancelled": false
+  },
+  {
     "day": "23",
     "month": "03",
     "year": 2025,
