@@ -233,9 +233,9 @@ h5 {
   }
 
   &.sold-out::after {
-    content: "AUSVERKAUFT";
-    display: inline-block;
+    content: "\a AUSVERKAUFT";
     color: red;
+    white-space: pre;
   }
 }
 
