@@ -39,7 +39,7 @@
     "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
     "hall": "Saal X | 11 Uhr",
     "link": "https://www.muenchenticket.de/event/die-legende-des-klangkristalls-ein-abenteuer-in-harmonia-32783/",
-    "visibility": "d-none",
+    "visibility": "",
     "linkText": "Tickets",
     "cancelled": false
   },
