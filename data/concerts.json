@@ -63,7 +63,8 @@
     "link": "https://www.muenchenticket.de/event/die-legende-des-klangkristalls-ein-abenteuer-in-harmonia-32783/",
     "visibility": "",
     "linkText": "Tickets",
-    "cancelled": false
+    "cancelled": false,
+    "soldOut": true
   },
   {
     "day": "28",
