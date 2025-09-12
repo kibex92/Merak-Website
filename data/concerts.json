@@ -60,9 +60,9 @@
     "year": 2025,
     "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
     "hall": "Schlossberghalle Starnberg | 11 Uhr",
-    "link": "",
-    "visibility": "d-none",
-    "linkText": "Infos",
+    "link": "https://events.fairetickets.de/8y8wj/",
+    "visibility": "",
+    "linkText": "Tickets",
     "cancelled": false
   },
   {
@@ -71,9 +71,9 @@
     "year": 2025,
     "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
     "hall": "Schlossberghalle Starnberg | 15 Uhr",
-    "link": "",
-    "visibility": "d-none",
-    "linkText": "Infos",
+    "link": "https://events.fairetickets.de/8y8wj/",
+    "visibility": "",
+    "linkText": "Tickets",
     "cancelled": false
   },
   {
