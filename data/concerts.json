@@ -22,13 +22,24 @@
     "cancelled": false
   },
   {
+    "day": "01",
+    "month": "03",
+    "year": 2026,
+    "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
+    "hall": "Stadthalle Grafing  | 15 Uhr",
+    "link": "https://www.ticket-regional.de/events_info.php?eventID=246598",
+    "visibility": "",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
     "day": "13",
     "month": "12",
     "year": 2025,
     "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
     "hall": "Benefizkonzert für Friends for Hope | Trudering | 16 Uhr",
-    "link": "https://www.gasteig.de/veranstaltungen/die-legende-des-klangkristalls-ein-abenteuer-in-harmonia/",
-    "visibility": "d-none",
+    "link": "https://www.kulturzentrum-trudering.de/2025/12/die-legende-des-klangkristalls-benefizkonzert/",
+    "visibility": "",
     "linkText": "Infos",
     "cancelled": false
   },
@@ -37,9 +48,9 @@
     "month": "12",
     "year": 2025,
     "city": "Portraitkonzert der Komponistin Abigél Varga",
-    "hall": "Seidlvilla | 20 Uhr",
-    "link": "",
-    "visibility": "d-none",
+    "hall": "Seidlvilla | 19:30 Uhr",
+    "link": "https://www.seidlvilla.de/programm-detail/verhoert-der-komponist-richard-heller",
+    "visibility": "",
     "linkText": "Infos",
     "cancelled": false
   },
