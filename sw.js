@@ -1,4 +1,4 @@
-const staticCacheName = "site-static-v2";
+const staticCacheName = "site-static-v3";
 const dynamicCache = "site-dynamic-v1";
 const assets = [
   "/",
@@ -32,7 +32,7 @@ const assets = [
   "/images/banner-1080.jpg",
   "/images/gallery/boris-1231.jpg",
   "/images/gallery/cris-1231.jpg",
-  "/images/gallery/moritz-1231.jpg",
+  "/images/gallery/felix-1231.jpg",
   "/images/gallery/img-1-1620.jpg",
   "/images/gallery/img-2-1620.jpg",
   "/images/gallery/img-3-1620.jpg",
