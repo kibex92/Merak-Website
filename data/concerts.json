@@ -4,10 +4,10 @@
     "month": "05",
     "year": 2026,
     "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
-    "hall": "Haus der bayerischen Landwirtschaft – Großer Saal | 11 Uhr",
-    "link": "",
-    "visibility": "d-none",
-    "linkText": "Infos",
+    "hall": "Haus der bayerischen Landwirtschaft – Großer Saal | 15 Uhr",
+    "link": "https://www.kulturverein-herrsching.de/herrschinger-konzerte/trio-merak-kinderkonzert/",
+    "visibility": "",
+    "linkText": "Tickets",
     "cancelled": false
   }, 
   {
@@ -16,9 +16,9 @@
     "year": 2026,
     "city": "Herrschinger Konzerte",
     "hall": "Haus der bayerischen Landwirtschaft – Großer Saal | 18 Uhr",
-    "link": "",
-    "visibility": "d-none",
-    "linkText": "Infos",
+    "link": "https://www.kulturverein-herrsching.de/herrschinger-konzerte/trio-merak/",
+    "visibility": "",
+    "linkText": "Tickets",
     "cancelled": false
   },
   {
