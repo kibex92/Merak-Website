@@ -73,7 +73,7 @@
 
 	<!-- Preload banner image -->
 	<link rel="preload" as="image" href="images/logo.svg" />
-  <!-- Commented out for now till I test it properly -->
+	<!-- Commented out for now till I test it properly -->
 	<!-- <link rel="preload" as="image" href="images/banner-360.jpg" media="(max-width: 640px)" />
 	<link rel="preload" as="image" href="images/banner-720.jpg" media="(min-width: 641px) and (max-width: 920px)" />
 	<link rel="preload" as="image" href="images/banner-1080.jpg" media="(min-width: 1200px)" />
@@ -133,27 +133,23 @@
 			</li>
 		</ul>
 	</header>
-		<div class="banner">
-			<img 
-        src="images/banner-3840.jpg" 
-        srcset="
+	<div class="banner">
+		<img src="images/banner-3840.jpg" srcset="
           images/banner-360.jpg 360w, 
           images/banner-720.jpg 720w, 
           images/banner-1080.jpg 1080w, 
           images/banner-crop-1920.jpg 1920w, 
-          images/banner-crop-3840.jpg 3840w" 
-        sizes="
+          images/banner-crop-3840.jpg 3840w" sizes="
           (max-width: 600px) 360px, 
           (max-width: 768px) 720px, 
           (max-width: 1024px) 1080px, 
           (max-width: 1366px) 1920px, 
-          (min-width: 1367px) 3840px" 
-        alt="Your Trio Banner Image">
+          (min-width: 1367px) 3840px" alt="Your Trio Banner Image">
 
-			<div class="logo-container">
-				<img id="logo" src="" data-src="images/logo.svg" alt="Logo vom Trio Merak">
-			</div>
+		<div class="logo-container">
+			<img id="logo" src="" data-src="images/logo.svg" alt="Logo vom Trio Merak">
 		</div>
+	</div>
 
 	<main>
 		<div class="container" id="blur">
@@ -246,13 +242,21 @@
 			<hr class="line-gold" />
 			<div class="container">
 				<h2 class="text-center section-header">Unser Debütalbum</h2>
-				 <picture>
-					<source media="(min-width: 768px)" srcset="/images/album-teaser.png" alt="Ankündigung des Debütalbums von Trio Merak: 'Zora - Balkan Awakening'" class="w-100 mb-5" style="border-radius: .75rem;">
-					
-					<img src="/images/album-teaser-mobile.png" alt="Ankündigung des Debütalbums von Trio Merak: 'Zora - Balkan Awakening'" class="w-100 mb-5" style="border-radius: .75rem;">
+				<picture>
+					<source media="(min-width: 768px)" srcset="/images/album-teaser.png"
+						alt="Ankündigung des Debütalbums von Trio Merak: 'Zora - Balkan Awakening'" class="w-100 mb-5"
+						style="border-radius: .75rem;">
+
+					<img src="/images/album-teaser-mobile.png"
+						alt="Ankündigung des Debütalbums von Trio Merak: 'Zora - Balkan Awakening'" class="w-100 mb-5"
+						style="border-radius: .75rem;">
 				</picture>
-				<iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5DaDwhdDrKkxKe90bqLzuW?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-				<iframe scrolling="no" style="border: 0;width: 100%;height: 33px;" src="https://bandcamp.com/band_follow_button_classic/3275175741"></iframe>
+				<iframe style="border-radius:12px"
+					src="https://open.spotify.com/embed/album/5DaDwhdDrKkxKe90bqLzuW?utm_source=generator&theme=0" width="100%"
+					height="352" frameBorder="0" allowfullscreen=""
+					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+				<iframe scrolling="no" style="border: 0;width: 100%;height: 33px;"
+					src="https://bandcamp.com/band_follow_button_classic/3275175741"></iframe>
 			</div>
 			<!-- Videos -->
 			<div class="videos">
@@ -292,7 +296,9 @@
 					<h2 class="text-center year">
 						2026
 					</h2>
-
+					<h2 class="text-center year">
+						2027
+					</h2>
 				</div>
 
 				<div class="event-container" id="2022"></div>
@@ -307,6 +313,7 @@
 				<div class="event-container" id="2024"></div>
 				<div class="event-container" id="2025"></div>
 				<div class="event-container" id="2026"></div>
+				<div class="event-container" id="2027"></div>
 			</div>
 
 			<hr class="line-gold">
@@ -557,9 +564,10 @@
 									target="_blank"></i></a></li>
 						<li><a class="youtube" href="https://www.youtube.com/@triomerak" target="_blank"><i
 									class="fab fa-youtube"></i></a></li>
-						<li><a href="https://open.spotify.com/artist/44qat9WslUm7LtdwnqgdCz?si=5d354211c8564d21" class="spotify" target="_blank">
-									<i class="fab fa-spotify"></i>
-						</a>
+						<li><a href="https://open.spotify.com/artist/44qat9WslUm7LtdwnqgdCz?si=5d354211c8564d21" class="spotify"
+								target="_blank">
+								<i class="fab fa-spotify"></i>
+							</a>
 						</li>
 					</ul>
 				</div>
