@@ -1,10 +1,54 @@
 [
   {
+    "day": "22",
+    "month": "10",
+    "year": 2027,
+    "city": "Herxheim",
+    "hall": "Villa Wieser",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
+    "day": "03",
+    "month": "07",
+    "year": 2027,
+    "city": "Ottobeuren",
+    "hall": "Kammerkonzerte im Museum",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
     "day": "23",
     "month": "05",
     "year": 2027,
     "city": "Burgdorf",
     "hall": "Ratssaal im Burgdorfer Schloss | 17 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
+    "day": "29",
+    "month": "04",
+    "year": 2027,
+    "city": "Nürnberg",
+    "hall": "Wohnstift am Tiergarten",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
+    "day": "28",
+    "month": "04",
+    "year": 2027,
+    "city": "Erlangen",
+    "hall": "Wohnstift Rathsberg",
     "link": "",
     "visibility": "d-none",
     "linkText": "Tickets",
@@ -27,6 +71,28 @@
     "year": 2027,
     "city": "Gräfelfing",
     "hall": "Bürgerhaus | 19:30 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
+    "day": "28",
+    "month": "01",
+    "year": 2027,
+    "city": "Beckum",
+    "hall": "Musik im Alten Pfarrhaus",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
+    "day": "29",
+    "month": "01",
+    "year": 2027,
+    "city": "Aachen",
+    "hall": "Wohnzimmerkonzerte Aachen",
     "link": "",
     "visibility": "d-none",
     "linkText": "Tickets",
