@@ -1,4 +1,16 @@
-[ {
+[ 
+  {
+    "day": "20",
+    "month": "05",
+    "year": 2027,
+    "city": "Opherdicke",
+    "hall": "Haus Opherdicke | 20 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+   },
+  {
     "day": "14",
     "month": "10",
     "year": 2026,
@@ -8,7 +20,7 @@
     "visibility": "d-none",
     "linkText": "Tickets",
     "cancelled": false
-  },
+    },
    {
     "day": "13",
     "month": "11",
