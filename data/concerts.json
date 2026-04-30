@@ -1,4 +1,25 @@
-[
+[ {
+    "day": "14",
+    "month": "10",
+    "year": 2026,
+    "city": "Preisverleihung des Musikstipendiums der Stadt München",
+    "hall": "Saal X | 19 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+   {
+    "day": "13",
+    "month": "11",
+    "year": 2027,
+    "city": "Bingen am Rhein",
+    "hall": "Villa Sachsen | 19 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
   {
     "day": "22",
     "month": "10",
