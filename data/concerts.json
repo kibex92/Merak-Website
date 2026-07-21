@@ -1,5 +1,16 @@
 [ 
   {
+    "day": "24",
+    "month": "10",
+    "year": 2027,
+    "city": "Polling",
+    "hall": "Bibliothekssaal Polling | 11 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+   },
+  {
     "day": "20",
     "month": "05",
     "year": 2027,
@@ -14,7 +25,7 @@
     "day": "14",
     "month": "10",
     "year": 2026,
-    "city": "Preisverleihung des Musikstipendiums der Stadt München",
+    "city": "Preisverleihung des Musikstipendiums der Stadt München | Geschlossene Veranstaltung",
     "hall": "Saal X | 19 Uhr",
     "link": "",
     "visibility": "d-none",
