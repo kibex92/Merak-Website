@@ -1,4 +1,14 @@
-[ 
+[ {
+    "day": "09",
+    "month": "05",
+    "year": 2027,
+    "city": "Planegg",
+    "hall": "Pfarrsaal St. Elisabeth | 16 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+   },
   {
     "day": "24",
     "month": "10",
