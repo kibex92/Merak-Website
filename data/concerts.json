@@ -1,4 +1,16 @@
-[ {
+[
+  {
+    "day": "22",
+    "month": "05",
+    "year": 2027,
+    "city": "Wachenheim",
+    "hall": "Ludwigskapelle | 19 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
     "day": "09",
     "month": "05",
     "year": 2027,
@@ -8,7 +20,7 @@
     "visibility": "d-none",
     "linkText": "Tickets",
     "cancelled": false
-   },
+  },
   {
     "day": "24",
     "month": "10",
@@ -19,7 +31,7 @@
     "visibility": "d-none",
     "linkText": "Tickets",
     "cancelled": false
-   },
+  },
   {
     "day": "20",
     "month": "05",
@@ -30,7 +42,7 @@
     "visibility": "d-none",
     "linkText": "Tickets",
     "cancelled": false
-   },
+  },
   {
     "day": "14",
     "month": "10",
@@ -41,8 +53,8 @@
     "visibility": "d-none",
     "linkText": "Tickets",
     "cancelled": false
-    },
-   {
+  },
+  {
     "day": "13",
     "month": "11",
     "year": 2027,
