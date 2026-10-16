@@ -1,4 +1,25 @@
-[
+[{
+    "day": "04",
+    "month": "12",
+    "year": 2027,
+    "city": "Essingen",
+    "hall": "Schloss-Scheune Essingen | 20 Uhr",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
+  {
+    "day": "27",
+    "month": "01",
+    "year": 2027,
+    "city": "Essen",
+    "hall": "Schloss Borbeck",
+    "link": "",
+    "visibility": "d-none",
+    "linkText": "Tickets",
+    "cancelled": false
+  },
   {
     "day": "13",
     "month": "03",
@@ -25,8 +46,8 @@
     "day": "09",
     "month": "05",
     "year": 2027,
-    "city": "Planegg",
-    "hall": "FAMILIENKONZERT | Pfarrsaal St. Elisabeth | 16 Uhr",
+    "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
+    "hall": "Planegg | Pfarrsaal St. Elisabeth | 16 Uhr",
     "link": "",
     "visibility": "d-none",
     "linkText": "Tickets",
@@ -137,8 +158,8 @@
     "year": 2027,
     "city": "FAMILIENKONZERT Die Legende des Klangkristalls: Ein Abenteuer in Harmonia!",
     "hall": "Bürgerhaus Putzbrunn | 15 Uhr",
-    "link": "",
-    "visibility": "d-none",
+    "link": "https://events.fairetickets.de/w9t3g/",
+    "visibility": "",
     "linkText": "Tickets",
     "cancelled": false
   },
